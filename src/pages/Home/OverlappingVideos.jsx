@@ -16,7 +16,7 @@ const CelebrityTestimonialGallery = () => {
       profession:t.Falak,
       rating: 4.8,
       video: "https://cdn.pixabay.com/video/2024/09/24/233024_tiny.mp4",
-      poster: "/src/assets/DALL·E 2025-01-25 11.36.40 - A modern and minimalistic website thumbnail design for an astrology platform called 'Ohm Astro.' The design features an elegant celestial theme with s.png",
+      poster: "https://cdn.pixabay.com/photo/2023/01/28/16/55/woman-7751363_1280.jpg",
       description: t.titl1,
     },
     {
@@ -25,7 +25,7 @@ const CelebrityTestimonialGallery = () => {
       profession: t.Chandra,
       rating: 4.9,
       video: "https://cdn.pixabay.com/video/2024/09/24/233024_tiny.mp4",
-      poster: "/src/assets/DALL·E 2025-01-25 11.08.49 - A visually appealing thumbnail for 'Ohm Astro' website featuring a cosmic theme. Include a glowing Ohm symbol (ॐ) in the center, with a gradient backg.png",
+      poster: "https://media.istockphoto.com/id/1347480695/photo/beard-priest-holy-astrologer-guru-or-jyotishi-placing-cowrie-shells-on-chart-and-counting-to.jpg?s=612x612&w=0&k=20&c=Fa0mG3pfB7X_odMXwU4rM0lyyVFIradeKZjgmo3sd0Y=",
       description: t.titl2
     },
     {
@@ -34,7 +34,7 @@ const CelebrityTestimonialGallery = () => {
       profession: t.Charu,
       rating: 5.0,
       video: "https://cdn.pixabay.com/video/2024/09/24/233024_tiny.mp4",
-      poster: "/src/assets/DALL·E 2025-01-25 11.42.50 - A visually appealing thumbnail for 'Ohm Astro' website featuring a cosmic theme. Include the Ohm symbol (ॐ) glowing at the center with a gradient back.png",
+      poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH57ve3TrvhgmcbhpikU55BnuFsNpzpoAHrqRy1j1klqIeY8yGLFggG4lQXWHgnioHYXo&usqp=CAU",
       description: t.titl3,
     }
   ];
