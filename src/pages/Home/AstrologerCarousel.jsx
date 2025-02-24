@@ -291,9 +291,9 @@ const AstrologerList = () => {
   };
 
   // Fixed handleClick function for navigation
-  const handleAstrologerClick = (astrologerId) => {
-    navigate(`/astrologer/${astrologerId}`);
-  };
+  // const handleAstrologerClick = (astrologerId) => {
+  //   navigate(`/astrologer/${astrologerId}`);
+  // };
 
   console.log("this link astrolprofile",navigate)
 

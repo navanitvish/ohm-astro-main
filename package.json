@@ -13,6 +13,7 @@
     "@reduxjs/toolkit": "^2.3.0",
     "@tanstack/react-query": "^5.62.0",
     "@zegocloud/zego-uikit-prebuilt": "^2.14.0",
+    "astorotalk": "file:",
     "axios": "^1.7.9",
     "framer-motion": "^11.11.17",
     "gsap": "^3.12.5",
