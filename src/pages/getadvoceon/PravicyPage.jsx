@@ -3,12 +3,12 @@ import ContentPage from "./PageContent";
 
 const privacyPolicyContent = {
   title: "PRIVACY POLICY",
-  introduction: `Anytime Astro values and respects the privacy of its users. The privacy policy mentioned below is created to provide you detailed information about the collection, dissemination and usage of your personal data. Our privacy policy applies when you use or visit the Anytime Astro website as well as the mobile application. All our users, astrologers and visitors will be collectively mentioned as “You” in this privacy policy.`,
+  introduction: `OHM Astro values and respects the privacy of its users. The privacy policy mentioned below is created to provide you detailed information about the collection, dissemination and usage of your personal data. Our privacy policy applies when you use or visit the OHM Astro website as well as the mobile application. All our users, astrologers and visitors will be collectively mentioned as “You” in this privacy policy.`,
   agreement: `By using this website and our application, you agree with this Privacy Policy. If you do not accept this policy, then you must not use the website or the application.`,
   sections: [
     {
-      heading: "WHAT DOES ANYTIME ASTRO DO?",
-      content: `Anytime Astro provides a guidance platform which allows members to locate an Astrologer, seek guidance and advice from these Astrologers, book online Pujas, purchase authentic Astrology products, and more. Anytime Astro facilitates one-on-one communication between the user and the Astrologers through direct consultation via chat or call, and messages and allows the users to pay for services requested from an Astrologer.\n\nThe call feature of Anytime Astro, i.e. Talk To Astrologer service, is only available in India.`,
+      heading: "WHAT DOES OHM Astro DO?",
+      content: `OHM Astro provides a guidance platform which allows members to locate an Astrologer, seek guidance and advice from these Astrologers, book online Pujas, purchase authentic Astrology products, and more. OHM Astro facilitates one-on-one communication between the user and the Astrologers through direct consultation via chat or call, and messages and allows the users to pay for services requested from an Astrologer.\n\nThe call feature of OHM Astro, i.e. Talk To Astrologer service, is only available in India.`,
     },
     {
       heading: "PROCESSING OF PERSONAL DATA",

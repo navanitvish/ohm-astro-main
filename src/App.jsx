@@ -77,7 +77,7 @@ function App() {
             <Route path="/ComingSoonPage" element={<ComingSoonPage />} />
             <Route path="/LiveSessions" element={<LiveAsro />} />
             <Route path="/astrology" element={<Astrology />} />
-            <Route path="/astrologer/:name" element={<AstrologerProfile />} />
+            <Route path="/astrologer/:_id" element={<AstrologerProfile />} />
             <Route path="//post/:id" element={<ModernPage />} />
             <Route path="/Purnima" element={<PurnimaVrat />} />
             <Route path="/amavasya" element={<AmavasyaDates />} />

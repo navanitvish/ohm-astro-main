@@ -16,6 +16,7 @@ const formatDateTime = (dateTimeStr) => {
       hour12: true
     });
   } catch (e) {
+     
     return dateTimeStr;
   }
 };

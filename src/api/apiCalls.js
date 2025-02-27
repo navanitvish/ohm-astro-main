@@ -25,6 +25,16 @@ export const fetchastrologers = async () => {
   return response.data;
 };
 
+
+export const fetchAstrologerById = async (astrogerId) => {
+  try {
+    const response = await axiosInstance.get(`${endpoints.getastrologers}/${astrogerId}`);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching astrologer details:", error);
+    throw error;
+  }
+};
 export const fetchBlogs = async ({ limit = 10, page = 1 }) => {
   const response = await axiosInstance.get(endpoints.getBlogs, {
     params: { limit, page }, // Pass query parameters here

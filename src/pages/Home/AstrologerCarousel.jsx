@@ -35,10 +35,10 @@
 // const language = useSelector((state) => state.language.language);
 // const t = translations[language];
 
-//   const { data, isLoading, error } = useQuery({
-//     queryKey: ["fetchTopRatedAstrologers"],
-//     queryFn: fetchTopRatedAstrologers,
-//   });
+  // const { data, isLoading, error } = useQuery({
+  //   queryKey: ["fetchTopRatedAstrologers"],
+  //   queryFn: fetchTopRatedAstrologers,
+  // });
 
 //   if (isLoading) return (
 //     <div className="flex items-center justify-center p-4 md:p-8">
@@ -211,7 +211,8 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import translations from "../../components/translations/translations";
-
+import { useQuery } from "@tanstack/react-query";
+import { fetchastrologers } from "../../api/apiCalls";
 const AstrologerList = () => {
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -219,81 +220,39 @@ const AstrologerList = () => {
   const language = useSelector((state) => state.language.language);
   const t = translations[language];
 
-  // Dummy data for astrologers
-  const dummyAstrologers = [
-    {
-      astrologer: {
-        _id: "1",
-        name: t.priyanka,
-        bio: t.rahulbio,
-        image:
-          "https://images.jdmagicbox.com/comp/ludhiana/w7/0161px161.x161.121128141006.k3w7/catalogue/rahul-kaushl-astrologer-and-vastu-consultant-pakhowal-road-ludhiana-astrologers-24syn6m.jpg",
-      },
-      averageRating: 4.5,
-      totalReviews: 120,
-    },
-    {
-      astrologer: {
-        _id: "2",
-        name: t.Vaibhavi,
-        bio: t.anjlilbio,
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU0Ow1SQNI3ethdMUA0uUQxiqfbwW4Q-nGmQ&s",
-      },
-      averageRating: 5,
-      totalReviews: 89,
-    },
-    {
-      astrologer: {
-        _id: "3",
-        name: t.acharya,
-        bio: t.archbio,
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv5TtYTmG8-blcxQHN8WYpgPjHshI7kxW9Yw&s",
-      },
-      averageRating: 4,
-      totalReviews: 156,
-    },
-    {
-      astrologer: {
-        _id: "4",
-        name: t.lakhanJ,
-        bio: t.lakhbio,
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTPWXwAi5uOFL-9p0zBhz1LX2DXNrA_emZ3g&s",
-      },
-      averageRating: 4.8,
-      totalReviews: 200,
-    },
-    {
-      astrologer: {
-        _id: "5",
-        name: t.dada,
-        bio: t.amitbio,
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1A7m0D9B9MOVbwzmZYaTeteH6vdTr2f4ztw&s",
-      },
-      averageRating: 4.2,
-      totalReviews: 145,
-    },
-  ];
+  const { data, error } = useQuery({
+    queryKey: ["fetchTopRatedAstrologers"],
+    queryFn: fetchastrologers,
+  });
+  console.log(" Our atrolager data",data);
+
+ 
+
+  if (error) {
+    return (
+      <div className="min-h-[400px] flex items-center justify-center p-4">
+        <p className="text-red-500">Error fetching astrologers: {error.message}</p>
+      </div>
+    );
+  }
 
   const nextSlide = () => {
+    const astrologersLength = data?.data?.length || 0;
     setCurrentIndex((prevIndex) =>
-      prevIndex >= dummyAstrologers.length - 3 ? 0 : prevIndex + 3
+      prevIndex >= astrologersLength - 3 ? 0 : prevIndex + 3
     );
   };
-
+  
   const prevSlide = () => {
+    const astrologersLength = data?.data?.length || 0;
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? dummyAstrologers.length - 3 : prevIndex - 3
+      prevIndex === 0 ? Math.max(0, astrologersLength - 3) : prevIndex - 3
     );
   };
 
   // Fixed handleClick function for navigation
-  // const handleAstrologerClick = (astrologerId) => {
-  //   navigate(`/astrologer/${astrologerId}`);
-  // };
+ 
+  
 
   console.log("this link astrolprofile",navigate)
 
@@ -332,9 +291,9 @@ const AstrologerList = () => {
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
           >
-            {dummyAstrologers.map(
-              ({ astrologer, averageRating, totalReviews }) => (
-                <div key={astrologer._id} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
+            {data?.data.map((astrologer) => (
+             
+                <div key={astrologer.id} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3">
                   <div
                     className="
                     bg-white rounded-lg border border-red-500 p-6 
@@ -343,11 +302,11 @@ const AstrologerList = () => {
                     transform transition-transform duration-300
                     hover:-translate-y-1 md:hover:-translate-y-2
                   "
-                    onClick={() => handleAstrologerClick(astrologer._id)} // Fixed: Using _id instead of id
+                  onClick={() => navigate(`/astrologer/${astrologer._id}`)} // Fixed: Using _id instead of id
                   >
                     <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-2 md:mb-4 rounded-full bg-gray-200 overflow-hidden">
                       <img
-                        src={astrologer.image}
+                        src={astrologer.profileImage}
                         alt={astrologer.name}
                         className="w-full h-full object-cover"
                         loading="lazy"
@@ -361,13 +320,13 @@ const AstrologerList = () => {
                         ? `${astrologer.bio.slice(0, 60)}...`
                         : astrologer.bio}
                     </p>
-                    <div className="text-xs md:text-sm">
+                    {/* <div className="text-xs md:text-sm">
                       {t.Reviews}:{" "}
-                      <span className="text-pink-500">{totalReviews}</span>
-                    </div>
+                     
+                    </div> */}
                     <div className="flex justify-center mt-2 text-yellow-400 text-sm md:text-base">
-                      {"★".repeat(Math.round(averageRating))}
-                      {"☆".repeat(5 - Math.round(averageRating))}
+                      {"★".repeat(Math.round(astrologer.rating))}
+                      {"☆".repeat(5 - Math.round(astrologer.rating))}
                     </div>
                   </div>
                 </div>

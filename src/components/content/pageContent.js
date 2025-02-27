@@ -1,6 +1,8 @@
 // src/data/contentData.js
-
-
+// import { useSelector } from "react-redux";
+// import translations from "../../components/translations/translations";
+// const language = useSelector((state) => state.language.language);
+//   const t = translations[language];
 export const contentData = {
   psychicReading: {
     id: "psychicReading",

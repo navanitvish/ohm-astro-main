@@ -3,22 +3,22 @@ import React from "react";
 const termsContent = {
   title: "TERMS OF USE",
   intro:
-    "This agreement “Member Terms of Use” pertain to all the users (“members”) who access and/or utilize the services of Anytime Astro platform for online Astrologer guidance.",
+    "This agreement “Member Terms of Use” pertain to all the users (“members”) who access and/or utilize the services of OHM Astro platform for online Astrologer guidance.",
   sections: [
     {
-      heading: "What is Anytime Astro?",
+      heading: "What is OHM Astro?",
       content: [
-        "Anytime Astro provides a guidance platform which allows the members to locate an Astrologer, to seek guidance and advice from these Astrologers. Anytime Astro provides a platform that enables one-on-one communication between the user and the Astrologers through direct consultation (chat or call), and messages, and allows the users to pay for services purchased from an Astrologer.",
-        "The call feature of Anytime Astro, i.e. Talk To Astrologer service, is only available in India.",
+        "OHM Astro provides a guidance platform which allows the members to locate an Astrologer, to seek guidance and advice from these Astrologers. OHM Astro provides a platform that enables one-on-one communication between the user and the Astrologers through direct consultation (chat or call), and messages, and allows the users to pay for services purchased from an Astrologer.",
+        "The call feature of OHM Astro, i.e. Talk To Astrologer service, is only available in India.",
       ],
     },
     {
       heading: "Disclaimer – For Entertainment Purposes Only",
       content: [
-        "It is the sole responsibility of the Users/Members to verify an Astrologer’s identity, credentials, qualifications, licenses, biographic information etc. Anytime Astro will not be liable for verifying such details.",
-        "The User/Member concedes to the fact that these Astrologers are neither employed by nor agents or representatives of Anytime Astro and Anytime Astro does not undertake any responsibility for conduct of any such Astrologer.",
-        "All the Astrologers are individual contractors of Anytime Astro, and because they function as independent contractors, Anytime Astro cannot administer the quality, accuracy or accordance with the advice or guidance provided by an Astrologer.",
-        "Anytime Astro also does not ascertain:",
+        "It is the sole responsibility of the Users/Members to verify an Astrologer’s identity, credentials, qualifications, licenses, biographic information etc. OHM Astro will not be liable for verifying such details.",
+        "The User/Member concedes to the fact that these Astrologers are neither employed by nor agents or representatives of OHM Astro and OHM Astro does not undertake any responsibility for conduct of any such Astrologer.",
+        "All the Astrologers are individual contractors of OHM Astro, and because they function as independent contractors, OHM Astro cannot administer the quality, accuracy or accordance with the advice or guidance provided by an Astrologer.",
+        "OHM Astro also does not ascertain:",
         [
           "The qualification of an Astrologer to guide on a particular subject.",
           "Whether an Astrologer is accurately categorized to guide a member in a sought field.",

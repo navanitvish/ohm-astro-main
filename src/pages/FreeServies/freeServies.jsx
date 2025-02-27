@@ -117,7 +117,7 @@ const AstrologerCard = ({ astrologer }) => {
             </span>
           </div>
           <button
-            onClick={() => navigate(`/astrologer/${astrologer.id || astrologer.id}`)}
+            onClick={() => navigate(`/astrologer/${astrologer._id}`)}
             className="flex items-center gap-2 bg-gradient-to-r from-amber-500 to-pink-500 text-black px-2 py-2 rounded-lg hover:opacity-90 transition-opacity"
           >
             <MessageCircle className="w-4 h-4" />

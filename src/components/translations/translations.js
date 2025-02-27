@@ -119,22 +119,23 @@ const translations = {
       "The Child Lenormand Card is the thirteenth card in the deck, denoting new beginn...",
     blogdesc3:
       "There are very few celebrities in the Bollywood film industry who have achieved ...",
-    blogbage1: "Anytime Astro",
-    blogbage2: "Anytime Astro",
-    blogbage3: "Anytime Astro",
+    blogbage1: "OHM Astro",
+    blogbage2: "OHM Astro",
+    blogbage3: "OHM Astro",
     blog1: "Latest Blogs",
     blogdec1:
       "Delve deeper into the world of Astrology, Psychic Reading & more with insightful articles and latest updates.",
     faqtitile1: "Verified Astrologers",
     faqtitile2: "Ask An Astrologer Via Multiple Ways",
     faqtitile3: "100% Privacy Guaranteed",
+    
     faqcontent1:
-      "Anytime Astro helps you connect with the best online Astrologers in India who will guide you through all the problems of your life and provide answers to all your queries through accurate Astrology predictions. Be it your love problems or money problems, our Astrologers can give you guidance on each and every aspect of your life.",
+      "OHM Astro helps you connect with the best online Astrologers in India who will guide you through all the problems of your life and provide answers to all your queries through accurate Astrology predictions. Be it your love problems or money problems, our Astrologers can give you guidance on each and every aspect of your life.",
     faqcontent2:
       "Connect with our expert astrologers through chat, call, or video consultation. Get personalized guidance at your convenience.",
     faqcontent3:
       "Your personal information and consultations are kept completely confidential. We ensure secure and private communication with our astrologers.",
-    whyAnytimeAstro: "Why Anytime Astro?",
+    whyAnytimeAstro: "Why OHM Astro?",
     whyAnytimeAstroDesc:
       "One of the best online Astrology platforms to connect with experienced and verified Astrologers.",
     whyAnytimeAstroDesc1:

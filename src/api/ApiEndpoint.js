@@ -5,6 +5,7 @@ export const endpoints = {
 
   getBlogs: "/api/blogs",
   getastrologers: "/api/astrologers",
+  getAstrologerById: (id) => `/astrologers/${id}`,
   getTopRatedAstrologers: "/api/reviews/astrologers/top-rated", // New endpoint
   fetchTopAstrologers: "/api/feedback/top-rated", // Updated name
 
