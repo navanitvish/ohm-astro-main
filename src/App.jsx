@@ -54,6 +54,9 @@ import NotFound from "./pages/NotFound";
 import AccountPage from "./pages/AccountPage";
 import BlogLayout from "./pages/Blog/BlogLayout";
 import BlogDetails from "./pages/Blog/BlogDetails";
+import ContactForm from "./pages/contectus";
+import FAQPage from './pages/FAQ/Faq';
+import UpcomingPujaSection from "./pages/Home/PujaSection";
 function App() {
   
   return (
@@ -74,7 +77,7 @@ function App() {
             <Route path="/Panchangs" element={<Panchang />} />
             <Route path="/AstrologyServices" element={<AstrologyServices />} />
             <Route path="/AstrologyBlog" element={<BlogLayout />} />
-            <Route path="/ComingSoonPage" element={<ComingSoonPage />} />
+            <Route path="/ComingSoonPage" element={<UpcomingPujaSection />} />
             <Route path="/LiveSessions" element={<LiveAsro />} />
             <Route path="/astrology" element={<Astrology />} />
             <Route path="/astrologer/:_id" element={<AstrologerProfile />} />
@@ -118,6 +121,9 @@ function App() {
             <Route path="/account" element={<AccountPage/>} />
             <Route path="/astrologer/:_id" element={<AstrologerProfile />} />
             <Route path="/blog/:slug" element={<BlogDetails />} />
+{/* footer */}
+            <Route path="/contact-us" element={<ContactForm />} />
+            <Route path="/faqs" element={<FAQPage />} />  
 
             <Route path="*" element={<NotFound />} />
          

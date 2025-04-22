@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { Clock } from "lucide-react";
-
+import { useSelector } from "react-redux";
+import translations from "../../components/translations/translations";
 const UpcomingPujaSection = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const language = useSelector((state) => state.language.language);
+  const t = translations[language];
 
   const handleSubscription = async (e) => {
     e.preventDefault();
@@ -27,13 +30,13 @@ const UpcomingPujaSection = () => {
   return (
     <section className="flex items-center justify-center h-[300px] bg-gradient-to-r from-amber-500 to-pink-500 to-red-500 animate-gradient">
       <div className="text-center  p-10 rounded-3xl  backdrop-blur-md">
-        <h1 className="text-4xl font-bold text-white mb-4 ">Upcoming Puja</h1>
+        <h1 className="text-4xl font-bold text-white mb-4 ">{t.heading_hi}</h1>
         <p className="text-lg text-white/80 mb-6 animate-fade-in">
-          Stay tuned! Our upcoming puja schedule will be updated here soon.
+{t.description_hi}
         </p>
         <div className="flex items-center justify-center gap-3 bg-white/30 p-4 rounded-lg shadow-lg animate-pulse">
           <Clock className="w-8 h-8 text-yellow-400" />
-          <span className="text-2xl font-semibold text-white">Coming Soon</span>
+          <span className="text-2xl font-semibold text-white">{t.comingSoon_en}</span>
         </div>
         <form onSubmit={handleSubscription} className="mt-6">
           <input
@@ -47,7 +50,7 @@ const UpcomingPujaSection = () => {
             type="submit"
             className="ml-3 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-purple-700 transition duration-200"
           >
-            Notify Me
+           {t.button_hi}
           </button>
         </form>
         {message && (

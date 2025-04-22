@@ -24,7 +24,7 @@ const translations = {
     onlinePuja: "Online Puja",
     freeServices: "Free Services",
     blog: "Astrology Blog",
-    Reviews:"Reviews",
+    Reviews: "Reviews",
     new: "New",
     priyanka: "Rahul Sharma",
     rahulbio: "Expert in Vedic Astrology with 15 years of experience",
@@ -43,7 +43,7 @@ const translations = {
     subtitle1: "From India's Top Astrologers",
     description1: "Unlock personalized insights about your life's journey",
     badge2: "EXPERT CONSULTATION",
-    title2: "Refer & Earn",
+    title2: "Refer More & Earn More",
     subtitle2: "Up to ₹5000 Bonus",
     description2: "Connect with top-tier astrologers anytime",
     phone1: "24/7 Instant Guidance",
@@ -67,6 +67,7 @@ const translations = {
     descri1:
       "Connect with top-rated Astrologers through live sessions for instant solutions.",
     ViewMore: "View More",
+    chatnow:"Chat Now",
     FalakNaaz: "Falak Naaz",
     Rashmi: "Rashmi Desai",
     Priya: "Priya Singh",
@@ -74,28 +75,28 @@ const translations = {
     titl2: "Rashmi Desai's Secret to Success!",
     titl3: "Priya Singh-From Village to the World!",
     CELEBRITIES: "TRUSTED BY CELEBRITIES ",
-    subCELEBRITIES:"Transformative insights that have guided stars to their true potential",
+    subCELEBRITIES: "Transformative insights that have guided stars to their true potential",
     Falak: "Bollywood Actress",
     Chandra: "International Model",
     Charu: "Tech Entrepreneur",
 
     // customer information
-    AnitaSharma:"Anita Sharma",
-    Anitastory:"The consultation helped me gain clarity on my career path. The advice was spot-on, and I feel more confident about my future.",
-    Anitalocation:"New Delhi, India",
+    AnitaSharma: "Anita Sharma",
+    Anitastory: "The consultation helped me gain clarity on my career path. The advice was spot-on, and I feel more confident about my future.",
+    Anitalocation: "New Delhi, India",
 
-    RohitMehta:"Rohit Mehta",
-    Rohitstory:"I had a tarot reading session that completely shifted my perspective on life. The experience was eye-opening, and the reading was incredibly accurate.",
-    Rohitlocation:"Mumbai, India",
+    RohitMehta: "Rohit Mehta",
+    Rohitstory: "I had a tarot reading session that completely shifted my perspective on life. The experience was eye-opening, and the reading was incredibly accurate.",
+    Rohitlocation: "Mumbai, India",
 
-    PriyaKapoor:"Priya Kapoor",
-    Priyastory:"The numerology session revealed aspects of my life that I hadn't considered before. It was a truly enlightening experience, and I feel empowered to make better decisions.",
-    Priyalocation:"Bangalore, India",
+    PriyaKapoor: "Priya Kapoor",
+    Priyastory: "The numerology session revealed aspects of my life that I hadn't considered before. It was a truly enlightening experience, and I feel empowered to make better decisions.",
+    Priyalocation: "Bangalore, India",
 
-    VikramSingh:"Vikram Singh",
-    Vikramstory:"he palmistry consultation gave me insights into my personality and future. The session was thorough and helped me understand myself better.",
-    Vikramlocation:"Chennai, India",
-   
+    VikramSingh: "Vikram Singh",
+    Vikramstory: "he palmistry consultation gave me insights into my personality and future. The session was thorough and helped me understand myself better.",
+    Vikramlocation: "Chennai, India",
+
 
 
     role1: "TV Actress",
@@ -128,7 +129,7 @@ const translations = {
     faqtitile1: "Verified Astrologers",
     faqtitile2: "Ask An Astrologer Via Multiple Ways",
     faqtitile3: "100% Privacy Guaranteed",
-    
+
     faqcontent1:
       "OHM Astro helps you connect with the best online Astrologers in India who will guide you through all the problems of your life and provide answers to all your queries through accurate Astrology predictions. Be it your love problems or money problems, our Astrologers can give you guidance on each and every aspect of your life.",
     faqcontent2:
@@ -250,6 +251,8 @@ const translations = {
     GirlName: "Girl Name",
     GetReport: "Get Report",
     Email: "Email",
+    label_hi: "Enter Details",
+
     Finance: "Finance & Business",
     Psychic: "Psychic Reading",
     GetAdviceOn: "Get Advice On",
@@ -283,7 +286,8 @@ const translations = {
     GenuineProducts: "100% Genuine Products Available Online",
     GemstonesShop:
       "Get The Best-Suited Gemstones As Per Your Birth Chart, Shop Now",
-
+show: "Show Kundali",
+   
     ShopNow: "Shop Now",
     OurBestSellers: "OUR BEST SELLERS",
     CertifiedGemstones: "Certified Gemstones",
@@ -370,7 +374,7 @@ const translations = {
     recommended_astrologers: "Recommended Astrologers",
     freeservices: "OUR FREE SERVICES",
 
-    title0: "Astrology, Horoscope, Tarot And More - Blog By Anytime Astro",
+    title0: "Astrology, Horoscope, Tarot And More - Blog By OhmAstro",
     Description0:
       "find all the information you need about Astrology, Tarot, Numerology, and other divine sciences, including the most insightful articles and blogs on a wide range of topics such as love, money, career, marriage, lifestyle, and more.",
     Entermoblie: "Enter your mobile number to continue",
@@ -382,53 +386,799 @@ const translations = {
     SignIn: "Sign In",
     Signintoyouraccount: "Sign in to your account",
     GetOTP: "Get OTP",
-    ConsultationExperts:"Get Consultation Experts",
-    free:"100% Free",
-    LoginviaOTP:"Login via Email",
-    WelcomeBack:"Welcome Back!",
-    MonthlyHoroscope:"Monthly Horoscope", 
+    ConsultationExperts: "Get Consultation Experts",
+    free: "100% Free",
+    LoginviaOTP: "Login via Email",
+    WelcomeBack: "Welcome Back!",
+    MonthlyHoroscope: "Monthly Horoscope",
     monthlyHoroscopeDetails: [
       "Every month brings new opportunities and challenges in different aspects of life. A Monthly Horoscope helps you navigate through these changes by offering predictions specific to each zodiac sign. It can provide insights into your financial growth, love life, career advancements, health concerns, and more. By understanding the monthly trends, you can plan your actions and decisions more effectively. Monthly Horoscopes are a great way to stay prepared for upcoming opportunities and avoid potential hurdles. The guidance of an experienced Astrologer can make your monthly horoscope even more accurate and actionable. Make the most of your month by understanding what lies ahead for your zodiac sign!",
     ],
-    
-    YearlyHoroscope :" Yearly Horoscope", 
-    yearlyHoroscopeDetails:[  
-    "The life of an individual is divided into phases where they do certain things on a daily basis, weekly basis, monthly basis, and yearly basis. When it comes to the whole year, it’s a long time that can significantly impact your life. Yearly Horoscope can predict the best and worst times that one can expect throughout the year, helping to plan important aspects of life more effectively. Knowing the overall vibe or theme of the year makes it easier to handle ups and downs. Yearly Horoscope mostly focuses on financial status but also provides insights into love, career, business, and success. Yearly Horoscopes are beneficial for long-term planning. These predictions are not set in stone and can be improved with remedies and Astrological guidance. Consulting the best Astrologers is essential for meaningful insights. Click on your zodiac sign and make the most of your year by utilizing blessings and preparing for challenges!",
+
+    YearlyHoroscope: " Yearly Horoscope",
+    yearlyHoroscopeDetails: [
+      "The life of an individual is divided into phases where they do certain things on a daily basis, weekly basis, monthly basis, and yearly basis. When it comes to the whole year, it’s a long time that can significantly impact your life. Yearly Horoscope can predict the best and worst times that one can expect throughout the year, helping to plan important aspects of life more effectively. Knowing the overall vibe or theme of the year makes it easier to handle ups and downs. Yearly Horoscope mostly focuses on financial status but also provides insights into love, career, business, and success. Yearly Horoscopes are beneficial for long-term planning. These predictions are not set in stone and can be improved with remedies and Astrological guidance. Consulting the best Astrologers is essential for meaningful insights. Click on your zodiac sign and make the most of your year by utilizing blessings and preparing for challenges!",
     ],
-    
+
+    // FAQ sections
+    faqConsulting: "Consulting FAQ",
+    faqStore: "Store FAQ",
+
+    // FAQ - Consulting
+    faq_chat_start_question: "How do I start talking to an astrologer?",
+    faq_chat_start_answer: "To talk to an astrologer, you simply need to log in to your Anytime Astro account or sign up to create an account, add money to your wallet, and then select the astrologer you want to talk to and start your session.",
+
+    faq_minimum_balance_question: "Is there a minimum balance requirement before starting a consultation with an astrologer?",
+    faq_minimum_balance_answer: "Yes, you need to have sufficient balance in your wallet to start a consultation. The minimum balance requirement depends on the astrologer's per-minute rate and minimum session duration. Generally, we recommend having enough balance for at least a 5-minute consultation.",
+
+    faq_astrologers_verified_question: "Are the astrologers verified?",
+    faq_astrologers_verified_answer: "Yes, all astrologers on our platform go through a rigorous verification process. We verify their qualifications, experience, and expertise before they provide consultations on our platform. We also regularly review their performance based on customer feedback.",
+
+    faq_phone_call_question: "If I get a phone call during the chat, will my session automatically end?",
+    faq_phone_call_answer: "No, your chat session will not automatically end if you receive a phone call. However, if you stay away from the app or website for an extended period, the session may be paused. You can resume the session when you return to the platform.",
+
+    faq_astrologer_unavailable_question: "What happens if my preferred astrologer is not available online?",
+    faq_astrologer_unavailable_answer: "If your preferred astrologer is not available online, you have several options. You can schedule an appointment with them for a future time, select the 'Notify Me' option to receive an alert when they come online, or choose another available astrologer with similar expertise.",
+
+    faq_payment_question: "How do I pay for a session?",
+    faq_payment_answer: "Payment for sessions is deducted directly from your wallet. You need to add money to your wallet before starting a consultation. We accept various payment methods including credit/debit cards, net banking, UPI, and popular digital wallets.",
+
+    faq_check_balance_question: "How do I check my wallet balance?",
+    faq_check_balance_answer: "You can check your wallet balance by logging into your account and navigating to the 'My Wallet' or 'Account' section. Your current balance will be prominently displayed on the page.",
+
+    faq_chat_history_question: "Can I view my chat/call history?",
+    faq_chat_history_answer: "Yes, you can access your complete chat and call history in the 'My Consultations' or 'History' section of your account. This includes details such as date, time, duration, astrologer name, and amount spent on each session.",
+
+    faq_privacy_question: "Will my privacy and anonymity be maintained?",
+    faq_privacy_answer: "Yes, we take your privacy very seriously. All consultations are completely confidential. Astrologers can only see the information that you choose to share. Personal details such as your full name, contact information, etc. are not disclosed unless you choose to share them.",
+
+    faq_issues_question: "What should I do if I experience issues during a chat or call session with an astrologer?",
+    faq_issues_answer: "If you experience any technical issues during a session, you can report them immediately through our 'Help' section. Our customer support team is available 24/7 to assist you. In case of connection problems, we may provide appropriate compensation or session extension.",
+
+    // FAQ - Store
+    faq_shipping_question: "How long does shipping take?",
+    faq_shipping_answer: "Shipping time depends on your location. Domestic orders typically arrive within 3-5 business days, while international orders may take 7-14 business days. You can track your order using the tracking number provided in your shipping confirmation email.",
+
+    faq_returns_question: "What is your return policy?",
+    faq_returns_answer: "We accept returns for most items within 30 days of purchase in their original condition. Custom-made items, digital products, and certain ritual items cannot be returned. Please contact our customer support to initiate a return.",
+
+    faq_payment_methods_question: "What payment methods do you accept?",
+    faq_payment_methods_answer: "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, Google Pay, Apple Pay, and bank transfers. All transactions are secure and encrypted for your safety.",
+
+    faq_international_shipping_question: "Do you ship internationally?",
+    faq_international_shipping_answer: "Yes, we ship to most countries worldwide. International shipping costs and delivery times vary by location. Please note that customers are responsible for any import duties or taxes imposed by their country.",
+
+    faq_product_authenticity_question: "Are your products authentic?",
+    faq_product_authenticity_answer: "Yes, all our products are 100% authentic and sourced from reputable suppliers. Our gems, crystals, and ritual items are checked for quality and authenticity before being listed in our store.",
+
+    faq_custom_orders_question: "Do you accept custom orders?",
+    faq_custom_orders_answer: "Yes, we accept custom orders for certain products such as personalized birth charts, talismans, and gemstone jewelry. Please contact our customer support with your specific requirements for a custom quote.",
+
+    faq_discount_codes_question: "How do I use discount codes?",
+    faq_discount_codes_answer: "To use a discount code, enter it in the designated field during checkout before completing your payment. Discount codes cannot be applied retroactively to orders that have already been placed.",
+
+    // kundli content
+    kundliTitle: "KUNDALI MATCHING | KUNDALI MATCH FOR MARRIAGE | HOROSCOPE MATCHING",
+    kundliIntro1: "Have you finalized the person you wish to get married to and want to do the Kundali matching?",
+    kundliIntro2: "Do you want to check if the person with whom you are vibing well is compatible enough, as per astrology, to get married?",
+    kundliIntro3: `Before proceeding to marriage, which is a turning point for any individual, Kundali Milan is performed to ensure a good compatibility in the future between the couple. A compatibility score of 18 and above is usually considered auspicious for a successful marriage. However, gun milan should not be the only criteria to judge the forecast of marriage as planetary positions and their effect on compatibility are also significant factors. It is suggested the prospective couple gets the Kundali matching by name and date of birth details assessed further by expert astrologers to study if the aspects essential for great compatibility are matched well. So, let us find a general outline of the Kundli Milan for marriage and check the compatibility between couples.`,
+    kundliFormHeading: "Enter Details to Get Free Online Kundali Matching Report For Marriage",
+    kundliFormPara1: `Ohm Astro is a premium online horoscope-matching site that can help you check Kundali Milan by name and date of birth. Here, the team of expert astrologers analyze the compatibility of both the partners and present accurate results based upon the Ashtakoots or eight categories considered to check the var vadhu gun milan.`,
+    kundliFormPara2: `So, what keeps you waiting, check your marriage compatibility by entering below the details of both partners, such as name, birth date, birth time, and birthplace for horoscope matching by date of birth.`,
+    kundliAnalysisPara: `Got the Patrika Matching analysis, but not sure about what it means? Rest assured, connect with expert astrologers instantly over call or chat to ensure minute details about your compatibility and also receive recommendations to fix any issues that might hinder in marital life. Connect with astrologers now!`,
+    kundliBeforeChatPara: `Before you chat with the astrologers, you can also refer to the below details to learn more about the analysis given by the astrologers.`,
+    kundliAshtakootaPara: `The online Kundali Matchmaker for Marriage calculates the Ashtakootas, to check the compatibility between the couple. Let us know the meaning of the Ashtakoota in the Lagna patrika matching to get a clear idea about what these scores denote.`,
+    gunMilanInfo: `Gun Milan by date of birth is a significant factor in predicting marriage compatibility by evaluating the shared qualities and characteristics of both partners. It considers the factors such as intellect, temperament, and spirituality based on the ancient texts. A high Gun Milan online suggests harmony and a strong foundation in marriage. However, it should not be considered the sole indicator of a successful marriage but definitely helps determine valuable insights to make an informed decision.`,
+    scoreIntroText: "Now, let us know about the scores that make a couple compatible for marriage in the table below –",
+    scoreHeading: "Score Obtained by Kundli Milan",
+    resultLabel: "Result",
+    benefitsTitle: "BENEFITS OF ONLINE KUNDALI MATCHING OR ONLINE HOROSCOPE MATCHING",
+    benefitsIntro: "The online free kundali matching site provides the following benefits –",
+    processIntro: "The process for Kundli Milan for marriage works as follows -",
+    rahuKaalTitle: "RAHU KAAL (INAUSPICIOUS PERIOD)",
+    rahuKaalIntro: "Astrologically, Rahu Kaal is considered a highly inauspicious period during the day. It is always advised to check Shubh Muhurat or Nalla Neram as well as Rahu Kaal or Rahu Kalam before deciding the time period and date of beginning any auspicious work.",
+
+    // Koota Matching Section
+    kootaTitle: "KOOTA",
+    maxScoreTitle: "MAXIMUM SCORE",
+    interpretationTitle: "INTERPRETATION",
+
+    // freeServices 
+    freeServicesTitle: "OUR FREE SERVICES",
+    freeServicesIntro: "Our free services are designed to help you achieve your goals.",
+
+
+
+    Kundalititle: "WHY SHOULD YOU GET YOUR JANAM KUNDALI?",
+    Kundalidescription:
+      "A Janam Kundali or Birth Chart is simply a way to get clarity about your future to make better decisions and choices in life. It is a blueprint of the position of the planets and the stars in the Universe at the time of your birth on the basis of which the predictions about your future are made. There are many ways in which your Janam Kundali by date of birth and time can help you in your life.",
+    benefits: [
+      "Make better professional decisions and career choices.",
+      "Gain better clarity about your personality, strengths and weaknesses.",
+      "Know the favorable and unfavorable time periods of your life.",
+      "Know how to make better financial choices and attract prosperity in life,",
+      "Choose the right partner for marriage with Kundali Matching.",
+    ],
+
+    software: {
+      title: "FREE ONLINE KUNDLI SOFTWARE",
+      description:
+        "Janam Kundli is a blueprint of an individual's life that can help them in analyzing various aspects of their lives. This is the reason that Anytime Astro has created a free Kundali software that provides accurate predictions of an individual's birth chart.",
+      additionalInfo:
+        "With the help of Anytime Astro's free online Kundli software, one can get extensive and accurate readings of their Janam Kundali. This software is recognized worldwide. A mobile app will prove very useful if you plan to use the software frequently. There are a few more wonderful features available in this Astrology and Kundli-making app for Android and iOS devices.It is possible to create Kundli both in Hindi and English, without compromising on the accuracy and precision.",
+    },
+    createKundali: {
+      title: "CREATE ONLINE JANAM KUNDALI",
+      description:
+        "An online Janam Kundli is only accurate when you have exact information about your date of birth and time of birth. A lot of people make the mistake of entering the incorrect birth time, which results in an incorrect Kundali and predictions that are totally irrelevant.",
+    },
+
+    // HOUREDATA
+    getFuturePrediction: "GET FUTURE PREDICTIONS FOR FREE",
+
+    onlineJanamKundalititle: "ONLINE JANAM KUNDALI ",
+    onlineJanamKundalidescription:
+      "The free online Janam Kundali at Anytime Astro is prepared after consulting with experienced Astrologers and is absolutely accurate & authentic. Having doubts in life? Confused about your future? Simply fill in your details and get the free online Kundali that will tell you everything about your personality, future & all the other important events in your life.",
+    houseTitle: "HOUSE",
+    rulingSignTitle: "RULING SIGN",
+    significanceTitle: "SIGNIFICANCE",
+
+    housestitle: "HOUSES IN KUNDLI AND THEIR SIGNIFICANCE",
+    housesdescription:
+      "A birth chart or a Kundli is divided into 12 houses and each house is linked with different planets and Zodiac signs. Every House represents different aspects of life such as career, money, relationships, etc.",
+    houses: [
+      {
+        house: "1st House",
+        rulingSign: "Aries",
+        significance: "Appearance, Personality, Ego, Temperament, New Beginnings",
+      },
+      {
+        house: "2nd House",
+        rulingSign: "Taurus",
+        significance: "Inheritance, Finance, Eating Habits",
+      },
+      {
+        house: "3rd House",
+        rulingSign: "Gemini",
+        significance: "Communication, Thinking, Courage, Younger Siblings",
+      },
+      {
+        house: "4th House",
+        rulingSign: "Cancer",
+        significance: "Parents, Mother, Home, Childhood, Luxuries, Material Things",
+      },
+      {
+        house: "5th House",
+        rulingSign: "Leo",
+        significance: "Education, Self-Expression, Karma of Past life, Children",
+      },
+      {
+        house: "6th House",
+        rulingSign: "Virgo",
+        significance: "Diet, Health, Fitness, Hygiene, Debt, Enemy, Social Service",
+      },
+      {
+        house: "7th House",
+        rulingSign: "Libra",
+        significance: "Partnerships, Business deals, Marriage, Life Partner",
+      },
+      {
+        house: "8th House",
+        rulingSign: "Scorpio",
+        significance: "Death and Reincarnation",
+      },
+      {
+        house: "9th House",
+        rulingSign: "Sagittarius",
+        significance: "Denotes higher mind, expansion of luck and horizons",
+      },
+      {
+        house: "10th House",
+        rulingSign: "Capricorn",
+        significance: "Represents father and his influence on your childhood and profession",
+      },
+      {
+        house: "11th House",
+        rulingSign: "Aquarius",
+        significance: "Roles taken during several stages of life are denoted by this house",
+      },
+      {
+        house: "12th House",
+        rulingSign: "Pisces",
+        significance: "Represents spiritual journey, enlightenment, and liberation",
+      },
+    ],
+name_en: "Name",
+    Kundalname1: "Varna / Caste",
+    score1: 1,
+    interpretation1:
+      "Talks about the mental & intellectual compatibility between the bride and groom.",
+      gender: "Gender",
+    Kundalname2: "Vasya / Vashya",
+    score2: 2,
+    interpretation2:
+      "Determines who will be more dominating or controlling, among both partners.",
+
+    Kundalname3: "Tara / Birth Star",
+    score3: 3,
+    interpretation3: "Determines how healthy a relationship can be.",
+
+    Kundalname4: "Yoni",
+    score4: 4,
+    interpretation4:
+      "Denotes the sexual compatibility of the bride and groom.",
+
+    Kundalname5: "Graha Maitri / Rasyadipati",
+    score5: 5,
+    interpretation5:
+      "Signifies the mental and intellectual bond between the couple.",
+
+    Kundalname6: "Gana",
+    score6: 6,
+    interpretation6:
+      "Denotes the approach, personality & attitude towards the relationship of the couple.",
+
+    Kundalname7: "Bhakoot",
+    score7: 7,
+    interpretation7:
+      "The career, financial status & family welfare after marriage can be predicted by this guna.",
+
+    Kundalname8: "Nadi",
+    scor8e: 8,
+    interpretation8:
+      "Considered the most significant guna, it depicts how a family works as a whole. It is responsible for procreation and childbirth as well.",
+
+    Milanobtain1: "18 or below",
+    Milanresult1: "Marriage is not recommended",
+
+    Milanobtain2: "18 to 24",
+    Milanresult2: "Marriage is possible, but consult an astrologer before getting married",
+
+    Milanobtain3: "24 to 32",
+    Milanresult3: "Successful Marriage",
+
+    Milanobtain4: "32 to 36",
+    Milanresult4: "A match made in Heaven",
+
+    step1: "Enter the details of both partners, such as their name, birthdate, birthplace, and birth time. Make sure you enter the correct details for an accurate Janam Kundli matching.",
+    step2: "The system will generate a horoscope matching for marriage based on the details provided.",
+    step3: "Gun Milan by name and other birth-related details are analyzed for both potential partners by the software. The compatibility score is generated based on eight factors, namely Varna, Vashya, Tara, Yoni, Graha Maitri, Gana, Bhakoot, and Nadi.",
+    step4: "Based on the scores of each guna, the compatibility gets calculated. The higher the score, the higher the compatibility, and vice versa. However, other factors are also considered while analyzing, which can be done by expert astrologers.",
+    step5: "The system then produces a detailed analysis concerning each factor and offers precautions or recommendations if required.",
+    step6: "It is recommended to consult expert astrologers for further clarifications and insights.",
+
+
+    benefits1: "Check your compatibility anytime, anywhere! You no longer need to book an appointment with the astrologers when you can do online kundali matching for marriage.",
+    benefits2: "Online kundli matching for marriage helps you save a lot of time and effort, as you don't need to travel to meet the astrologers traditionally in person.",
+    benefits3: "Various online Kundali matching apps offer personalized consultation services, too, and give clarity on compatibility concerns.",
+    benefits4: "The online Janam Patrika milan can deliver results in no time, which can present a great help considering arranged marriages.",
+    benefits5: "The free kundali matching presents a detailed analysis of all the compatibility factors, thus helping to make informed decisions.",
+    benefits6: "Even the best kundli matching apps seem more affordable than the customary methods, thus making them accessible to a wide range of populations.",
+    benefits7: "Lesser chances of errors as online free kundali matching uses algorithms established to eliminate human biases and provide transparency.",
+    Marriagetitle1: "ARE YOU",
+    Marriagetitle2: "GETTING MARRIED",
+    Marriagetitle3: "RIGHT PERSON?",
+    Marriagesubtitle: "Get answers to all your questions right here.",
+    MarriagebuttonText: "Ask An Astrologer Now",
+
+
+    doshas_intro:
+      "As per Vedic astrology, some astrological combinations negatively influence the marital life of the couple. These conditions are known as doshas, which is also an integral part of astrology. Let us learn about the common doshas that might prevail in kundali milan by name and other birth-related details.",
+    doshas_types: [
+      {
+        name: "Mangal Dosha",
+        description:
+          "Also known as Mars or Kuja Dosha, Mangal Dosha occurs when Mars is placed in specific positions in the birth chart. It creates conflicts and harms the marriage, hence, they should marry someone having similar dosha in their Kundali. Alternatively, they can talk to astrologers and conduct specific rituals.",
+      },
+      {
+        name: "Nadi Dosha",
+        description:
+          "It is related to the genetic and physical compatibility of the couple. It occurs when the nadi of the couple is the same because such similarities bring conflicts and progeny issues in the marital relationship.",
+      },
+      {
+        name: "Bhakoot Dosha",
+        description:
+          "Associated with the position of the Moon in the birth chart, Bhakoot dosha indicates a lack of emotional compatibility of partners and results in disharmony in couples.",
+      },
+      {
+        name: "Rajju Dosha",
+        description:
+          "Based on the placement of the Moon in Nakshatra at the time of birth, the longevity of the marital life can be impacted, which can be a concern, as indicated by Rajju Dosha in Kundli Milan.",
+      },
+      {
+        name: "Gana Dosha",
+        description:
+          "It is the dosha arising from the classification of three Ganas, namely, Deva Gana (divine), Manushya Gana (human), and Rakshasa Gana (demonic). When partners of different Ganas marry, they might raise potential conflicts in their lifestyles and values.",
+      },
+    ],
+
+    matching_intro:
+      "As per Vedic Astrology of the many Kundli Milan practices, the commonly followed practices for horoscope matching are Kundali Milan by date of birth and Kundali Milan by name. Let us learn about both to find the difference between their methods.",
+    matching_types: [
+      {
+        title: "Kundali Matching by Date of Birth",
+        description:
+          "It is the widely practiced and acknowledged method of Kundli Milan for marriage. This method involves comparing the birth charts of both prospective partners based on their birth-related information, such as birthdate, birthplace, and birth time, in addition to the names of the individuals. Then, astrologers study the houses, positions of planets, and the aspects in birth charts to determine the compatibility of both individuals. Not only the placement of important planets is taken into consideration, but also the doshas present in the horoscope matching are marked. Thus, the kundali matching presents a comprehensive assessment of all aspects of compatibility.",
+      },
+      {
+        title: "Kundli Matching by Name",
+        description:
+          "Used less commonly, or as an alternative when birth details are missing, this method is preferred, which uses the numeric values of the names of the individuals instead of their birth details. The names of both individuals are first converted into numerical values based on the letters of the names and then assess the compatibility through mathematical calculations. This method focuses on the fact that the numerical values of the names impact the personality and compatibility of a person. This approach of Kundli Milan is considered a modern as well as an additional approach for Gun Milan analysis.",
+      },
+    ],
+
+    finding_title: "FINDING THE RIGHT PARTNER THROUGH KUNDLI MATCHING",
+    finding_intro:
+      "The Hindu culture has always favored Kundali matching by date of birth to check the compatibility among the prospective partners. Let us explore the reasons why Kundli matching helps to find an ideal partner for having a successful and lasting marriage -",
+    finding_points: [
+      "The temperament, health, financials, intellect, and family of partners can be evaluated by horoscope matching by name and other birth details.",
+      "In the Kundali Milan by date of birth, the eight vital aspects are evaluated by considering behavior, personality, and spirituality.",
+      "A higher gun milan means stronger compatibility and vice between the partners.",
+      "The Kundali matching by name and other birth details provides an analysis of more than just the compatibility score, such as the potential strengths and weaknesses.",
+      "Based on the results, one can consult astrologers to seek personalized guidance, yet clarifying concerns.",
+    ],
+
+    lowScore_title: "WHAT TO DO IF JANAM KUNDLI MILAN SCORE IS LOW?",
+    lowScore_intro:
+      "The low compatibility score in the Janam Kundli Matching doesn't always mean the marriage cannot be a success. However, it is recommended that you follow the below-mentioned steps if you have a low compatibility score -",
+    lowScore_points: [
+      "It is best to seek guidance from an expert astrologer and get a more detailed analysis. Also, try to get a second opinion from other astrologers.",
+      "Check out the doshas and get remedies to mitigate the impacts of these doshas.",
+      "Apart from the horoscope matching, always consider factors such as personal compatibility, goals, values, and mutual respect before tying the knot.",
+      "Discuss with your partner the Kundali Milan results and share your thoughts and the importance that you wish to give astrology.",
+      "Understanding and compromise between the couple with the help of astrology guidance can help overcome many challenges. Try communicating in areas where you score less and focus on strength areas, thus working on personal growth.",
+      "Not all marriages with a low marital score have an unsuccessful marriage life. Hence, a holistic compatibility is essential to assess your compatibility.",
+    ],
+
+    kundliMatchingTitle: "Kundali Matching Information",
+    kundliMatchingIntro: "Discover the ancient Vedic practice of matching horoscopes for marriage compatibility.",
+
+    question1: "How Accurate Is Online Kundli Matching?",
+    answer1: "The results of the Janam Kundli matching depend upon the quality of the software used, the expertise of the astrologers, and the information provided by the individuals. The online free kundali milan follows the same principles as traditional methods and provides accurate results.",
+
+    question2: "How Many Gunas Should Match For Marriage?",
+    answer2: "Traditional Vedic astrology recommends a minimum of 18–24 Gunas to match for a harmonious marriage. However, the exact number may vary based on different astrological schools of thought.",
+
+    question3: "Is Mangal Dosha Matching Also Important?",
+    answer3: "Yes, Mangal Dosha matching is considered crucial in Vedic astrology as it can significantly impact marital harmony. It requires careful analysis of Mars' position in both horoscopes.",
+
+    question4: "Can Nadi Dosha Be Ignored?",
+    answer4: "Nadi Dosha is one of the important factors in Kundali matching. While some aspects can be compensated by other positive matches, it's generally not recommended to ignore it completely.",
+
+    question5: "Which Test Is Most Important In Kundali Matching?",
+    answer5: "The Guna Milan test, which analyzes the compatibility of 36 Gunas between partners, is considered one of the most important aspects of Kundali matching.",
+
+    question6: "Is It OK To Marry Without Kundali Matching?",
+    answer6: "While personal choice is paramount, traditional astrology recommends Kundali matching for understanding potential compatibility. The final decision should be based on multiple factors.",
+    faqtitle: " FREQUENTLY ASKED QUESTIONS",
+    title_hi1: "Today's Panchang",
+    description_hi1: "Daily astrological almanac",
+   title_hi2: "Janam Kundali",
+    description_hi2: "Birth chart analysis",
+   title_hi3: "Free Horoscope",
+    description_hi3: "Daily predictions",
+
+    title_hi4: "Kundali Match",
+   description_hi4: "Compatibility analysis",
+   title_hi5: "Subh Mahurat",
+    description_hi5: "Auspicious timings",
+    title_hi6: "Vrat and Upwaas",
+   description_hi6: "Fasting calendar",
+
+    title_en: "OUR FREE SERVICES",
+    description_en: "Our free services are designed to help you achieve your goals.",
+
+    Choghadiyatitle_en: "WHAT ARE THE AUSPICIOUS HOURS IN A CHOGHADIYA TABLE?",
+    Choghadiyadescription_en: "Choghadiya or Chaughadiya essentially translates to 'four ghadi' comprising 96 minutes, where each ghadi is of the duration of 24 minutes.",
+    Choghadiya_en: [
+      "Shubh, Labh, Char, and Amrit are considered auspicious Choghadiya and one should begin all their significant work in these time periods. These 4 Choghadiyas have their own significance. While Shubh time today is an auspicious period for marriages, education, and religious activities, the Labh period is considered suitable for starting new businesses or educational activities. The Amrit period is considered suitable for any sort of work and the Char time period is considered suitable for traveling, dance, or cultural activities.",
+      "Rahu Kaal is considered inauspicious Choghadiya and should be avoided for any work. See today's Rahu Kaal."
+    ],
+
+auspiciousTimeToday_title: "Auspicious Time Today",
+    auspiciousTimeToday_dec: "Looking for an auspicious marriage muhurat? Planning to buy a vehicle? Starting something new? Today's Choghadiya table will help you make a better decision by telling you about the most auspicious hours of the day. You can also learn about the Shubh Muhurats for tomorrow from this table.",
+    heading_hi: "Upcoming Puja",
+    description_hi: "Stay tuned! Our upcoming puja schedule will be updated here soon.",
+    button_hi: "Notify Me",
+    comingSoon_en:"comingSoon_en",
+consultAstrologer:"Consult With Top Vedic Astrologers",
+      consltdesc:"Is today an auspicious day for you? Call or chat with the best Vedic Astrologers to know the Shubh Muhurat as per your Birth Chart!",
   },
   HIN: {
-    MonthlyHoroscope:"मासिक राशिफल",
+    auspiciousTimeToday_title: "आज का शुभ समय",
+    auspiciousTimeToday_dec: "क्या आप विवाह के लिए शुभ मुहूर्त खोज रहे हैं? वाहन खरीदने की योजना बना रहे हैं? कुछ नया शुरू करने जा रहे हैं? आज की चौघड़िया तालिका आपको दिन के सबसे शुभ समय के बारे में बताकर बेहतर निर्णय लेने में मदद करेगी। आप इस तालिका से कल के शुभ मुहूर्तों की जानकारी भी प्राप्त कर सकते हैं।",
+  
+    Choghadiyatitle_en: "चौघड़िया तालिका में शुभ समय क्या हैं?",
+    Choghadiyadescription_en: "चौघड़िया का अर्थ है 'चार घड़ी', जो कुल 96 मिनट होते हैं, जिसमें प्रत्येक घड़ी की अवधि 24 मिनट होती है।",
+   Choghadiya_en: [
+      "शुभ, लाभ, चर और अमृत को शुभ चौघड़िया माना जाता है और इन समयों में किसी भी महत्वपूर्ण कार्य की शुरुआत करनी चाहिए। इन चारों चौघड़ियों का अपना अलग महत्व होता है। जहां शुभ समय आज विवाह, शिक्षा और धार्मिक कार्यों के लिए उपयुक्त होता है, वहीं लाभ काल नए व्यापार या शैक्षिक गतिविधियों की शुरुआत के लिए अच्छा माना जाता है। अमृत काल किसी भी प्रकार के कार्य के लिए उपयुक्त होता है और चर काल यात्रा, नृत्य या सांस्कृतिक गतिविधियों के लिए उपयुक्त होता है।",
+      "राहु काल को अशुभ चौघड़िया माना जाता है और इस समय में कोई भी कार्य करने से बचना चाहिए। आज का राहु काल देखें।"
+    ],
     
+    Kundalititle: "आपको अपनी जन्म कुंडली क्यों बनवानी चाहिए?",
+    Kundalidescription:
+      "जन्म कुंडली या बर्थ चार्ट आपके भविष्य के बारे में स्पष्टता प्राप्त करने का एक तरीका है, जिससे आप जीवन में बेहतर निर्णय और विकल्प ले सकें। यह ग्रहों और सितारों की उन स्थितियों का खाका है जो आपके जन्म के समय ब्रह्मांड में मौजूद थीं, और इन्हीं के आधार पर आपके भविष्य की भविष्यवाणी की जाती है। जन्म तिथि और समय के आधार पर आपकी कुंडली आपके जीवन में कई तरीकों से सहायक हो सकती है।",
+    benefits: [
+      "बेहतर करियर निर्णय और प्रोफेशनल विकल्प चुनने में मदद करें।",
+      "आपकी पर्सनैलिटी, ताकत और कमजोरियों को समझने में मदद करें।",
+      "जीवन के शुभ और अशुभ समय की जानकारी प्राप्त करें।",
+      "बेहतर वित्तीय निर्णय लेने और समृद्धि प्राप्त करने में सहायता करें।",
+      "कुंडली मिलान के माध्यम से विवाह के लिए सही साथी चुनें।",
+    ],
+
+    softwaretitle: "फ्री ऑनलाइन कुंडली सॉफ्टवेयर",
+    softwaredescription:
+      "जन्म कुंडली एक व्यक्ति के जीवन का खाका होती है, जो जीवन के विभिन्न पहलुओं का विश्लेषण करने में सहायक होती है। इसी कारण ohmAstro ने एक फ्री कुंडली सॉफ्टवेयर बनाया है जो व्यक्ति की कुंडली के सटीक भविष्यवाणी प्रदान करता है।",
+    softwareadditionalInfo:
+      "ohmAstro  के फ्री ऑनलाइन कुंडली सॉफ्टवेयर की मदद से कोई भी अपनी जन्म कुंडली का विस्तृत और सटीक विश्लेषण प्राप्त कर सकता है। यह सॉफ्टवेयर विश्वभर में मान्यता प्राप्त है। यदि आप इस सॉफ्टवेयर का बार-बार उपयोग करने की योजना बना रहे हैं, तो मोबाइल ऐप बहुत उपयोगी साबित होगा। यह ज्योतिष और कुंडली बनाने वाला ऐप Android और iOS दोनों के लिए उपलब्ध है और इसमें कई बेहतरीन सुविधाएँ हैं। आप हिंदी और इंग्लिश दोनों भाषाओं में सटीक और विश्वसनीय कुंडली बना सकते हैं।",
+
+
+    createKundalititle: "ऑनलाइन जन्म कुंडली बनाएं",
+    createKundalidescription:
+      "ऑनलाइन जन्म कुंडली केवल तभी सटीक होती है जब आपके पास अपनी जन्म तिथि और जन्म समय की सटीक जानकारी हो। बहुत से लोग गलत जन्म समय दर्ज कर देते हैं, जिससे गलत कुंडली बनती है और भविष्यवाणियाँ भी पूरी तरह से असंबंधित हो जाती हैं।",
+
+
+    heading_hi: "आगामी पूजा",
+    description_hi: "बने रहें! हमारी आगामी पूजा अनुसूची जल्द ही यहां अपडेट की जाएगी।",
+    button_hi: "सूचित करें",
+    comingSoon_en: "आगामी पूजा",
+    label_hi: "विवरण दर्ज करें",
+    // kundli content
+    kundliTitle: "कुंदली में मार्गदर्शन | कुंदली में मार्गदर्शन | राशिफल में मार्गदर्शन",
+    kundliIntro1: "क्या आपने उस व्यक्ति को अंतिम रूप दे दिया है जिससे आप शादी करना चाहते हैं और अब कुंडली मिलान करना चाहते हैं?",
+    kundliIntro2: "क्या आप जानना चाहते हैं कि जिसके साथ आपकी अच्छी ट्यूनिंग है, वह ज्योतिष के अनुसार शादी के लिए उपयुक्त और अनुकूल है या नहीं?",
+    kundliIntro3: `शादी के लिए आगे बढ़ने से पहले, जो किसी भी व्यक्ति के जीवन का एक महत्वपूर्ण मोड़ होता है, कुंडली मिलान किया जाता है ताकि यह सुनिश्चित किया जा सके कि भविष्य में जोड़े के बीच अच्छी अनुकूलता हो। 18 या उससे अधिक का अनुकूलता स्कोर आमतौर पर एक सफल विवाह के लिए शुभ माना जाता है। हालांकि, केवल गुण मिलान के आधार पर विवाह का पूर्वानुमान नहीं लगाया जा सकता, क्योंकि ग्रहों की स्थिति और उनके प्रभाव भी महत्वपूर्ण कारक होते हैं। यह सुझाव दिया जाता है कि भावी जोड़ा नाम और जन्म तिथि के आधार पर कुंडली मिलान करवाए, जिसे विशेषज्ञ ज्योतिषियों द्वारा गहराई से जांचा जाए, ताकि यह सुनिश्चित किया जा सके कि विवाह के लिए आवश्यक सभी पहलू अच्छी तरह से मेल खाते हैं या नहीं। तो आइए विवाह के लिए कुंडली मिलान की एक सामान्य रूपरेखा जानें और जोड़े के बीच की अनुकूलता को जांचें।`,
+    kundliFormHeading: "विवाह के लिए निःशुल्क ऑनलाइन कुंडली मिलान रिपोर्ट प्राप्त करने के लिए विवरण दर्ज करें",
+    kundliFormPara1: `ओम् एस्ट्रो एक प्रीमियम ऑनलाइन कुंडली मिलान साइट है जो नाम और जन्म तिथि के आधार पर कुंडली मिलान जांचने में आपकी मदद कर सकती है। यहां, विशेषज्ञ ज्योतिषियों की टीम दोनों व्यक्तियों की अनुकूलता का विश्लेषण करती है और वर-वधु गुण मिलान की जांच के लिए माने जाने वाले अष्टकूट या आठ श्रेणियों के आधार पर सटीक परिणाम प्रदान करती है।`,
+    kundliFormPara2: `तो, आप किसका इंतज़ार कर रहे हैं? नीचे दोनों व्यक्तियों के विवरण जैसे नाम, जन्म तिथि, जन्म समय और जन्म स्थान दर्ज करके अपनी विवाह अनुकूलता जांचें, जो जन्म तिथि के आधार पर कुंडली मिलान के लिए आवश्यक हैं।`,
+    kundliAnalysisPara: `आपको पत्रिका मिलान का विश्लेषण मिल गया है, लेकिन समझ नहीं आ रहा कि इसका क्या मतलब है? चिंता न करें, विशेषज्ञ ज्योतिषियों से तुरंत कॉल या चैट के माध्यम से जुड़ें ताकि आपकी अनुकूलता से जुड़ी बारीकियों को समझा जा सके और वैवाहिक जीवन में बाधा डालने वाली किसी भी समस्या को ठीक करने के लिए सुझाव मिल सकें। अभी ज्योतिषियों से संपर्क करें!`,
+    kundliBeforeChatPara: `ज्योतिषियों से चैट करने से पहले, आप नीचे दिए गए विवरणों को भी देख सकते हैं ताकि आप ज्योतिषियों द्वारा दिए गए विश्लेषण को बेहतर ढंग से समझ सकें।`,
+    kundliAshtakootaPara: `ऑनलाइन कुंडली मैचमेकर विवाह के लिए अष्टकूटों की गणना करता है, ताकि जोड़ी की अनुकूलता की जांच की जा सके। हमें लग्न पत्रिका मिलान में अष्टकूट का अर्थ बताएं, ताकि हम समझ सकें कि ये स्कोर क्या दर्शाते हैं।`,
+    gunMilanInfo: `जन्म तिथि के आधार पर गुण मिलान, विवाह अनुकूलता की भविष्यवाणी करने में एक महत्वपूर्ण कारक है, जो दोनों भागीदारों के साझा गुणों और विशेषताओं का मूल्यांकन करता है। यह प्राचीन ग्रंथों के आधार पर बुद्धिमत्ता, स्वभाव और आध्यात्मिकता जैसे तत्वों पर विचार करता है। ऑनलाइन उच्च गुण मिलान विवाह में सामंजस्य और मजबूत आधार का संकेत देता है। हालांकि, इसे सफल विवाह का एकमात्र संकेतक नहीं माना जाना चाहिए, लेकिन यह निश्चित रूप से एक सूचित निर्णय लेने में महत्वपूर्ण अंतर्दृष्टि प्रदान करता है।`,
+    scoreIntroText: "अब आइए नीचे दी गई तालिका में जानें कि कौन से स्कोर किसी जोड़े को विवाह के लिए अनुकूल बनाते हैं –",
+    scoreHeading: "कुंडली मिलान द्वारा प्राप्त स्कोर",
+    resultLabel: "परिणाम",
+    benefitsTitle: "ऑनलाइन कुंडली मिलान या ऑनलाइन जन्म कुंडली मिलान के लाभ",
+    benefitsIntro: "ऑनलाइन फ्री कुंडली मिलान साइट निम्नलिखित लाभ प्रदान करती है –",
+    processIntro: "विवाह हेतु कुंडली मिलान की प्रक्रिया इस प्रकार कार्य करती है -",
+
+    rahuKaalIntro: "ज्योतिष शास्त्र के अनुसार, राहु काल दिन का अत्यंत अशुभ समय माना जाता है। किसी भी शुभ कार्य की शुरुआत करने से पहले शुभ मुहूर्त या नल्ला नेरम और राहु काल या राहु कालम अवश्य देखना चाहिए।",
+
+    // Koota Matching Section
+    kootaTitle: "कूट",
+    maxScoreTitle: "अधिकतम अंक",
+    interpretationTitle: "व्याख्या",
+chatnow:"चैट करें",
+    // freeServices 
+    freeServicesTitle: "हमारी निःशुल्क सेवाएं",
+    freeServicesIntro: "हमारी निःशुल्क सेवाएं आपके लक्ष्यों को प्राप्त करने में सहायता करने के लिए बनाई गई हैं।",
+    show: "कुंडली दिखाएं",
+
+      name_en: "नाम",
+ 
+    gender: "लिंग",
+     
+
+    // HOUSEDATA
+    houseTitle: "भाव",
+    rulingSignTitle: "शासक राशि",
+    significanceTitle: "महत्त्व",
+
+    getFuturePrediction: "भविष्य की भविष्यवाणी बिल्कुल मुफ्त में प्राप्त करें",
+
+    onlineJanamKundalititle: "ऑनलाइन जन्म कुंडली ",
+    onlineJanamKundalidescription:
+      "ओम् एस्ट्रो  की फ्री ऑनलाइन जन्म कुंडली अनुभवी ज्योतिषाचार्यों की सलाह से तैयार की जाती है और यह पूरी तरह से सटीक व प्रामाणिक होती है। जीवन में उलझनें हैं? भविष्य को लेकर असमंजस में हैं? तो बस अपनी जानकारी भरें और फ्री ऑनलाइन कुंडली पाएं, जो आपके व्यक्तित्व, भविष्य और जीवन की अन्य महत्वपूर्ण घटनाओं के बारे में विस्तार से बताएगी।",
+
+
+      consultAstrologer:"शीर्ष वैदिक ज्योतिषियों से परामर्श करें",
+      consltdesc:"क्या आज आपके लिए शुभ दिन है? अपनी जन्म कुंडली के अनुसार शुभ मुहूर्त जानने के लिए सबसे अच्छे वैदिक ज्योतिषियों से कॉल या चैट करें!",
+    question1: "ऑनलाइन कुंडली मिलान कितना सटीक होता है?",
+    answer1: "जनम कुंडली मिलान का परिणाम उस सॉफ़्टवेयर की गुणवत्ता, ज्योतिषी की विशेषज्ञता और व्यक्तियों द्वारा दी गई जानकारी पर निर्भर करता है। ऑनलाइन कुंडली मिलान पारंपरिक सिद्धांतों का पालन करता है और सटीक परिणाम देता है।",
+
+    question2: "विवाह के लिए कितने गुण मिलना आवश्यक है?",
+    answer2: "पारंपरिक वैदिक ज्योतिष अनुसार 18 से 24 गुणों का मिलान एक सुखद वैवाहिक जीवन के लिए आवश्यक माना जाता है। हालांकि, विभिन्न ज्योतिषीय मान्यताओं के अनुसार यह संख्या थोड़ी बदल सकती है।",
+
+    question3: "क्या मांगलिक दोष का मिलान भी ज़रूरी है?",
+    answer3: "हाँ, वैदिक ज्योतिष में मंगल दोष का मिलान बहुत महत्वपूर्ण माना जाता है क्योंकि यह वैवाहिक जीवन पर गहरा प्रभाव डाल सकता है। मंगल की स्थिति का सावधानीपूर्वक विश्लेषण आवश्यक है।",
+
+    question4: "क्या नाड़ी दोष को नज़रअंदाज़ किया जा सकता है?",
+    answer4: "नाड़ी दोष कुंडली मिलान का एक महत्वपूर्ण पहलू है। हालांकि कुछ मामलों में अन्य सकारात्मक मेलों से इसकी भरपाई हो सकती है, फिर भी इसे पूरी तरह से नज़रअंदाज़ करना उचित नहीं होता।",
+
+    question5: "कुंडली मिलान में सबसे महत्वपूर्ण परीक्षण कौन सा है?",
+    answer5: "गुण मिलान परीक्षण, जो 36 गुणों के आधार पर जोड़ों की अनुकूलता का विश्लेषण करता है, कुंडली मिलान का सबसे महत्वपूर्ण भाग माना जाता है।",
+
+    question6: "क्या बिना कुंडली मिलान के शादी करना सही है?",
+    answer6: "जबकि व्यक्तिगत पसंद सर्वोपरि होती है, पारंपरिक ज्योतिष कुंडली मिलान की सिफारिश करता है ताकि संभावित अनुकूलता को समझा जा सके। अंतिम निर्णय विभिन्न पहलुओं को ध्यान में रखकर लेना चाहिए।",
+    faqtitle: "अक्सर पूछे जाने वाले प्रश्न",
+
+
+    housestitle: "कुंडली में भाव और उनका महत्त्व",
+    housesdescription:
+      "जन्म कुंडली को 12 भावों में विभाजित किया गया है और प्रत्येक भाव अलग-अलग ग्रहों और राशियों से जुड़ा होता है। प्रत्येक भाव जीवन के विभिन्न पहलुओं का प्रतिनिधित्व करता है जैसे करियर, धन, रिश्ते आदि।",
+    houses: [
+      {
+        house: "प्रथम भाव",
+        rulingSign: "मेष",
+        significance: "रूप-रंग, व्यक्तित्व, अहंकार, स्वभाव, नई शुरुआत",
+      },
+      {
+        house: "द्वितीय भाव",
+        rulingSign: "वृषभ",
+        significance: "विरासत, वित्त, खाने की आदतें",
+      },
+      {
+        house: "तृतीय भाव",
+        rulingSign: "मिथुन",
+        significance: "संचार, विचार प्रक्रिया, साहस, छोटे भाई-बहन",
+      },
+      {
+        house: "चतुर्थ भाव",
+        rulingSign: "कर्क",
+        significance: "माता-पिता, माता, घर, बचपन, विलासिता, भौतिक वस्तुएँ",
+      },
+      {
+        house: "पंचम भाव",
+        rulingSign: "सिंह",
+        significance: "शिक्षा, आत्म-अभिव्यक्ति, पिछले जन्म का कर्म, संतान",
+      },
+      {
+        house: "षष्ठ भाव",
+        rulingSign: "कन्या",
+        significance: "आहार, स्वास्थ्य, फिटनेस, स्वच्छता, ऋण, शत्रु, सामाजिक सेवा",
+      },
+      {
+        house: "सप्तम भाव",
+        rulingSign: "तुला",
+        significance: "साझेदारी, व्यापारिक सौदे, विवाह, जीवनसाथी",
+      },
+      {
+        house: "अष्टम भाव",
+        rulingSign: "वृश्चिक",
+        significance: "मृत्यु और पुनर्जन्म",
+      },
+      {
+        house: "नवम भाव",
+        rulingSign: "धनु",
+        significance: "उच्च मानसिकता, भाग्य और दृष्टिकोण का विस्तार",
+      },
+      {
+        house: "दशम भाव",
+        rulingSign: "मकर",
+        significance: "पिता और उनका बचपन व करियर पर प्रभाव",
+      },
+      {
+        house: "एकादश भाव",
+        rulingSign: "कुंभ",
+        significance: "जीवन के विभिन्न चरणों में निभाई गई भूमिकाएं",
+      },
+      {
+        house: "द्वादश भाव",
+        rulingSign: "मीन",
+        significance: "आध्यात्मिक यात्रा, आत्मज्ञान और मुक्ति",
+      },
+    ],
+
+
+    Kundalname1: "वर्ण / जाति",
+    score: 1,
+    interpretation1:
+      "दूल्हा और दुल्हन के बीच मानसिक और बौद्धिक अनुकूलता को दर्शाता है।",
+
+
+    Kundalname2: "वश्य / वश्यता",
+    score2: 2,
+    interpretation2:
+      "दोनो में से कौन अधिक प्रभावशाली या नियंत्रित करने वाला होगा, यह निर्धारित करता है।",
+
+    Kundalname3: "तारा / जन्म नक्षत्र",
+    score3: 3,
+    interpretation3: "यह निर्धारित करता है कि रिश्ता कितना स्वस्थ हो सकता है।",
+
+    Kundalname4: "योनि",
+    score4: 4,
+    interpretation4:
+      "दूल्हा और दुल्हन के बीच यौन अनुकूलता को दर्शाता है।",
+
+    Kundalname5: "ग्रह मैत्री / राश्यादिपति",
+    score5: 5,
+    interpretation5:
+      "जोड़े के बीच मानसिक और बौद्धिक संबंध को दर्शाता है।",
+
+    Kundalname6: "गण",
+    score6: 6,
+    interpretation6:
+      "रिश्ते के प्रति जोड़े के दृष्टिकोण, व्यक्तित्व और सोच को दर्शाता है।",
+
+    Kundalname7: "भकूट",
+    score7: 7,
+    interpretation7:
+      "विवाह के बाद करियर, आर्थिक स्थिति और पारिवारिक कल्याण की भविष्यवाणी इस गुण से की जा सकती है।",
+
+    Kundalname8: "नाड़ी",
+    score8: 8,
+    interpretation8:
+      "सबसे महत्वपूर्ण गुण माना जाता है, यह दर्शाता है कि एक परिवार कैसे कार्य करता है। यह संतानोत्पत्ति और बच्चों के लिए भी जिम्मेदार होता है।",
+    Milanobtain1: "18 या उससे कम",
+    Milanresult1: "विवाह की सिफारिश नहीं की जाती है",
+
+    Milanobtain2: "18 से 24",
+    Milanresult2: "विवाह संभव है, लेकिन विवाह से पहले किसी ज्योतिषी से परामर्श करें",
+
+    Milanobtain3: "24 से 32",
+    Milanresult3: "सफल विवाह",
+
+    Milanobtain4: "32 से 36",
+    Milanresult4: "स्वर्ग में बना जोड़ा",
+
+    step1: "दोनों साथियों का नाम, जन्म तिथि, जन्म स्थान और जन्म समय जैसे विवरण दर्ज करें। सटीक जन्म कुंडली मिलान के लिए सही जानकारी दर्ज करना आवश्यक है।",
+    step2: "प्रणाली आपके द्वारा प्रदान की गई जानकारी के आधार पर विवाह के लिए कुंडली मिलान उत्पन्न करेगी।",
+    step3: "नाम और जन्म संबंधी अन्य विवरणों के आधार पर सॉफ़्टवेयर दोनों संभावित साथियों के लिए गुण मिलान करता है। अनुकूलता स्कोर आठ तत्वों के आधार पर उत्पन्न किया जाता है: वर्ण, वश्य, तारा, योनि, ग्रह मैत्री, गण, भकूट और नाड़ी।",
+    step4: "प्रत्येक गुण के स्कोर के आधार पर अनुकूलता की गणना की जाती है। जितना अधिक स्कोर, उतनी अधिक अनुकूलता और इसके विपरीत। हालांकि, विश्लेषण करते समय अन्य कारकों पर भी विचार किया जाता है, जिसे विशेषज्ञ ज्योतिषी कर सकते हैं।",
+    step5: "इसके बाद प्रणाली प्रत्येक कारक से संबंधित विस्तृत विश्लेषण प्रस्तुत करती है और आवश्यकता पड़ने पर सावधानियाँ या सिफारिशें देती है।",
+    step6: "अधिक स्पष्टता और गहन अंतर्दृष्टि के लिए विशेषज्ञ ज्योतिषियों से परामर्श करने की सिफारिश की जाती है।",
+
+    benefits1: "कभी भी, कहीं भी अपनी अनुकूलता जांचें! जब आप ऑनलाइन कुंडली मिलान कर सकते हैं, तो ज्योतिषियों से अपॉइंटमेंट लेने की जरूरत नहीं है।",
+    benefits2: "विवाह के लिए ऑनलाइन कुंडली मिलान आपको काफी समय और प्रयास बचाने में मदद करता है, क्योंकि आपको पारंपरिक रूप से ज्योतिषियों से मिलने के लिए यात्रा नहीं करनी पड़ती।",
+    benefits3: "विभिन्न ऑनलाइन कुंडली मिलान ऐप्स व्यक्तिगत परामर्श सेवाएं भी प्रदान करते हैं और अनुकूलता संबंधी चिंताओं पर स्पष्टता देते हैं।",
+    benefits4: "ऑनलाइन जन्म पत्रिका मिलान तुरंत परिणाम दे सकता है, जो विशेष रूप से तय विवाहों के संदर्भ में बहुत मददगार हो सकता है।",
+    benefits5: "फ्री कुंडली मिलान सभी अनुकूलता कारकों का विस्तृत विश्लेषण प्रस्तुत करता है, जिससे सूचित निर्णय लेने में मदद मिलती है।",
+    benefits6: "यहां तक कि सबसे अच्छे कुंडली मिलान ऐप्स भी पारंपरिक तरीकों की तुलना में अधिक किफायती हैं, जिससे यह व्यापक जनसंख्या के लिए सुलभ होता है।",
+    benefits7: "ऑनलाइन फ्री कुंडली मिलान मानव पूर्वाग्रहों को समाप्त करने और पारदर्शिता सुनिश्चित करने के लिए स्थापित एल्गोरिदम का उपयोग करता है, जिससे त्रुटियों की संभावना कम हो जाती है।",
+
+
+    Marriagetitle1: "क्या आप",
+    Marriagetitle2: "विवाह कर रहे हैं",
+    Marriagetitle3: "सही व्यक्ति से?",
+    Marriagesubtitle: "अपने सभी सवालों के जवाब यहां पाएं।",
+    MarriagebuttonText: "अभी ज्योतिषी से पूछें",
+
+
+    // kundli info
+
+
+
+    title_hi1: "आज का पंचांग",
+    description_hi1: "दैनिक ज्योतिषीय पंचांग",
+title_hi2: "जनम कुंडली",
+    description_hi2: "जन्म कुंडली विश्लेषण",
+title_hi3: "फ्री राशिफल",
+    description_hi3: "दैनिक भविष्यवाणियाँ",
+title_hi4: "कुंडली मैच",
+    description_hi4: "मेल जोल का विश्लेषण",
+title_hi5: "शुभ मुहूर्त",
+    description_hi5: "शुभ समय",
+    title_hi6: "व्रत और उपवास",
+    description_hi6: "व्रत कैलेंडर",
+
+   
+    title_en: "हमारी मुफ्त सेवाएँ",
+    description_en: "हमारी मुफ्त सेवाएं आपकी सफलता में मदद करने के लिए डिज़ाइन की गई हैं।",
+
+    doshas_intro:
+      "वैदिक ज्योतिष के अनुसार, कुछ ज्योतिषीय संयोजन दंपत्ति के वैवाहिक जीवन को नकारात्मक रूप से प्रभावित करते हैं। इन स्थितियों को दोष कहा जाता है, जो ज्योतिष का एक अभिन्न हिस्सा भी हैं। आइए उन सामान्य दोषों के बारे में जानें जो नाम और जन्म से संबंधित अन्य विवरणों के आधार पर कुंडली मिलन में प्रचलित हो सकते हैं।",
+    doshas_types: [
+      {
+        name: "मंगल दोष",
+        description:
+          "जिसे मंगल या कुज दोष के नाम से भी जाना जाता है, मंगल दोष तब होता है जब मंगल जन्म कुंडली में विशिष्ट स्थानों पर होता है। यह संघर्ष पैदा करता है और विवाह को नुकसान पहुंचाता है, इसलिए ऐसे व्यक्तियों को ऐसे साथी से विवाह करना चाहिए जिनके कुंडली में समान दोष हो। वैकल्पिक रूप से, वे ज्योतिषियों से परामर्श कर विशिष्ट अनुष्ठान कर सकते हैं।",
+      },
+      {
+        name: "नाड़ी दोष",
+        description:
+          "यह जोड़े की आनुवंशिक और शारीरिक अनुकूलता से संबंधित है। यह तब होता है जब जोड़े की नाड़ी समान होती है क्योंकि ऐसी समानताएं वैवाहिक संबंध में संघर्ष और संतान संबंधी समस्याएं लाती हैं।",
+      },
+      {
+        name: "भाकूट दोष",
+        description:
+          "यह जन्म कुंडली में चंद्रमा की स्थिति से जुड़ा होता है, भाकूट दोष साथी के बीच भावनात्मक अनुकूलता की कमी को दर्शाता है और दंपत्तियों में असंगति का परिणाम होता है।",
+      },
+      {
+        name: "राजू दोष",
+        description:
+          "जन्म के समय नक्षत्र में चंद्रमा की स्थिति के आधार पर, वैवाहिक जीवन की दीर्घायु प्रभावित हो सकती है, जिसे कुंडली मिलन में राजू दोष के रूप में संकेतित किया जाता है।",
+      },
+      {
+        name: "गण दोष",
+        description:
+          "यह दोष तीन गणों के वर्गीकरण से उत्पन्न होता है, अर्थात्, देव गण (दैवी), मनुष्य गण (मानव), और राक्षस गण (राक्षसी)। जब विभिन्न गणों के साथी विवाह करते हैं, तो उनके जीवनशैली और मूल्यों में संभावित संघर्ष हो सकते हैं।",
+      },
+    ],
+
+    matching_intro:
+      "वैदिक ज्योतिष के अनुसार, कुंडली मिलन के कई प्रचलित तरीकों में, जन्म तिथि द्वारा कुंडली मिलन और नाम द्वारा कुंडली मिलन सबसे अधिक अपनाए जाते हैं। आइए दोनों के तरीकों के बीच अंतर जानें।",
+    matching_types: [
+      {
+        title: "जन्म तिथि द्वारा कुंडली मिलन",
+        description:
+          "यह विवाह के लिए कुंडली मिलन का व्यापक रूप से प्रचलित और मान्यता प्राप्त तरीका है। इस विधि में दोनों संभावित जीवनसाथियों की जन्म तिथि, जन्म स्थान, और जन्म समय जैसे जन्म संबंधी जानकारी के आधार पर जन्म कुंडली की तुलना की जाती है, साथ ही व्यक्तियों के नाम भी लिए जाते हैं। इसके बाद, ज्योतिषी ग्रहों की स्थिति, घरों और जन्म कुंडली के पहलुओं का अध्ययन कर दोनों व्यक्तियों की अनुकूलता निर्धारित करते हैं। न केवल महत्वपूर्ण ग्रहों की स्थिति को ध्यान में रखा जाता है, बल्कि कुंडली मिलान में उपस्थित दोषों को भी चिह्नित किया जाता है। इस प्रकार, कुंडली मिलन सभी अनुकूलता के पहलुओं का एक व्यापक मूल्यांकन प्रस्तुत करता है।",
+      },
+      {
+        title: "नाम द्वारा कुंडली मिलन",
+        description:
+          "कम आमतौर पर उपयोग किया जाने वाला, या जब जन्म विवरण उपलब्ध नहीं होते हैं तो विकल्प के रूप में, यह तरीका अपनाया जाता है जिसमें व्यक्तियों के नाम के अक्षरों के आधार पर संख्यात्मक मानों का उपयोग किया जाता है। पहले दोनों व्यक्तियों के नामों को उनके अक्षरों के आधार पर संख्याओं में बदला जाता है और फिर गणितीय गणनाओं के माध्यम से अनुकूलता का आकलन किया जाता है। यह विधि इस तथ्य पर केंद्रित है कि नामों के संख्यात्मक मान किसी व्यक्ति के व्यक्तित्व और अनुकूलता को प्रभावित करते हैं। यह कुंडली मिलन का आधुनिक और अतिरिक्त दृष्टिकोण माना जाता है।",
+      },
+    ],
+
+    finding_title: "कुंडली मिलन द्वारा सही जीवनसाथी का चयन",
+    finding_intro:
+      "हिंदू संस्कृति में हमेशा से जन्म तिथि द्वारा कुंडली मिलन को प्राथमिकता दी जाती रही है ताकि संभावित जीवनसाथियों के बीच अनुकूलता की जांच की जा सके। आइए देखें कि कुंडली मिलन सफल और स्थायी विवाह के लिए आदर्श जीवनसाथी खोजने में कैसे मदद करता है -",
+    finding_points: [
+      "नाम और अन्य जन्म विवरण द्वारा कुंडली मिलन से साथी के स्वभाव, स्वास्थ्य, वित्त, बुद्धिमत्ता और परिवार का मूल्यांकन किया जा सकता है।",
+      "जन्म तिथि द्वारा कुंडली मिलन में आठ महत्वपूर्ण पहलुओं का मूल्यांकन किया जाता है, जिसमें व्यवहार, व्यक्तित्व और आध्यात्मिकता शामिल हैं।",
+      "अधिक गुण मिलान का मतलब है मजबूत अनुकूलता और इसके विपरीत।",
+      "नाम और अन्य जन्म विवरण द्वारा कुंडली मिलन सिर्फ अनुकूलता स्कोर नहीं बल्कि संभावित ताकत और कमजोरियों का विश्लेषण भी प्रदान करता है।",
+      "परिणामों के आधार पर, व्यक्ति ज्योतिषियों से व्यक्तिगत मार्गदर्शन ले सकते हैं और अपनी शंकाओं को स्पष्ट कर सकते हैं।",
+    ],
+
+    lowScore_title: "यदि जन्म कुंडली मिलन स्कोर कम हो तो क्या करें?",
+    lowScore_intro:
+      "जन्म कुंडली मिलन में कम अनुकूलता स्कोर का मतलब यह नहीं है कि विवाह सफल नहीं होगा। हालांकि, यदि आपका अनुकूलता स्कोर कम है तो नीचे दिए गए कदमों का पालन करना उचित होता है -",
+    lowScore_points: [
+      "विशेषज्ञ ज्योतिषी से मार्गदर्शन लेना और अधिक विस्तृत विश्लेषण कराना सबसे अच्छा है। साथ ही, अन्य ज्योतिषियों से दूसरी राय लेना भी लाभकारी होता है।",
+      "दोषों की जांच करें और उनके प्रभावों को कम करने के लिए उपाय करें।",
+      "ज्योतिष मिलान के अलावा, हमेशा व्यक्तिगत अनुकूलता, लक्ष्यों, मूल्यों और आपसी सम्मान को ध्यान में रखें।",
+      "अपने साथी के साथ कुंडली मिलन के परिणामों पर चर्चा करें और अपनी सोच तथा ज्योतिष को देने वाली महत्ता साझा करें।",
+      "ज्योतिष मार्गदर्शन की मदद से समझदारी और समझौता करके कई चुनौतियों को पार किया जा सकता है। जहाँ स्कोर कम हो वहाँ संवाद करें और मजबूत क्षेत्रों पर ध्यान केंद्रित करें, जिससे व्यक्तिगत विकास हो।",
+      "कम वैवाहिक स्कोर के बावजूद सभी विवाह असफल नहीं होते। इसलिए, समग्र अनुकूलता का आकलन आवश्यक है।",
+    ],
+
+
+    kundliMatchingTitle: "कुंडली मिलान जानकारी",
+    kundliMatchingIntro: "विवाह संगति के लिए कुंडलियों के मिलान की प्राचीन वैदिक परंपरा की खोज करें।",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    MonthlyHoroscope: "मासिक राशिफल",
+
     monthlyHoroscopeDetails: [
       "हर महीने जीवन के विभिन्न पहलुओं में नए अवसर और चुनौतियाँ लेकर आता  मासिक राशिफल इन परिवर्तनों को समझने में आपकी मदद करता है और प्रत्येक राशि के लिए विशेष भविष्यवाणियाँ प्रदान करता है। यह आपके वित्तीय विकास, प्रेम जीवन, करियर की प्रगति, स्वास्थ्य संबंधी चिंताओं और अधिक के बारे में जानकारी दे सकता है। मासिक रुझानों को समझकर, आप अपने कार्यों और निर्णयों की बेहतर योजना बना सकते हैं। मासिक राशिफल आने वाले अवसरों के लिए तैयार रहने और संभावित बाधाओं से बचने का एक बेहतरीन तरीका है।,एक अनुभवी ज्योतिषी का मार्गदर्शन आपके मासिक राशिफल को और भी सटीक और क्रियान्वयन योग्य बना सकता है। अपने महीने का अधिकतम लाभ उठाने के लिए जानें कि आपकी राशि के लिए आगे क्या है!",
     ],
-    
-    YearlyHoroscope :"वार्षिक राशिफल",
-    yearlyHoroscopeDetails: [ 
-    "व्यक्ति का जीवन विभिन्न चरणों में विभाजित होता है जहाँ वे दैनिक, साप्ताहिक, मासिक और वार्षिक आधार पर कुछ कार्य करते हैं। जब पूरे वर्ष की बात आती है, तो यह एक लंबा समय होता है जो आपके जीवन को काफी प्रभावित कर सकता है। वार्षिक राशिफल वर्ष भर में आने वाले सर्वोत्तम और सबसे बुरे समय की भविष्यवाणी कर सकता है, जिससे जीवन के महत्वपूर्ण पहलुओं की बेहतर योजना बनाई जा सके। वर्ष का समग्र थीम या वाइब जानना उतार-चढ़ाव से निपटना आसान बना देता है। वार्षिक राशिफल मुख्य रूप से वित्तीय स्थिति पर केंद्रित होता है, लेकिन यह प्यार, करियर, व्यवसाय, और सफलता के बारे में भी अंतर्दृष्टि प्रदान करता है। वार्षिक राशिफल दीर्घकालिक योजना के लिए बहुत लाभकारी साबित होते हैं। ये भविष्यवाणियाँ पत्थर की लकीर नहीं हैं और इन्हें उपायों और ज्योतिषीय मार्गदर्शन से सुधारा जा सकता है। सबसे अच्छे ज्योतिषियों से परामर्श करना आवश्यक है। अपनी राशि पर क्लिक करें और आशीर्वादों का उपयोग करते हुए वर्ष का अधिकतम लाभ उठाने और चुनौतियों के लिए तैयार हो जाएं!",
+
+    YearlyHoroscope: "वार्षिक राशिफल",
+    yearlyHoroscopeDetails: [
+      "व्यक्ति का जीवन विभिन्न चरणों में विभाजित होता है जहाँ वे दैनिक, साप्ताहिक, मासिक और वार्षिक आधार पर कुछ कार्य करते हैं। जब पूरे वर्ष की बात आती है, तो यह एक लंबा समय होता है जो आपके जीवन को काफी प्रभावित कर सकता है। वार्षिक राशिफल वर्ष भर में आने वाले सर्वोत्तम और सबसे बुरे समय की भविष्यवाणी कर सकता है, जिससे जीवन के महत्वपूर्ण पहलुओं की बेहतर योजना बनाई जा सके। वर्ष का समग्र थीम या वाइब जानना उतार-चढ़ाव से निपटना आसान बना देता है। वार्षिक राशिफल मुख्य रूप से वित्तीय स्थिति पर केंद्रित होता है, लेकिन यह प्यार, करियर, व्यवसाय, और सफलता के बारे में भी अंतर्दृष्टि प्रदान करता है। वार्षिक राशिफल दीर्घकालिक योजना के लिए बहुत लाभकारी साबित होते हैं। ये भविष्यवाणियाँ पत्थर की लकीर नहीं हैं और इन्हें उपायों और ज्योतिषीय मार्गदर्शन से सुधारा जा सकता है। सबसे अच्छे ज्योतिषियों से परामर्श करना आवश्यक है। अपनी राशि पर क्लिक करें और आशीर्वादों का उपयोग करते हुए वर्ष का अधिकतम लाभ उठाने और चुनौतियों के लिए तैयार हो जाएं!",
     ],
-    
-    WelcomeBack :"वापस स्वागत है",
-    free:"100% मुफ़्त",
-    ConsultationExperts:"विशेषज्ञों से परामर्श प्राप्त करें",
+
+    WelcomeBack: "वापस स्वागत है",
+    free: "100% मुफ़्त",
+    ConsultationExperts: "विशेषज्ञों से परामर्श प्राप्त करें",
     Entermoblie: "जारी रखने के लिए अपना मोबाइल नंबर दर्ज करें",
     MobileNumber: "मोबाइल नंबर",
     SendOTP: "ओटीपी भेजें",
     signinginyouagree: "साइन इन करके, आप हमारी सहमति देते हैं",
     LoginviaEmail: "ईमेल के माध्यम से लॉगिन करें",
-    LoginviaOTP:"ओटीपी के माध्यम से लॉगिन करें",
+    LoginviaOTP: "ओटीपी के माध्यम से लॉगिन करें",
     OTP: "ओटीपी",
     SignIn: "साइन इन करें",
     Signintoyouraccount: "अपने खाते में साइन इन क",
     GetOTP: "ओटीपी प्राप्त करें",
     title0:
-      "एस्ट्रोलॉजी, राशिफल, टैरो और और भी बहुत कुछ - ब्लॉग बाय Anytime Astro",
+      "ज्योतिष, राशिफल, टैरो और अधिक - ब्लॉग बाय ओमएस्ट्रो",
     description0:
       "एस्ट्रोलॉजी, टैरो, अंकज्योतिष और अन्य दिव्य विज्ञानों के बारे में सभी जानकारी प्राप्त करें, जिनमें प्रेम, पैसा, करियर, शादी, जीवनशैली और अन्य कई विषयों पर सबसे गहरे और insightful लेख और ब्लॉग्स शामिल हैं।",
     have_another_concern:
       "क्या आपकी कोई और चिंता है? टॉप ज्योतिषियों से तुरंत परामर्श लें और समाधान प्राप्त करें। ",
-    recommended_astrologers: "सुझाए गए ज्योतिषी",
+    recommended_astrologers: "प्रसिद्ध  ज्योतिषी",
     freeservices: "हमारी मुफ्त सेवाएं",
     freeserv: "फ्री सर्विस",
     start: "क्या आप भविष्य में ",
@@ -466,7 +1216,7 @@ const translations = {
     Capricorn: "पंथिक ",
     Aquarius: "षाट ",
     Pisces: "स्तोत्र ",
-    Reviews:"समीक्षाएं ",
+    Reviews: "समीक्षाएं ",
     DailyHoroscope: "दैनिक राशिफल",
     FreeDailyHoroscope: "निःशुल्क दैनिक राशिफल",
     Horoscope: "राशिफल",
@@ -484,7 +1234,7 @@ const translations = {
       "आत्मविश्वास के साथ खरीदारी करें, यह जानते हुए कि आपकी व्यक्तिगत और भुगतान जानकारी उन्नत सुरक्षा उपायों द्वारा संरक्षित है।",
 
     content5:
-      "एनीटाइम एस्ट्रो में, प्रामाणिकता हमारे व्यवसाय का मुख्य आधार है। हम आपकी आध्यात्मिक यात्रा में रत्नों के महत्व को समझते हैं। इसलिए, हम उन उत्पादों का चयन करते हैं जो आपकी आध्यात्मिक आवश्यकताओं को पूरा करते हैं। जब आप हमसे खरीदारी करते हैं, तो निश्चिंत रहें कि आपको उच्च गुणवत्ता वाले, प्रामाणिक रत्न मिलेंगे, जो प्रत्येक को उनके उद्देश्य के लिए सावधानीपूर्वक चुना और ऊर्जा प्रदान की गई है।",
+      "ओम् एस्ट्रो  में, प्रामाणिकता हमारे व्यवसाय का मुख्य आधार है। हम आपकी आध्यात्मिक यात्रा में रत्नों के महत्व को समझते हैं। इसलिए, हम उन उत्पादों का चयन करते हैं जो आपकी आध्यात्मिक आवश्यकताओं को पूरा करते हैं। जब आप हमसे खरीदारी करते हैं, तो निश्चिंत रहें कि आपको उच्च गुणवत्ता वाले, प्रामाणिक रत्न मिलेंगे, जो प्रत्येक को उनके उद्देश्य के लिए सावधानीपूर्वक चुना और ऊर्जा प्रदान की गई है।",
     content6:
       "हम प्रीमियम रत्नों, क्रिस्टल्स और आध्यात्मिक उपकरणों का एक विस्तृत संग्रह प्रदान करते हैं जो विभिन्न आवश्यकताओं और प्राथमिकताओं को पूरा करते हैं।",
     content7:
@@ -497,7 +1247,7 @@ const translations = {
     TransparentPricing: "पारदर्शी मूल्य निर्धारण",
     RoundTheClockSupport: "24/7 समर्थन",
     SecureTransactions: "विश्वसनीय और सुरक्षित लेनदेन",
-    subCELEBRITIES:"परिवर्तनकारी अंतर्दृष्टि जिन्होंने सितारों को उनकी सच्ची क्षमता तक पहुँचने में मार्गदर्शन किया है।",
+    subCELEBRITIES: "परिवर्तनकारी अंतर्दृष्टि जिन्होंने सितारों को उनकी सच्ची क्षमता तक पहुँचने में मार्गदर्शन किया है।",
     whyrespect: "एनीटाइम एस्ट्रो से रत्न क्यों खरीदें?",
     werespect:
       " हम आपके बहुमूल्य विश्वास का सम्मान और सराहना करते हैं। एनीटाइम एस्ट्रो की टीम आपको सर्वोत्तम गुणवत्ता, असली उत्पाद प्रदान करने के लिए प्रतिबद्ध है जो आपकी आध्यात्मिक आवश्यकताओं को पूरा करें और आपके जीवन की सभी समस्याओं का समाधान करें।",
@@ -602,23 +1352,23 @@ const translations = {
     blog: "ज्योतिष ब्लॉग",
     new: "नया",
     priyanka: "राहुल शर्मा",
-    rahulbio:"वैदिक ज्योतिष में विशेषज्ञ, 15 वर्षों का अनुभव",
+    rahulbio: "वैदिक ज्योतिष में विशेषज्ञ, 15 वर्षों का अनुभव",
     Vaibhavi: "अंजलि मेहता",
-    anjlilbio:"टैरो रीडिंग और न्यूमेरोलॉजी में विशेषज्ञता",
+    anjlilbio: "टैरो रीडिंग और न्यूमेरोलॉजी में विशेषज्ञता",
     acharya: "कुणाल कपूर",
-    archbio:"हस्तरेखा और कुंडली विशेषज्ञ",
+    archbio: "हस्तरेखा और कुंडली विशेषज्ञ",
     lakhanJ: "पूजा वर्मा",
-    lakhbio:"ज्योतिष और क्रिस्टल हीलिंग में विशेषज्ञता",
+    lakhbio: "ज्योतिष और क्रिस्टल हीलिंग में विशेषज्ञता",
     dada: "अमिताभ मिश्रा",
     amitbio: "राशि चिन्ह और जीवन पथ पढ़ने में विशेषज्ञ",
     ourAstrologers: "हमारे ज्योतिषी",
     contactAstrologers: "हमारे ज्योतिषियों से मार्गदर्शन के लिए संपर्क करें",
-    badge1: "दूरी समाप्त",
-    title1: "चालान आपके लिए तुरंत दिए",
-    subtitle1: "भारत में सबसे शहरी ज्योतिषी",
+    badge1: "सीमित समय ऑफर",
+    title1: "पहली चैट मुफ़्त पाएं",
+    subtitle1: "भारत के टॉप ज्योतिषियों से",
     description1: "अनुभव ज्योतिषी के लिए व्यक्तिगत जानकारी",
-    badge2: "व्यापारिक सहायता",
-    title2: "ज्योतिषी से आमंत्रित करें",
+    badge2: "विशेषज्ञ परामर्श",
+    title2: "ज्यादा रेफर करें - ज्यादा कमाएं।",
     subtitle2: "अनुभव ज्योतिषी के लिए व्यक्तिगत जानकारी",
     description2: "अनुभव ज्योतिषी के लिए व्यक्तिगत जानकारी",
     phone1: "अनुभव ज्योतिषी के लिए व्यक्तिगत जानकारी",
@@ -681,7 +1431,7 @@ const translations = {
     revi3:
       "मैंने टैरो अंकिता के साथ एक चैट सत्र किया और वास्तव में यह एक शानदार अनुभव था। बहुत ही तेज और सटीक। मेरा अनुभव अद्भुत था।",
     Customer: "ग्राहकों की कहानियां",
-    desc: "देखें कि हमारे उपयोगकर्ता हमसे क्यों प्यार करते हैं और कैसे Anytime Astro ने उन्हें खुशी का रास्ता खोजने में मदद की!",
+    desc: "देखें कि हमारे उपयोगकर्ता हमसे क्यों प्यार करते हैं और कैसे ohmAstro ने उन्हें खुशी का रास्ता खोजने में मदद की!",
     ASSEEN: "जैसा देखा गया",
     blogtile1: "वैदिक ज्योतिष में गुरु-शनि की युति: लाभ...",
     blogtile2: "द चाइल्ड लेनॉर्मंड कार्ड अर्थ, व्याख्या, और ...",
@@ -796,6 +1546,63 @@ const translations = {
     HOROSCOPE: "राशिफल",
     PANCHANG: "पंचांग",
     VRATANDUPVAASs: "व्रत और उपवास",
+
+    // FAQ sections
+    faqConsulting: "परामर्श FAQ",
+    faqStore: "स्टोर FAQ",
+
+    // FAQ - Consulting
+    faq_chat_start_question: "मैं एक ज्योतिषी से बात करना चाहता हूँ। मैं कैसे शुरू करूं?",
+    faq_chat_start_answer: "एक ज्योतिषी से बात करने के लिए, आपको बस अपने एनीटाइम एस्ट्रो अकाउंट में लॉगिन करना है या साइन अप करके एक अकाउंट बनाना है, अपने वॉलेट में पैसे जोड़ें और फिर आप जिस ज्योतिषी से बात करना चाहते हैं उसे चुनें और अपना सेशन शुरू करें।",
+
+    faq_minimum_balance_question: "क्या एक ज्योतिषी से परामर्श शुरू करने से पहले न्यूनतम बैलेंस की कोई आवश्यकता है?",
+    faq_minimum_balance_answer: "हां, परामर्श शुरू करने के लिए आपके वॉलेट में पर्याप्त बैलेंस होना आवश्यक है। न्यूनतम बैलेंस आवश्यकता ज्योतिषी की प्रति मिनट दर और न्यूनतम सेशन अवधि पर निर्भर करती है। सामान्य तौर पर, हम कम से कम 5 मिनट के परामर्श के लिए पर्याप्त बैलेंस रखने की सलाह देते हैं।",
+
+    faq_astrologers_verified_question: "क्या ज्योतिषी सत्यापित हैं?",
+    faq_astrologers_verified_answer: "हां, हमारे प्लेटफॉर्म पर सभी ज्योतिषी एक गहन सत्यापन प्रक्रिया से गुजरते हैं। हमारे प्लेटफॉर्म पर परामर्श प्रदान करने से पहले हम उनकी योग्यता, अनुभव और विशेषज्ञता को सत्यापित करते हैं। हम ग्राहक फीडबैक के आधार पर उनके प्रदर्शन की नियमित समीक्षा भी करते हैं।",
+
+    faq_phone_call_question: "अगर मुझे चैट के बीच में फोन कॉल आती है, तो क्या मेरा सेशन अपने आप समाप्त हो जाएगा?",
+    faq_phone_call_answer: "नहीं, अगर आपको फोन कॉल प्राप्त होती है तो आपका चैट सेशन अपने आप समाप्त नहीं होगा। हालांकि, अगर आप लंबे समय तक ऐप या वेबसाइट से बाहर रहते हैं, तो सेशन को रोका जा सकता है। आप प्लेटफॉर्म पर वापस आने पर सेशन फिर से शुरू कर सकते हैं।",
+
+    faq_astrologer_unavailable_question: "अगर मेरी पसंद का ज्योतिषी ऑनलाइन उपलब्ध नहीं है तो क्या होगा?",
+    faq_astrologer_unavailable_answer: "अगर आपका पसंदीदा ज्योतिषी ऑनलाइन उपलब्ध नहीं है, तो आपके पास कई विकल्प हैं। आप उनके साथ भविष्य में अपॉइंटमेंट शेड्यूल कर सकते हैं, \"मुझे सूचित करें\" का विकल्प चुन सकते हैं ताकि जब वे ऑनलाइन आएं तो आपको अलर्ट मिले, या समान विशेषज्ञता वाले किसी अन्य उपलब्ध ज्योतिषी को चुन सकते हैं।",
+
+    faq_payment_question: "मैं एक सेशन के लिए भुगतान कैसे करूं?",
+    faq_payment_answer: "सेशन के लिए भुगतान सीधे आपके वॉलेट से काट लिया जाता है। परामर्श शुरू करने से पहले आपको अपने वॉलेट में पैसे जोड़ने की आवश्यकता है। हम क्रेडिट/डेबिट कार्ड, नेट बैंकिंग, यूपीआई और लोकप्रिय डिजिटल वॉलेट सहित विभिन्न भुगतान विधियों को स्वीकार करते हैं।",
+
+    faq_check_balance_question: "मैं अपना वॉलेट बैलेंस कैसे चेक करूं?",
+    faq_check_balance_answer: "आप अपने अकाउंट में लॉगिन करके और \"माय वॉलेट\" या \"अकाउंट\" सेक्शन पर जाकर अपना वॉलेट बैलेंस चेक कर सकते हैं। आपका वर्तमान बैलेंस पेज पर प्रमुखता से प्रदर्शित किया जाएगा।",
+
+    faq_chat_history_question: "क्या मैं अपने चैट/कॉल का इतिहास देख सकता हूँ?",
+    faq_chat_history_answer: "हां, आप अपने अकाउंट के \"माई कंसल्टेशन्स\" या \"हिस्ट्री\" सेक्शन में अपने पूरे चैट और कॉल इतिहास तक पहुंच सकते हैं। इसमें तारीख, समय, अवधि, ज्योतिषी का नाम और प्रत्येक सेशन पर खर्च की गई राशि जैसे विवरण शामिल हैं।",
+
+    faq_privacy_question: "क्या मेरी गोपनीयता और अनामता बनाए रखी जाएगी?",
+    faq_privacy_answer: "हां, हम आपकी गोपनीयता को बहुत गंभीरता से लेते हैं। सभी परामर्श पूरी तरह से गोपनीय हैं। ज्योतिषी केवल वही जानकारी देख सकते हैं जिसे आप साझा करना चुनते हैं। आपका पूरा नाम, संपर्क जानकारी आदि जैसे व्यक्तिगत विवरण तब तक प्रकट नहीं किए जाते हैं जब तक आप उन्हें साझा करना नहीं चुनते।",
+
+    faq_issues_question: "अगर मुझे एक ज्योतिषी के साथ चैट या कॉल सेशन के दौरान समस्याएं होती हैं तो मुझे क्या करना चाहिए?",
+    faq_issues_answer: "अगर आपको सेशन के दौरान कोई तकनीकी समस्या आती है, तो आप हमारे \"हेल्प\" सेक्शन के माध्यम से तुरंत रिपोर्ट कर सकते हैं। हमारी ग्राहक सहायता टीम आपकी सहायता के लिए 24/7 उपलब्ध है। कनेक्शन समस्याओं के मामले में, हम उचित मुआवजा या सेशन विस्तार प्रदान कर सकते हैं।",
+
+    // FAQ - Store
+    faq_shipping_question: "शिपिंग में कितना समय लगता है?",
+    faq_shipping_answer: "शिपिंग का समय आपके स्थान पर निर्भर करता है। घरेलू ऑर्डर आमतौर पर 3-5 कार्य दिवसों के भीतर पहुंच जाते हैं, जबकि अंतरराष्ट्रीय ऑर्डर में 7-14 कार्य दिवस लग सकते हैं। आप अपने शिपिंग कन्फर्मेशन ईमेल में प्रदान किए गए ट्रैकिंग नंबर का उपयोग करके अपने ऑर्डर को ट्रैक कर सकते हैं।",
+
+    faq_returns_question: "आपकी रिटर्न पॉलिसी क्या है?",
+    faq_returns_answer: "हम अधिकांश वस्तुओं के लिए खरीद के 30 दिनों के भीतर उनकी मूल स्थिति में रिटर्न स्वीकार करते हैं। कस्टम-मेड आइटम, डिजिटल प्रोडक्ट्स और कुछ अनुष्ठान वस्तुओं को वापस नहीं किया जा सकता। रिटर्न शुरू करने के लिए कृपया हमारे ग्राहक सहायता से संपर्क करें।",
+
+    faq_payment_methods_question: "आप कौन से भुगतान तरीके स्वीकार करते हैं?",
+    faq_payment_methods_answer: "हम सभी प्रमुख क्रेडिट कार्ड (वीजा, मास्टरकार्ड, अमेरिकन एक्सप्रेस), पेपाल, गूगल पे, एप्पल पे और बैंक ट्रांसफर स्वीकार करते हैं। आपकी सुरक्षा के लिए सभी लेनदेन सुरक्षित और एन्क्रिप्टेड हैं।",
+
+    faq_international_shipping_question: "क्या आप अंतरराष्ट्रीय शिपिंग करते हैं?",
+    faq_international_shipping_answer: "हां, हम दुनिया भर के अधिकांश देशों में शिपिंग करते हैं। अंतरराष्ट्रीय शिपिंग लागत और डिलीवरी समय स्थान के अनुसार भिन्न होते हैं। कृपया ध्यान दें कि ग्राहक अपने देश द्वारा लगाए गए किसी भी आयात शुल्क या करों के लिए जिम्मेदार हैं।",
+
+    faq_product_authenticity_question: "क्या आपके प्रोडक्ट्स प्रामाणिक हैं?",
+    faq_product_authenticity_answer: "हां, हमारे सभी प्रोडक्ट्स 100% प्रामाणिक हैं और विश्वसनीय आपूर्तिकर्ताओं से प्राप्त किए जाते हैं। हमारे स्टोर में सूचीबद्ध करने से पहले हमारे रत्न, क्रिस्टल और अनुष्ठान वस्तुओं की गुणवत्ता और प्रामाणिकता की जांच की जाती है।",
+
+    faq_custom_orders_question: "क्या आप कस्टम ऑर्डर स्वीकार करते हैं?",
+    faq_custom_orders_answer: "हां, हम कुछ प्रोडक्ट्स जैसे व्यक्तिगत जन्म कुंडली, ताबीज और रत्न आभूषण के लिए कस्टम ऑर्डर स्वीकार करते हैं। कृपया कस्टम कोटेशन के लिए अपनी विशिष्ट आवश्यकताओं के साथ हमारे ग्राहक सहायता से संपर्क करें।",
+
+    faq_discount_codes_question: "मैं डिस्काउंट कोड का उपयोग कैसे करूं?",
+    faq_discount_codes_answer: "डिस्काउंट कोड का उपयोग करने के लिए, अपना भुगतान पूरा करने से पहले चेकआउट के दौरान इसे निर्दिष्ट फील्ड में दर्ज करें। डिस्काउंट कोड उन ऑर्डर पर पूर्वव्यापी रूप से लागू नहीं किए जा सकते जो पहले ही दिए जा चुके हैं।"
   },
 };
 

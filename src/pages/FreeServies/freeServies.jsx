@@ -3,56 +3,20 @@
 
 
 import { useState, useEffect } from "react";
-import { MessageCircle, Star } from "lucide-react";
+import { MessageCircle, Star, ArrowRight} from "lucide-react";
 import { useSelector } from "react-redux";
 import translations from "../../components/translations/translations";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { fetchastrologers } from "../../api/apiCalls";
 
-const servicesData = [
-  {
-    id: 1,
-    title: "Today's Panchang",
-    description: "Daily astrological almanac",
-    icon: "📜",
-  },
-  {
-    id: 2,
-    title: "Janam Kundali",
-    description: "Birth chart analysis",
-    icon: "🗺️",
-  },
-  {
-    id: 3,
-    title: "Free Horoscope",
-    description: "Daily predictions",
-    icon: "🔮",
-  },
-  {
-    id: 4,
-    title: "Kundali Match",
-    description: "Compatibility analysis",
-    icon: "💍",
-  },
-  {
-    id: 5,
-    title: "Subh Mahurat",
-    description: "Auspicious timings",
-    icon: "🪷",
-  },
-  {
-    id: 6,
-    title: "Vrat and Upwaas",
-    description: "Fasting calendar",
-    icon: "⚙️",
-  },
-];
+
 
 // eslint-disable-next-line react/prop-types
 const AstrologerCard = ({ astrologer }) => {
   const navigate = useNavigate();
-
+  const language = useSelector((state) => state.language.language);
+  const t = translations[language];
   // Safely access nested properties with default values
   // eslint-disable-next-line react/prop-types
   const specialties = Array.isArray(astrologer.specialties) 
@@ -121,7 +85,7 @@ const AstrologerCard = ({ astrologer }) => {
             className="flex items-center gap-2 bg-gradient-to-r from-amber-500 to-pink-500 text-black px-2 py-2 rounded-lg hover:opacity-90 transition-opacity"
           >
             <MessageCircle className="w-4 h-4" />
-            <span>Chat Now</span>
+            <span>{t.chatnow}</span>
           </button>
         </div>
       </div>
@@ -129,17 +93,29 @@ const AstrologerCard = ({ astrologer }) => {
   );
 };
 
-const ServiceCard = ({ service }) => (
-  <div>
-    <div className="p-6 rounded-xl border border-purple-200 bg-white backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group cursor-pointer">
-      <div className="text-4xl mb-4">{service.icon}</div>
-      <h3 className="text-lg font-semibold text-black mb-2">
-        {service.title}
-      </h3>
-      <p className="text-sm text-black">{service.description}</p>
+const ServiceCard = ({ service }) => {
+  const language = useSelector((state) => state.language.language);
+  const t = translations[language];
+  
+  return (
+    <div>
+      <div className="p-6 rounded-xl border border-purple-200 bg-white backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group cursor-pointer">
+        <div className="text-4xl mb-4">{service.icon}</div>
+        <h3 className="text-lg font-semibold text-black mb-2">
+          {service.title}
+        </h3>
+        <p className="text-sm text-black">{service.description}</p>
+
+        <Link to={service.link}>
+          <button className="flex items-center gap-2 text-black px-2 py-2 rounded-lg hover:opacity-90 transition-opacity">
+            <ArrowRight className="w-4 h-4" />
+            <span>{t.ViewMore}</span>
+          </button>
+        </Link>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const AstrologyServices = () => {
   const {
@@ -197,6 +173,51 @@ const AstrologyServices = () => {
     return <p>Error fetching top-rated astrologers: {error.message}</p>;
   }
 
+  const servicesData = [
+    {
+      id: 1,
+      title: t.title_hi1,
+      description: t.description_hi1,
+      icon: "📜",
+      link:"/panchang"
+    },
+    {
+      id: 2,
+      title: t.title_hi2,
+      description: t.description_hi2,
+      icon: "🗺️",
+      link:"/kundali-janam"
+    },
+    {
+      id: 3,
+      title:t.title_hi3,
+      description: t.description_hi3,
+      icon: "🔮",
+      link:"/horoscope"
+    },
+    {
+      id: 4,
+      title: t.title_hi4,
+      description: t.description_hi4,
+      icon: "💍",
+      link:"/KundaliMatching"
+    },
+    {
+      id: 5,
+      title: t.title_hi5,
+      description: t.description_hi5,
+      icon: "🪷",
+      link:"/subh-mahurat"
+    },
+    {
+      id: 6,
+      title: t.title_hi6,
+      description: t.description_hi6,
+      icon: "⚙️",
+      link:"/vrat-upwaas"
+    },
+  ];
+
   return (
     <div className="relative min-h-screen text-black">
       <main className="max-w-6xl mx-auto px-6 py-12">
@@ -219,10 +240,10 @@ const AstrologyServices = () => {
         <section>
           <div className="text-center mt-12 mb-8">
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text">
-              OUR FREE SERVICES
+             {t.title_en}
             </h2>
             <p className="text-black">
-              Our free services are designed to help you achieve your goals.
+             {t.description_en}
             </p>
           </div>
 

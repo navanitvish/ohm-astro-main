@@ -20,8 +20,7 @@ const EnhancedAstrologyLanding = () => {
       description: t.description1,
       videoSrc: "https://cdn.pixabay.com/video/2024/02/04/199293-909903179_tiny.mp4",
       features: [
-        { icon: <Phone className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />, text: t.phone1 },
-        { icon: <MessageCircle className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />, text: t.message1 },
+       
       ],
     },
     {
@@ -32,8 +31,7 @@ const EnhancedAstrologyLanding = () => {
       description: t.description2,
       videoSrc: "https://cdn.pixabay.com/video/2024/04/13/207868_tiny.mp4",
       features: [
-        { icon: <Phone className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />, text: t.phone2 },
-        { icon: <MessageCircle className="w-5 h-5 md:w-6 md:h-6 text-yellow-400" />, text: t.message2 },
+       
       ],
     },
   ];
@@ -134,7 +132,7 @@ const EnhancedAstrologyLanding = () => {
                 <p className="text-sm md:text-base text-white/70">{slides[activeSlide].description}</p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+              {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                 {slides[activeSlide].features.map((feature, idx) => (
                   <div
                     key={idx}
@@ -144,11 +142,16 @@ const EnhancedAstrologyLanding = () => {
                     <span className="text-sm md:text-base text-white">{feature.text}</span>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               <button className="w-full md:w-auto py-3 px-6 bg-gradient-to-r from-yellow-400 to-red-500 text-white rounded-full hover:from-yellow-500 hover:to-red-600 transition-all text-sm md:text-base">
                 {t.StartConsultation}
               </button>
+
+              <div className="text-sm md:text-base text-white/80">
+               App Available on : <span className="underline "><Link to="https://play.google.com/store/apps/details?id=com.ohmastroVendor"> Android</Link></span>
+              </div>
+    
             </div>
           </div>
         </div>

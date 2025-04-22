@@ -27,10 +27,10 @@ const VedicAstrologersSection = () => {
           {/* Left Content */}
           <div className="max-w-xl">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
-              Consult With Top Vedic Astrologers
+              {t.consultAstrologer}
             </h2>
             <p className="text-gray-700 mb-6">
-              Is today an auspicious day for you? Call or chat with the best Vedic Astrologers to know the Shubh Muhurat as per your Birth Chart!
+             {t.consltdesc}
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-6 py-3 rounded-full font-medium transition-colors">

@@ -16,48 +16,100 @@ const formatDateTime = (dateTimeStr) => {
       hour12: true
     });
   } catch (e) {
-     
     return dateTimeStr;
   }
+};
+
+// Helper function to convert date format from DD/MM/YYYY to ISO 8601
+const convertToISOFormat = (dateStr) => {
+  if (!dateStr) return "";
+  
+  // Split the date string
+  const parts = dateStr.split('/');
+  if (parts.length !== 3) return "";
+  
+  // Create ISO format YYYY-MM-DDTHH:MM:SS+05:30 (assuming Indian timezone)
+  // Encode the + to %2B for URL safety
+  return `${parts[2]}-${parts[1]}-${parts[0]}T00:00:00%2B05:30`;
 };
 
 const PanchangPage = () => {
   const language = useSelector((state) => state.language.language);
   const [selectedDate, setSelectedDate] = useState("24/12/2024");
   const [location, setLocation] = useState({
-    address: "New Delhi, NCT, India",
-    latitude: 10.214747,
-    longitude: 78.097626,
+    latitude: null,
+    longitude: null,
   });
+  const [isLocationLoading, setIsLocationLoading] = useState(true);
   const t = translations[language];
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const [panchangData, setPanchangData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Get user's geolocation on component mount
+  useEffect(() => {
+    const getUserLocation = () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const { latitude, longitude } = position.coords;
+            setLocation({
+              latitude,
+              longitude
+            });
+            setIsLocationLoading(false);
+          },
+          (error) => {
+            console.error("Error getting user location:", error);
+            // Fall back to default coordinates if permission denied or error
+            setLocation({
+              latitude: 28.6139,
+              longitude: 77.2090, // Default coordinates for New Delhi
+            });
+            setIsLocationLoading(false);
+          }
+        );
+      } else {
+        console.error("Geolocation is not supported by this browser");
+        // Fall back to default coordinates
+        setLocation({
+          latitude: 28.6139,
+          longitude: 77.2090, // Default coordinates for New Delhi
+        });
+        setIsLocationLoading(false);
+      }
+    };
+
+    getUserLocation();
+  }, []);
+
   useEffect(() => {
     const fetchPanchangData = async () => {
+      // Don't fetch if location coordinates are not available yet
+      if (!location.latitude || !location.longitude) {
+        return;
+      }
+      
       try {
         setIsLoading(true);
         setError(null);
-          // Request configuration
-          const requestOptions = {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-              // Add any additional headers if needed
-              // 'Authorization': 'Bearer your-token-here'
-            },
-            body: JSON.stringify({
-              latitude: location.latitude,
-              longitude: location.longitude,
-              ayanamsa: 1,
-              language: 'en'
-            })
-          };
+        
+        // Convert date to ISO format for API request
+        const isoDateTime = convertToISOFormat(selectedDate);
+        
+        // Request configuration with proper body parameters
+        const requestOptions = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+         
+        };
         
         const response = await fetch(
-          `https://astrology-3bjo.onrender.com/api/free-services/panchang?latitude=${location.latitude}&longitude=${location.longitude}&ayanamsa=1&language=en`,    requestOptions
+          'http://localhost:4500/api/free-services/panchang?latitude=28.6139&longitude=77.2090&ayanamsa=1&language=en',
+          requestOptions
         );
         
         if (!response.ok) {
@@ -74,8 +126,20 @@ const PanchangPage = () => {
     };
 
     fetchPanchangData();
-  }, [location.latitude, location.longitude]);
+  }, [location.latitude, location.longitude, selectedDate, language]);
 
+  // Handle location selection from the autocomplete component
+  const handleLocationSelect = (newLocation) => {
+    setLocation(newLocation);
+  };
+  
+  // Handle date change
+  const handleDateChange = (newDate) => {
+    setSelectedDate(newDate);
+    setIsCalendarOpen(false);
+  };
+
+  if (isLocationLoading) return <AstroLoader title="Getting your location..." />;
   if (isLoading) return <AstroLoader title="Loading Panchang data..." />;
   if (error) return <div className="p-4">Error loading Panchang data: {error}</div>;
   if (!panchangData) return <div className="p-4">No panchang data available</div>;
@@ -116,10 +180,29 @@ const PanchangPage = () => {
               onClick={() => setIsCalendarOpen(true)}
             />
             <Calendar className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
+            
+            {/* Calendar Dropdown */}
+            {isCalendarOpen && (
+              <div className="absolute top-12 left-0 bg-white shadow-lg p-4 rounded-md z-10">
+                <div className="flex justify-between mb-2">
+                  <span>Select Date</span>
+                  <X onClick={() => setIsCalendarOpen(false)} className="cursor-pointer" />
+                </div>
+                <input 
+                  type="date" 
+                  onChange={(e) => {
+                    const date = new Date(e.target.value);
+                    const formattedDate = `${String(date.getDate()).padStart(2, '0')}/${String(date.getMonth() + 1).padStart(2, '0')}/${date.getFullYear()}`;
+                    handleDateChange(formattedDate);
+                  }}
+                  className="w-full p-2 border rounded-md"
+                />
+              </div>
+            )}
           </div>
           <LocationAutocomplete
-            defaultValue={location.address}
-            onLocationSelect={setLocation}
+            defaultValue={`${location.latitude}, ${location.longitude}`}
+            onLocationSelect={handleLocationSelect}
           />
         </div>
 
@@ -221,5 +304,6 @@ const PanchangPage = () => {
     </div>
   );
 };
+
 
 export default PanchangPage;

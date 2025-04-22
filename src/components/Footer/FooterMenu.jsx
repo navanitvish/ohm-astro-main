@@ -94,10 +94,9 @@ const Footer = () => {
             { text: t.ContactUs, url: "/contact-us" },
             { text: t.Blog, url: "/AstrologyBlog" },
             { text: t.FAQs, url: "/faqs" },
-            { text: t.Support, url: "/support" },
+            { text: t.Support, url: "/contact-us" },
             { text: t.AstrologerRegistration, url: "/astrologer-registration" },
-            { text: t.AstrologerLogin, url: "/astrologer-login" },
-            { text: t.OnlinePuja, url: "/online-puja" },
+            { text: t.OnlinePuja, url: "/ComingSoonPage" },
             { text: t.StoreGems, url: "/GemstoneShowcase" },
           ],
         },
@@ -106,11 +105,11 @@ const Footer = () => {
           links: [
             { text: t.PrivacyPolicy, url: "/privacy-policy" },
             { text: t.TermsOfUse, url: "/terms-of-use" },
-            { text: t.RefundAndCancellation, url: "/refund-and-cancellation" },
+            // { text: t.RefundAndCancellation, url: "/refund-and-cancellation" },
             { text: t.Disclaimer, url: "/disclaimer" },
             { text: t.CookiePolicy, url: "/cookie-policy" },
-            { text: t.StoreRefundPolicy, url: "/store-refund-policy" },
-            { text: t.ShippingAndDeliveryPolicy, url: "/shipping-delivery-policy" },
+            // { text: t.StoreRefundPolicy, url: "/store-refund-policy" },
+            // { text: t.ShippingAndDeliveryPolicy, url: "/shipping-delivery-policy" },
           ],
         },
       ],
@@ -146,7 +145,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2 xs:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
           {/* Column 1: Get Advice On */}
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <h3 className="font-semibold text-lg md:text-xl">
               {footerData.getAdviceOn.title}
             </h3>
@@ -162,7 +161,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Column 2: Muhurat Section */}
           <div className="space-y-6">

@@ -2,12 +2,7 @@ import KundaliMatchingForm from "./KundaliMatchingForm";
 import ConsultWithTopVedicAstrologers from "../ConsultWithTopVedicAstrologers";
 import { useSelector } from "react-redux";
 import translations from "../../components/translations/translations";
-import {
-  kootaData,
-  KundliMilan,
-  steps,
-  benefits,
-} from "../../components/content/astordata";
+
 import MarriageBanner from "./MarriageBanner";
 import KundaliInfo from "./KundaliInfo";
 import FAQ from "./FAQ";
@@ -35,6 +30,112 @@ const Breadcrumb = () => {
 const KundaliMatching = () => {
   const language = useSelector((state) => state.language.language);
   const t = translations[language];
+  const kootaData = [
+    {
+      name: t.Kundalname1,
+      score: t.score1,
+      interpretation:
+        t.interpretation1,
+    },
+    {
+      name: t.Kundalname2,
+      score: t.score2,
+      interpretation: t.interpretation2,
+    },
+    {
+      name: t.Kundalname3,
+      score: t.score3,
+      interpretation: t.interpretation3,
+    },
+    {
+      name: t.Kundalname4,
+      score: t.score4,
+      interpretation: t.interpretation4,
+    },
+    {
+      name: t.Kundalname5,
+      score: t.score5,
+      interpretation: t.interpretation5,
+    },
+    {
+      name: t.Kundalname6,
+      score: t.score6,
+      interpretation: t.interpretation6,
+    },
+    {
+      name: t.Kundalname7,
+      score: t.score7,
+      interpretation: t.interpretation7,
+    },
+    {
+      name: t.Kundalname8,
+      score: t.score8,
+      interpretation: t.interpretation7,
+    },
+  ];
+
+  const KundliMilan = [
+    {
+      obtain: t.Milanobtain1,
+      Result: t.Milanresult1,
+    },
+    {
+      obtain: t.Milanobtain2,
+      Result: t.Milanresult2,
+    },
+    {
+      obtain: t.Milanobtain3,
+      Result: t.Milanresult3,
+    },
+    {
+      obtain: t.Milanobtain4,
+      Result: t.Milanresult4,
+    },
+  ];
+
+  const steps = [
+    {
+      step: 1,
+      description:
+        t.step1,
+    },
+    {
+      step: 2,
+      description:
+        t.step2,
+    },
+    {
+      step: 3,
+      description:
+        t.step3,
+    },
+    {
+      step: 4,
+      description:
+        t.step4,
+    },
+    {
+      step: 5,
+      description:
+        t.step5,
+    },
+    {
+      step: 6,
+      description:
+        t.step6,
+    },
+  ];
+
+
+  const benefits = [
+    t.benefits1,
+    t.benefits2,
+    t.benefits3,
+    t.benefits4,
+    t.benefits5,
+    t.benefits6,
+    t.benefits7,
+  ];
   return (
     <div>
       <Breadcrumb />
@@ -95,59 +196,37 @@ const KundaliMatching = () => {
         <div className="max-w-6xl mx-auto">
           {/* Main Title */}
           <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text">
-            KUNDALI MATCHING | KUNDALI MATCH FOR MARRIAGE | HOROSCOPE MATCHING
+            {t.kundliTitle}
           </h2>
 
           {/* Introduction Cards */}
           <div className="space-y-6 mb-12">
             <div className="  p-2">
               <p className="text-lg text-center">
-                Have you finalized the person you wish to get married to and
-                want to do the Kundali matching?
+                {t.kundliIntro1}
               </p>
             </div>
 
             <div className="  p-2">
               <p className="text-lg text-center">
-                Do you want to check if the person with whom you are vibing well
-                is compatible enough, as per astrology, to get married?
+                {t.kundliIntro2}
               </p>
             </div>
             <p className="text-lg text-center">
-              Before proceeding to marriage, which is a turning point for any
-              individual, Kundali Milan is performed to ensure a good
-              compatibility in the future between the couple. A compatibility
-              score of 18 and above is usually considered auspicious for a
-              successful marriage. However, gun milan should not be the only
-              criteria to judge the forecast of marriage as planetary positions
-              and their effect on compatibility are also significant factors. It
-              is suggested the prospective couple gets the Kundali matching by
-              name and date of birth details assessed further by expert
-              astrologers to study if the aspects essential for great
-              compatibility are matched well. So, let us find a general outline
-              of the Kundli Milan for marriage and check the compatibility
-              between couples.
+              {t.kundliIntro3}
             </p>
           </div>
 
           <div>
             <h2 className="text-center text-3xl font-bold mb-8  bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text">
-              Enter Details to Get Free Online Kundali Matching Report For
-              Marriage
+              {t.kundliFormHeading}
             </h2>
             <p className="text-lg text-center">
-              Anytime Astro is a premium online horoscope-matching site that can
-              help you check Kundali Milan by name and date of birth. Here, the
-              team of expert astrologers analyze the compatibility of both the
-              partners and present accurate results based upon the Ashtakoots or
-              eight categories considered to check the var vadhu gun milan.
+              {t.kundliFormPara1}
             </p>
 
             <p className="text-lg text-center">
-              So, what keeps you waiting, check your marriage compatibility by
-              entering below the details of both partners, such as name, birth
-              date, birth time, and birthplace for horoscope matching by date of
-              birth.
+              {t.kundliFormPara2}
             </p>
           </div>
 
@@ -167,11 +246,7 @@ const KundaliMatching = () => {
               {t.KundaliMatchingAnalysis}
             </h2>
             <p className="text-lg text-center">
-              Got the Patrika Matching analysis, but not sure about what it
-              means. Rest assured, connect with expert astrologers instantly
-              over call or chat to ensure minute details about your
-              compatibility and also receive recommendations to fix any issues
-              that might hinder in marital life. Connect with astrologers now!
+              {t.kundliAnalysisPara}
             </p>
           </div>
         </div>
@@ -180,9 +255,7 @@ const KundaliMatching = () => {
       <div>
         <div className="max-w-6xl mx-auto">
           <p className="text-lg text-center">
-            Before you chat with the astrologers, you can also refer to the
-            below details to learn more about the analysis given by the
-            astrologers.
+            {t.kundliBeforeChatPara}
           </p>
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text mt-6 uppercase">
@@ -191,10 +264,7 @@ const KundaliMatching = () => {
             <div className="w-24 h-1 bg-red-500 mx-auto"></div>
           </div>
           <p className="text-lg text-center">
-            The online Kundali Matchmaker for Marriage calculates the
-            Ashtakootas, to check the compatibility between the couple. Let us
-            know the meaning of the Ashtakoota in the Lagna patrika matching to
-            get a clear idea about what these scores denote -
+            {t.kundliAshtakootaPara}
           </p>
         </div>
 
@@ -204,13 +274,13 @@ const KundaliMatching = () => {
               <thead>
                 <tr className="bg-pink-50">
                   <th className="px-4 py-3 text-left text-pink-600 font-semibold border border-slate-600">
-                    Koota
+                    {t.kootaTitle}
                   </th>
                   <th className="px-4 py-3 text-center text-pink-600 font-semibold border border-slate-600">
-                    Maximum Score
+                    {t.maxScoreTitle}
                   </th>
                   <th className="px-4 py-3 text-left text-pink-600 font-semibold border border-slate-600">
-                    Interpretation
+                    {t.interpretationTitle}
                   </th>
                 </tr>
               </thead>
@@ -218,9 +288,8 @@ const KundaliMatching = () => {
                 {kootaData.map((item, index) => (
                   <tr
                     key={item.name}
-                    className={`border-b border border-slate-600 ${
-                      index % 2 === 0 ? "bg-pink-50/20" : "bg-white"
-                    }`}
+                    className={`border-b border border-slate-600 ${index % 2 === 0 ? "bg-pink-50/20" : "bg-white"
+                      }`}
                   >
                     <td className="px-4 py-3 text-gray-700 font-medium border border-slate-600 ">
                       {item.name}
@@ -247,29 +316,21 @@ const KundaliMatching = () => {
           <div className="w-32 h-1 bg-red-500 mx-auto"></div>
         </div>
         <p className="text-md text-left p-2">
-          Gun Milan by date of birth is a significant factor in predicting
-          marriage compatibility by evaluating the shared qualities and
-          characteristics of both partners. It considers the factors such as
-          intellect, temperament, and spirituality based on the ancient texts. A
-          high Gun Milan online suggests harmony and a strong foundation in
-          marriage. However, it should not be considered the sole indicator of a
-          successful marriage but definitely helps determine valuable insights
-          to make an informed decision.
+          {t.gunMilanInfo}
         </p>
         <div className="p-6 max-w-6xl mx-auto">
           <div className="overflow-x-auto">
             <table className="w-full ">
               <caption className="caption-top text-left p-2">
-                Now, let us know about the scores that make a couple compatible
-                for marriage in the table below -
+                {t.scoreIntroText}
               </caption>
               <thead>
                 <tr className="bg-pink-50">
                   <th className="px-4 py-3 text-left text-pink-600 font-semibold border border-slate-600">
-                    Score Obtained by Kundli Milan
+                    {t.scoreHeading}
                   </th>
                   <th className="px-4 py-3 text-left text-pink-600 font-semibold border border-slate-600">
-                    Result
+                    {t.resultLabel}
                   </th>
                 </tr>
               </thead>
@@ -277,9 +338,8 @@ const KundaliMatching = () => {
                 {KundliMilan.map((item, index) => (
                   <tr
                     key={item.name}
-                    className={`border-b border border-slate-600 ${
-                      index % 2 === 0 ? "bg-pink-50/20" : "bg-white"
-                    }`}
+                    className={`border-b border border-slate-600 ${index % 2 === 0 ? "bg-pink-50/20" : "bg-white"
+                      }`}
                   >
                     <td className="px-4 py-3 text-gray-700 font-medium border border-slate-600 ">
                       {item.obtain}
@@ -300,7 +360,7 @@ const KundaliMatching = () => {
             {t.OnlineKundaliMatchingProcess}
           </h1>
           <p className="text-gray-700 mb-6">
-            The process for Kundli Milan for marriage works as follows -
+            {t.processIntro}
           </p>
           <div className="space-y-6">
             {steps.map(({ step, description }) => (
@@ -317,11 +377,10 @@ const KundaliMatching = () => {
         {/* Benefits Section */}
         <div>
           <h2 className="text-3xl font-bold text-center  bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text mb-8">
-            BENEFITS OF ONLINE KUNDALI MATCHING OR ONLINE HOROSCOPE MATCHING
+            {t.benefitsTitle}
           </h2>
           <p className="text-gray-700 mb-4">
-            The online free kundali matching site provides the following
-            benefits -
+            {t.processIntro}
           </p>
           <ul className="list-disc pl-6 space-y-2">
             {benefits.map((benefit, index) => (

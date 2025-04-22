@@ -1,4 +1,10 @@
+import { useSelector } from "react-redux";
+import translations from "../../components/translations/translations";
+
 const MarriageBanner = () => {
+  const language = useSelector((state) => state.language.language);
+  const t = translations[language];
+
   return (
     <div className="relative w-full h-[350px] bg-pink-50 overflow-hidden">
       {/* Decorative circles */}
@@ -11,23 +17,23 @@ const MarriageBanner = () => {
         {/* Text content */}
         <div className="w-1/2 text-center ">
           <h1 className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text mb-6">
-            ARE YOU <span className="text-red-500">GETTING MARRIED</span> TO THE
+            {t.Marriagetitle1}<span className="text-red-500"> {" "}{t.Marriagetitle2}</span> 
             <br />
-            RIGHT PERSON?
+         {t.Marriagetitle3}
           </h1>
 
           {/* Red underline decoration */}
           <div className="w-32 h-1 bg-red-500 mx-auto mb-6"></div>
 
           <p className="text-xl text-gray-700 mb-8">
-            Get answers to all your questions right here.
+           {t.Marriagesubtitle}
           </p>
 
           <button
             className="bg-yellow-400 text-gray-800 px-8 py-3 rounded-full font-semibold 
                            hover:bg-yellow-500 transition-colors duration-300"
           >
-            Ask An Astrologer Now
+           {t.MarriagebuttonText}
           </button>
         </div>
 

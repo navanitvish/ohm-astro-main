@@ -19,9 +19,9 @@ const Home = () => {
       <LiveSessions/>
       <AstrologerCarousel/>
       <PujaSection/>
-      <OverlappingVideos/>
-      <CustomerStories/>
-      <AsSeenOn/>
+      {/* <OverlappingVideos/>
+      <CustomerStories/> */}
+      {/* <AsSeenOn/> */}
       <BlogSection/>
       <AstrologySection/>
       <WhyAnyTimeAstro/>

@@ -108,15 +108,15 @@ const LiveSessions = () => {
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 1,
-          dots: true,
+          slidesToShow: 3,
+          dots: false,
         },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          dots: true,
+          dots: false,
           arrows: true,
         },
       },
@@ -124,7 +124,7 @@ const LiveSessions = () => {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          dots: true,
+          dots: false,
           arrows: false,
           centerMode: true,
           centerPadding: "24px",
