@@ -1,53 +1,56 @@
 import React from "react";
-
+import { useSelector } from "react-redux";
+import translations from "../../components/translations/translations";
 const About = () => {
+    const language = useSelector((state) => state.language.language);
+    const t = translations[language];
   const stats = [
     {
       icon: "👥",
-      title: "Astrologers selected through a 7-Step Interview Process",
+      title: t.titleAstro5,
     },
     {
       icon: "👨‍🦲",
-      title: "1000+ Certified Astrologers",
+      title: t.titleAstro6,
     },
     {
       icon: "⭐",
-      title: "#1 Astrology App",
+      title: t.titleAstro1,
     },
     {
       icon: "😊",
-      title: "1Cr+ Happy Customers",
+      title: t.titleAstro2,
     },
     {
       icon: "🔒",
-      title: "100% Privacy",
+      title: t.titleAstro3,
     },
     {
       icon: "🕐",
-      title: "24*7 Availability",
+      title: t.titleAstro4,
     },
   ];
 
   const features = [
     {
-      title: "EXPERIENCED ASTROLOGERS",
+      title: t.featurestitle,
       description:
-        "Get advice from the most accomplished and renowned Astrologers, Tarot Readers & Fortune-Tellers.",
+        t.featuresdescription,
     },
     {
-      title: "QUALITY SERVICES",
+      title: t.featurestitle1,
       description:
-        "Unmatched services to ensure a hassle-free connection and the best user experience.",
+        t.featuresdescription1,
     },
     {
-      title: "MULTIPLE WAYS TO CONNECT",
+      title: t.featurestitle2,
       description:
-        "Connect to an Astrologer via chat or call as per your choice and convenience.",
+        t.featuresdescription2,
     },
     {
-      title: "PRIVATE AND SECURE",
+      title: t.featurestitle3,
       description:
-        "Your privacy, and anonymity are our top priority which will not be compromised with.",
+        t.featuresdescription3,
     },
   ];
 

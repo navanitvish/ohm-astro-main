@@ -67,7 +67,7 @@ const translations = {
     descri1:
       "Connect with top-rated Astrologers through live sessions for instant solutions.",
     ViewMore: "View More",
-    chatnow:"Chat Now",
+    chatnow: "Chat Now",
     FalakNaaz: "Falak Naaz",
     Rashmi: "Rashmi Desai",
     Priya: "Priya Singh",
@@ -286,8 +286,8 @@ const translations = {
     GenuineProducts: "100% Genuine Products Available Online",
     GemstonesShop:
       "Get The Best-Suited Gemstones As Per Your Birth Chart, Shop Now",
-show: "Show Kundali",
-   
+    show: "Show Kundali",
+
     ShopNow: "Shop Now",
     OurBestSellers: "OUR BEST SELLERS",
     CertifiedGemstones: "Certified Gemstones",
@@ -588,12 +588,12 @@ show: "Show Kundali",
         significance: "Represents spiritual journey, enlightenment, and liberation",
       },
     ],
-name_en: "Name",
+    name_en: "Name",
     Kundalname1: "Varna / Caste",
     score1: 1,
     interpretation1:
       "Talks about the mental & intellectual compatibility between the bride and groom.",
-      gender: "Gender",
+    gender: "Gender",
     Kundalname2: "Vasya / Vashya",
     score2: 2,
     interpretation2:
@@ -753,17 +753,17 @@ name_en: "Name",
     faqtitle: " FREQUENTLY ASKED QUESTIONS",
     title_hi1: "Today's Panchang",
     description_hi1: "Daily astrological almanac",
-   title_hi2: "Janam Kundali",
+    title_hi2: "Janam Kundali",
     description_hi2: "Birth chart analysis",
-   title_hi3: "Free Horoscope",
+    title_hi3: "Free Horoscope",
     description_hi3: "Daily predictions",
 
     title_hi4: "Kundali Match",
-   description_hi4: "Compatibility analysis",
-   title_hi5: "Subh Mahurat",
+    description_hi4: "Compatibility analysis",
+    title_hi5: "Subh Mahurat",
     description_hi5: "Auspicious timings",
     title_hi6: "Vrat and Upwaas",
-   description_hi6: "Fasting calendar",
+    description_hi6: "Fasting calendar",
 
     title_en: "OUR FREE SERVICES",
     description_en: "Our free services are designed to help you achieve your goals.",
@@ -775,26 +775,265 @@ name_en: "Name",
       "Rahu Kaal is considered inauspicious Choghadiya and should be avoided for any work. See today's Rahu Kaal."
     ],
 
-auspiciousTimeToday_title: "Auspicious Time Today",
+    auspiciousTimeToday_title: "Auspicious Time Today",
     auspiciousTimeToday_dec: "Looking for an auspicious marriage muhurat? Planning to buy a vehicle? Starting something new? Today's Choghadiya table will help you make a better decision by telling you about the most auspicious hours of the day. You can also learn about the Shubh Muhurats for tomorrow from this table.",
     heading_hi: "Upcoming Puja",
     description_hi: "Stay tuned! Our upcoming puja schedule will be updated here soon.",
     button_hi: "Notify Me",
-    comingSoon_en:"comingSoon_en",
-consultAstrologer:"Consult With Top Vedic Astrologers",
-      consltdesc:"Is today an auspicious day for you? Call or chat with the best Vedic Astrologers to know the Shubh Muhurat as per your Birth Chart!",
+    comingSoon_en: "comingSoon_en",
+    consultAstrologer: "Consult With Top Vedic Astrologers",
+    consltdesc: "Is today an auspicious day for you? Call or chat with the best Vedic Astrologers to know the Shubh Muhurat as per your Birth Chart!",
+    privacytitle: "PRIVACY POLICY",
+    introduction: `OHM Astro values and respects the privacy of its users. The privacy policy mentioned below is created to provide you detailed information about the collection, dissemination and usage of your personal data. Our privacy policy applies when you use or visit the OHM Astro website as well as the mobile application. All our users, astrologers and visitors will be collectively mentioned as “You” in this privacy policy.`,
+    agreement: `By using this website and our application, you agree with this Privacy Policy. If you do not accept this policy, then you must not use the website or the application.`,
+    sections: [
+      {
+        heading: "WHAT DOES OHM Astro DO?",
+        content: `OHM Astro provides a guidance platform which allows members to locate an Astrologer, seek guidance and advice from these Astrologers, book online Pujas, purchase authentic Astrology products, and more. OHM Astro facilitates one-on-one communication between the user and the Astrologers through direct consultation via chat or call, and messages and allows the users to pay for services requested from an Astrologer.\n\nThe call feature of OHM Astro, i.e. Talk To Astrologer service, is only available in India.`
+      },
+      {
+        heading: "PROCESSING OF PERSONAL DATA",
+        content: `Although all the features of our product and services are available on the application, some of them may require your attention due to the information they collect. Hence, we would like to provide you with more details related to the data we collect for the proper working of our Application. We offer various features in our application and to make them all work smoothly, we need access to different permissions and information as described below.`,
+        subSections: [
+          {
+            title: "Permissions We Need",
+            subContent: [
+              {
+                platform: "For Android",
+                permissions: [
+                  "WAKE_LOCK - This permission is required to keep the device awake during a chat session to ensure a smooth experience to the user.",
+                  "CHANGE_WIFI_STATE/ ACCESS_NETWORK_STATE/ ACCESS_WIFI_STATE/ INTERNET - This permission is required to access the internet to process user data, for chat sessions, calls and for other readings.",
+                  "WRITE_EXTERNAL_STORAGE/ READ_EXTERNAL_STORAGE - Access to device storage to save documents on the device and to access Gallery.",
+                  "CAMERA - Application needs the permission to access your device’s camera and photo album to take photos if needed by any of the features."
+                ]
+              },
+              {
+                platform: "For iOS",
+                permissions: [
+                  "Camera and Photos: Access to capture and upload photos.",
+                  "Push Notifications: Permissions to send app alerts.",
+                  "Location Services: To improve the user experience based on geographic region."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+
+    TERMStitle: "TERMS OF USE",
+    intro:
+      "This agreement “Member Terms of Use” pertain to all the users (“members”) who access and/or utilize the services of OHM Astro platform for online Astrologer guidance.",
+    TERMSsections: [
+      {
+        heading: "What is OHM Astro?",
+        content: [
+          "OHM Astro provides a guidance platform which allows the members to locate an Astrologer, to seek guidance and advice from these Astrologers. OHM Astro provides a platform that enables one-on-one communication between the user and the Astrologers through direct consultation (chat or call), and messages, and allows the users to pay for services purchased from an Astrologer.",
+          "The call feature of OHM Astro, i.e. Talk To Astrologer service, is only available in India.",
+        ],
+      },
+      {
+        heading: "Disclaimer – For Entertainment Purposes Only",
+        content: [
+          "It is the sole responsibility of the Users/Members to verify an Astrologer’s identity, credentials, qualifications, licenses, biographic information etc. OHM Astro will not be liable for verifying such details.",
+          "The User/Member concedes to the fact that these Astrologers are neither employed by nor agents or representatives of OHM Astro and OHM Astro does not undertake any responsibility for conduct of any such Astrologer.",
+          "All the Astrologers are individual contractors of OHM Astro, and because they function as independent contractors, OHM Astro cannot administer the quality, accuracy or accordance with the advice or guidance provided by an Astrologer.",
+          "OHM Astro also does not ascertain:",
+          [
+            "The qualification of an Astrologer to guide on a particular subject.",
+            "Whether an Astrologer is accurately categorized to guide a member in a sought field.",
+            "Whether the postings by an Astrologer or a Member on our Website or Application are relevant, appropriate and correct.",
+          ],
+          "ANY OPINION, ADVICE, GUIDANCE, RESPONSE, INFORMATION, PREDICTION OR OTHER SERVICES PROVIDED BY AN ASTROLOGER ARE FOR ENTERTAINMENT PURPOSE ONLY.",
+        ],
+      },
+    ],
+
+    DISCLAIMERtitle: "DISCLAIMER",
+    DISCLAIMERparagraphs: [
+      "OHM Astro provides a platform that enables one on one interaction between the user and the Astrologers through direct consultation (chat or call) and messages and allows the users to pay for services requested from an Astrologer. We can guarantee you satisfaction for the counseling services provided by the Astrologers on our platform, but we neither guarantee nor evaluate the precision, truthfulness and success of the advice, answers and any other services provided by the Astrologers to you through our website and application.",
+      "The website and application is being provided to you for as-is use with no warranty. Your use of the OHM Astro website and application is done at your sole and absolute risk without any warranty of fitness, merchantability or performance failure. We do not guarantee that the services, assistance and functionalities provided to you by OHM Astro will be free from errors, eavesdropping, or listening, unbiased, or defect-free. OHM Astro will not hold any liability for the quality and authenticity of the information, assistance, services provided and also content provided by the Astrologers. Please note that by visiting, using and accessing the website, you automatically accept the terms mentioned in this Disclaimer. You agree that by posting a question on the platform of OHM Astro, you accept and understand that OHM Astro will not be responsible for any use that you make or action that you take by relying on the reply or information you do or do not receive.",
+      "You agree and accept that any use or action that you take on the basis of the advice, services or the answers is at your own absolute risk only and OHM Astro will not be in any way responsible for any loss, harm, or damage that results if you trust and rely on these advice and answers. Also, you expressly agree to not hold OHM Astro responsible for any loss, harm, injury, arising due to your submission of the query or your use of or reliance on any response or taking any other services such as Puja, Yantra, Gemstone, etc from the Astrologers in which OHM Astro is not directly involved. Anytime Astro reserves all the rights for any changes from time to time."
+    ],
+    breadcrumb: {
+      home: "/",
+      current: "Disclaimer"
+    },
+
+    COOKIEtitle: 'COOKIE POLICY',
+    useOfCookies: 'We use Cookies to provide you with a better user experience when you visit or use our website or application.',
+    whatAreCookies: `Cookies are small pieces of data sent from a website that are stored in a user's web browser while they are browsing a particular website. Each time the user loads a website, the browser sends cookies related to that website back to the site server to notify it of the user's activity on the website. Cookies are often used as a mechanism by websites to remember activities that a website browser had done in the past; for example, clicking on particular buttons, logging in, or having read pages on the site months or years ago.`,
+    cookieTypes: [
+      {
+        type: 'Strictly Necessary Cookies',
+        description: 'These are a mandate for our website or application to operate. They include, but are not limited to, cookies that enable you to log into secure areas of our website and use the online services.'
+      },
+      {
+        type: 'Analytical/Performance Cookies',
+        description: 'These cookies help us identify and count the number of visits by a user. They also help qualify and quantify how visitors move around on our website or application. This helps us improve our website by optimizing maximum used areas of the site and in making them user-friendly.'
+      },
+      {
+        type: 'Functionality Cookies',
+        description: 'We use these cookies to improve the functional performance of our website, thus personalizing it for you, e.g., keeping you logged in or keeping your shopping cart as you had previously left it.'
+      }
+    ],
+    cookieManagement: `You can manage cookies by changing or activating the settings on your web browser, which would allow you to either accept or refuse the settings of some or all cookies. If you wish to manage your preferences regarding cookies, refer to online help files available using your web browser for detailed instructions. Alternatively, you can visit https://www.aboutcookies.org for further information.`,
+    refusalNote: `Please note, if you refuse to accept cookies from our website, you may not be able to use some additional features that the website offers. In fact, some areas of the website may not be accessible at all.`,
+    cookiePolicyData: "In general, we use the following cookies",
+    titleAstro5: "Astrologers selected through a 7-Step Interview Process",
+    titleAstro6: " 1000+ Certified Astrologers",
+    titleAstro1: "Astrology App",
+    titleAstro2: ` Cr+ Happy Customers`,
+    titleAstro3: " 100% Privacy",
+    titleAstro4: "6. 24*7 Availability",
+  
+      featurestitle: "EXPERIENCED ASTROLOGERS",
+      featuresdescription: "Get advice from the most accomplished and renowned Astrologers, Tarot Readers & Fortune-Tellers.",
+  
+      featurestitle1: "QUALITY SERVICES",
+      featuresdescription1: "Unmatched services to ensure a hassle-free connection and the best user experience.",
+   
+      featurestitle2: "MULTIPLE WAYS TO CONNECT",
+      featuresdescription2: "Connect to an Astrologer via chat or call as per your choice and convenience.",
+   
+      featurestitle3: "PRIVATE AND SECURE",
+      featuresdescription3: "Your privacy, and anonymity are our top priority which will not be compromised with.",
+    
+
+
+
   },
   HIN: {
+
+      featurestitle: "अनुभवी ज्योतिषी",
+      featuresdescription: "सबसे प्रसिद्ध ज्योतिषियों, टैरो रीडर और भाग्यवक्ताओं से सलाह लें।",
+   
+      featurestitle1: "गुणवत्ता सेवाएं",
+      featuresdescription1: "बेहतर उपयोगकर्ता अनुभव के लिए बेजोड़ सेवाएं।",
+  
+      featurestitle2: "कनेक्ट करने के अनेक तरीके",
+      featuresdescription2: "आपकी सुविधा अनुसार कॉल या चैट के माध्यम से ज्योतिषी से संपर्क करें।",
+   
+      featurestitle3: "निजी और सुरक्षित",
+      featuresdescription3: "आपकी गोपनीयता और पहचान हमारी सर्वोच्च प्राथमिकता है।",
+    
+
+
+  titleAstro5: " 7-स्टेप इंटरव्यू प्रक्रिया से चयनित ज्योतिषी" ,
+ titleAstro6: " 1000+ प्रमाणित ज्योतिषी" ,
+ titleAstro1: " #1 ज्योतिष ऐप" ,
+ titleAstro2: " 1 करोड़+ संतुष्ट ग्राहक" ,
+titleAstro3: "100% गोपनीयता" ,
+  titleAstro4: "24*7 उपलब्धता" ,
+    COOKIEtitle: 'कुकी नीति',
+    useOfCookies: 'हम आपके वेबसाइट या एप्लिकेशन पर विज़िट या उपयोग के दौरान बेहतर अनुभव प्रदान करने के लिए कुकीज़ का उपयोग करते हैं।',
+    whatAreCookies: `कुकीज़ छोटे डेटा फाइल्स होती हैं जो किसी वेबसाइट से उपयोगकर्ता के वेब ब्राउज़र में भेजी जाती हैं और ब्राउज़िंग के दौरान संग्रहित की जाती हैं। जब उपयोगकर्ता वेबसाइट लोड करता है, तो ब्राउज़र उस वेबसाइट से संबंधित कुकीज़ को वेबसाइट सर्वर पर भेजता है ताकि उपयोगकर्ता की गतिविधियों की जानकारी दी जा सके। वेबसाइटें कुकीज़ का उपयोग इसीलिए करती हैं ताकि वे उपयोगकर्ता की पिछली गतिविधियों को याद रख सकें, जैसे कि किसी बटन पर क्लिक करना, लॉग इन करना, या पहले पढ़े गए पेज।`,
+    cookieTypes: [
+      {
+        type: 'सख्ती से आवश्यक कुकीज़',
+        description: 'ये कुकीज़ हमारी वेबसाइट या एप्लिकेशन के संचालन के लिए अनिवार्य हैं। इनमें वह कुकीज़ शामिल होती हैं जो आपको हमारी वेबसाइट के सुरक्षित क्षेत्रों में लॉग इन करने और ऑनलाइन सेवाओं का उपयोग करने में सक्षम बनाती हैं।'
+      },
+      {
+        type: 'विश्लेषणात्मक/प्रदर्शन कुकीज़',
+        description: 'ये कुकीज़ हमें उपयोगकर्ता द्वारा की गई विज़िट की संख्या को पहचानने और गिनने में मदद करती हैं। साथ ही, वे यह समझने में मदद करती हैं कि उपयोगकर्ता वेबसाइट पर कैसे नेविगेट करते हैं। इससे हम उन क्षेत्रों को बेहतर बना सकते हैं जो सबसे ज़्यादा उपयोग किए जाते हैं और उन्हें उपयोगकर्ता-अनुकूल बना सकते हैं।'
+      },
+      {
+        type: 'कार्यक्षमता कुकीज़',
+        description: 'हम इन कुकीज़ का उपयोग अपनी वेबसाइट के कार्यात्मक प्रदर्शन को बेहतर बनाने के लिए करते हैं ताकि हम इसे आपके लिए व्यक्तिगत बना सकें, जैसे कि आपको लॉग इन रखना या आपकी शॉपिंग कार्ट को पहले की स्थिति में बनाए रखना।'
+      }
+    ],
+    cookieManagement: `आप अपने वेब ब्राउज़र की सेटिंग्स को बदलकर कुकीज़ का प्रबंधन कर सकते हैं जिससे आप कुछ या सभी कुकीज़ को स्वीकार या अस्वीकार कर सकते हैं। यदि आप अपनी कुकी प्राथमिकताओं को प्रबंधित करना चाहते हैं, तो अपने ब्राउज़र की ऑनलाइन सहायता फ़ाइलों को देखें या https://www.aboutcookies.org पर जाएं।`,
+    refusalNote: `कृपया ध्यान दें, यदि आप हमारी वेबसाइट से कुकीज़ को अस्वीकार करते हैं, तो आप वेबसाइट की कुछ अतिरिक्त सुविधाओं का उपयोग नहीं कर पाएंगे। वास्तव में, वेबसाइट के कुछ क्षेत्र पूरी तरह से अनुपलब्ध हो सकते हैं।`,
+    cookiePolicyData: "सामान्यतः, हम निम्नलिखित कुकीज़ का उपयोग करते हैं",
+
+
+
+
+    DISCLAIMERtitle: "अस्वीकरण",
+    DISCLAIMERparagraphs: [
+      "OHM Astro एक ऐसा प्लेटफ़ॉर्म प्रदान करता है जो उपयोगकर्ता और ज्योतिषियों के बीच सीधे परामर्श (चैट या कॉल) और संदेशों के माध्यम से एक-से-एक बातचीत को सक्षम करता है और उपयोगकर्ताओं को किसी ज्योतिषी से अनुरोधित सेवाओं के लिए भुगतान करने की अनुमति देता है। हम हमारे प्लेटफ़ॉर्म पर ज्योतिषियों द्वारा प्रदान की गई परामर्श सेवाओं की संतुष्टि की गारंटी दे सकते हैं, लेकिन हम सलाह, उत्तरों और किसी भी अन्य सेवाओं की सटीकता, सत्यता और सफलता की गारंटी या मूल्यांकन नहीं करते हैं जो ज्योतिषियों द्वारा वेबसाइट और एप्लिकेशन के माध्यम से प्रदान की जाती हैं।",
+      "वेबसाइट और एप्लिकेशन आपको जैसा है उसी रूप में बिना किसी वारंटी के उपयोग के लिए प्रदान की जा रही है। OHM Astro की वेबसाइट और एप्लिकेशन का उपयोग आप अपनी पूरी और पूर्ण जिम्मेदारी पर कर रहे हैं, जिसमें कोई भी फिटनेस, गुणवत्ता या प्रदर्शन की विफलता की गारंटी नहीं दी जाती है। हम यह गारंटी नहीं देते कि OHM Astro द्वारा प्रदान की गई सेवाएं, सहायता और कार्यक्षमताएं त्रुटियों, जासूसी, पक्षपात या दोषों से मुक्त होंगी। OHM Astro किसी भी जानकारी, सहायता, सेवाओं और ज्योतिषियों द्वारा प्रदान की गई सामग्री की गुणवत्ता और प्रामाणिकता के लिए कोई जिम्मेदारी नहीं लेता है। कृपया ध्यान दें कि वेबसाइट पर विज़िट करने, उपयोग करने और एक्सेस करने से आप इस अस्वीकरण में उल्लिखित शर्तों को स्वचालित रूप से स्वीकार करते हैं। आप सहमत हैं कि OHM Astro प्लेटफ़ॉर्म पर प्रश्न पोस्ट करने से आप स्वीकार करते हैं और समझते हैं कि OHM Astro किसी भी उस उपयोग या कार्रवाई के लिए जिम्मेदार नहीं होगा जो आप उत्तर या जानकारी पर निर्भर करते हुए करते हैं या नहीं करते हैं।",
+      "आप सहमत हैं और स्वीकार करते हैं कि किसी भी सलाह, सेवा या उत्तर के आधार पर जो भी उपयोग या कार्रवाई आप करते हैं, वह पूरी तरह से आपकी खुद की जिम्मेदारी पर आधारित है और OHM Astro किसी भी प्रकार के नुकसान, हानि, या क्षति के लिए जिम्मेदार नहीं होगा जो इन सलाहों और उत्तरों पर विश्वास करने और निर्भर करने से हो सकती है। इसके अलावा, आप स्पष्ट रूप से सहमत होते हैं कि OHM Astro को किसी भी प्रकार के नुकसान, हानि, चोट के लिए जिम्मेदार नहीं ठहराया जाएगा जो आपके द्वारा प्रश्न सबमिट करने या उत्तर पर निर्भर करने या पूजा, यंत्र, रत्न आदि जैसी सेवाएं लेने से उत्पन्न होती हैं, जिनमें OHM Astro सीधे तौर पर शामिल नहीं है। Anytime Astro समय-समय पर परिवर्तन करने के सभी अधिकार सुरक्षित रखता है।"
+    ],
+    breadcrumb: {
+      home: "/",
+      current: "अस्वीकरण"
+    },
+
+    TERMStitle: "उपयोग की शर्तें",
+    intro:
+      "यह समझौता 'सदस्य उपयोग की शर्तें' सभी उपयोगकर्ताओं ('सदस्यों') पर लागू होता है जो OHM Astro प्लेटफ़ॉर्म की सेवाओं का ऑनलाइन ज्योतिषीय मार्गदर्शन के लिए उपयोग करते हैं।",
+    TERMSsections: [
+      {
+        heading: "OHM Astro क्या है?",
+        content: [
+          "OHM Astro एक ऐसा मार्गदर्शन प्लेटफ़ॉर्म प्रदान करता है जो सदस्यों को एक ज्योतिषी खोजने, उनसे मार्गदर्शन और सलाह प्राप्त करने की अनुमति देता है। यह प्लेटफ़ॉर्म उपयोगकर्ता और ज्योतिषियों के बीच एक-से-एक परामर्श (चैट या कॉल) और संदेशों के माध्यम से संचार सक्षम करता है, और उपयोगकर्ताओं को खरीदी गई सेवाओं के लिए भुगतान करने की अनुमति देता है।",
+          "OHM Astro की कॉल सुविधा, यानी 'ज्योतिषी से बात करें' सेवा केवल भारत में उपलब्ध है।",
+        ],
+      },
+      {
+        heading: "अस्वीकरण – केवल मनोरंजन उद्देश्यों के लिए",
+        content: [
+          "ज्योतिषी की पहचान, योग्यता, प्रमाणपत्र, लाइसेंस, जीवनी आदि की पुष्टि करना उपयोगकर्ता/सदस्य की पूरी जिम्मेदारी है। OHM Astro इन विवरणों की पुष्टि के लिए जिम्मेदार नहीं होगा।",
+          "उपयोगकर्ता/सदस्य यह स्वीकार करता है कि ये ज्योतिषी न तो OHM Astro के कर्मचारी हैं और न ही एजेंट या प्रतिनिधि, और OHM Astro ऐसे किसी ज्योतिषी के आचरण के लिए जिम्मेदार नहीं है।",
+          "सभी ज्योतिषी OHM Astro के स्वतंत्र ठेकेदार हैं, और चूंकि वे स्वतंत्र ठेकेदार के रूप में काम करते हैं, इसलिए OHM Astro उनके द्वारा दी गई सलाह या मार्गदर्शन की गुणवत्ता, सटीकता या उपयुक्तता का प्रबंधन नहीं कर सकता।",
+          "OHM Astro यह भी सत्यापित नहीं करता:",
+          [
+            "क्या ज्योतिषी किसी विशिष्ट विषय पर मार्गदर्शन देने के योग्य है।",
+            "क्या किसी सदस्य को मार्गदर्शन देने के लिए ज्योतिषी को सही ढंग से वर्गीकृत किया गया है।",
+            "क्या हमारे वेबसाइट या एप्लिकेशन पर किसी ज्योतिषी या सदस्य द्वारा की गई पोस्टिंग प्रासंगिक, उपयुक्त और सही हैं।",
+          ],
+          "ज्योतिषी द्वारा प्रदान की गई कोई भी राय, सलाह, मार्गदर्शन, प्रतिक्रिया, जानकारी, भविष्यवाणी या अन्य सेवा केवल मनोरंजन उद्देश्य के लिए है।",
+        ],
+      },
+    ],
+    privacytitle: "गोपनीयता नीति",
+    introduction: `OHM Astro अपने उपयोगकर्ताओं की गोपनीयता को महत्व देता है और उसका सम्मान करता है। नीचे दी गई गोपनीयता नीति आपको आपके व्यक्तिगत डेटा के संग्रह, प्रसार और उपयोग के बारे में विस्तृत जानकारी प्रदान करने के लिए बनाई गई है। हमारी गोपनीयता नीति तब लागू होती है जब आप OHM Astro की वेबसाइट या मोबाइल एप्लिकेशन का उपयोग करते हैं या उसे देखते हैं। इस गोपनीयता नीति में हमारे सभी उपयोगकर्ताओं, ज्योतिषियों और आगंतुकों को सामूहिक रूप से “आप” के रूप में संबोधित किया गया है।`,
+    agreement: `इस वेबसाइट और हमारे एप्लिकेशन का उपयोग करके, आप इस गोपनीयता नीति से सहमत होते हैं। यदि आप इस नीति को स्वीकार नहीं करते हैं, तो आपको वेबसाइट या एप्लिकेशन का उपयोग नहीं करना चाहिए।`,
+    sections: [
+      {
+        heading: "OHM Astro क्या करता है?",
+        content: `OHM Astro एक मार्गदर्शन मंच प्रदान करता है जो सदस्यों को ज्योतिषी खोजने, उनसे सलाह और मार्गदर्शन प्राप्त करने, ऑनलाइन पूजा बुक करने, प्रामाणिक ज्योतिष उत्पाद खरीदने और बहुत कुछ करने की सुविधा देता है। OHM Astro उपयोगकर्ता और ज्योतिषियों के बीच चैट, कॉल या संदेशों के माध्यम से सीधे परामर्श की सुविधा प्रदान करता है और उपयोगकर्ताओं को ज्योतिषियों से अनुरोधित सेवाओं के लिए भुगतान करने की अनुमति देता है।\n\nOHM Astro की कॉल सुविधा, यानी "Talk To Astrologer" सेवा, केवल भारत में उपलब्ध है।`
+      },
+      {
+        heading: "व्यक्तिगत डेटा की प्रक्रिया",
+        content: `हालाँकि हमारे उत्पाद और सेवाओं की सभी विशेषताएं एप्लिकेशन पर उपलब्ध हैं, लेकिन उनमें से कुछ को एकत्र की जाने वाली जानकारी के कारण आपके ध्यान की आवश्यकता हो सकती है। इसलिए, हम आपको उस डेटा के बारे में अधिक जानकारी प्रदान करना चाहते हैं जिसे हम अपने एप्लिकेशन के सुचारु रूप से काम करने के लिए एकत्र करते हैं। हम अपने एप्लिकेशन में विभिन्न सुविधाएं प्रदान करते हैं और उन्हें सभी को सुचारु रूप से कार्य करने के लिए हमें नीचे बताए गए विभिन्न अनुमतियों और सूचनाओं की आवश्यकता होती है।`,
+        subSections: [
+          {
+            title: "हमें किन अनुमतियों की आवश्यकता है",
+            subContent: [
+              {
+                platform: "Android के लिए",
+                permissions: [
+                  "WAKE_LOCK - इस अनुमति की आवश्यकता होती है ताकि चैट सत्र के दौरान डिवाइस को जागृत रखा जा सके जिससे उपयोगकर्ता को सुचारु अनुभव प्राप्त हो।",
+                  "CHANGE_WIFI_STATE/ ACCESS_NETWORK_STATE/ ACCESS_WIFI_STATE/ INTERNET - उपयोगकर्ता डेटा को संसाधित करने, चैट सत्रों, कॉल और अन्य रीडिंग्स के लिए इंटरनेट एक्सेस की अनुमति।",
+                  "WRITE_EXTERNAL_STORAGE/ READ_EXTERNAL_STORAGE - डिवाइस पर दस्तावेज़ सहेजने और गैलरी एक्सेस के लिए डिवाइस स्टोरेज तक पहुंच।",
+                  "CAMERA - एप्लिकेशन को डिवाइस के कैमरा और फोटो एलबम तक पहुंचने की अनुमति चाहिए ताकि आवश्यक होने पर फोटो ली जा सके।"
+                ]
+              },
+              {
+                platform: "iOS के लिए",
+                permissions: [
+                  "कैमरा और फोटो: फोटो लेने और अपलोड करने की अनुमति।",
+                  "पुश सूचनाएं: ऐप अलर्ट भेजने की अनुमति।",
+                  "स्थान सेवाएं: भौगोलिक क्षेत्र के आधार पर उपयोगकर्ता अनुभव को बेहतर बनाने के लिए।"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
     auspiciousTimeToday_title: "आज का शुभ समय",
     auspiciousTimeToday_dec: "क्या आप विवाह के लिए शुभ मुहूर्त खोज रहे हैं? वाहन खरीदने की योजना बना रहे हैं? कुछ नया शुरू करने जा रहे हैं? आज की चौघड़िया तालिका आपको दिन के सबसे शुभ समय के बारे में बताकर बेहतर निर्णय लेने में मदद करेगी। आप इस तालिका से कल के शुभ मुहूर्तों की जानकारी भी प्राप्त कर सकते हैं।",
-  
+
     Choghadiyatitle_en: "चौघड़िया तालिका में शुभ समय क्या हैं?",
     Choghadiyadescription_en: "चौघड़िया का अर्थ है 'चार घड़ी', जो कुल 96 मिनट होते हैं, जिसमें प्रत्येक घड़ी की अवधि 24 मिनट होती है।",
-   Choghadiya_en: [
+    Choghadiya_en: [
       "शुभ, लाभ, चर और अमृत को शुभ चौघड़िया माना जाता है और इन समयों में किसी भी महत्वपूर्ण कार्य की शुरुआत करनी चाहिए। इन चारों चौघड़ियों का अपना अलग महत्व होता है। जहां शुभ समय आज विवाह, शिक्षा और धार्मिक कार्यों के लिए उपयुक्त होता है, वहीं लाभ काल नए व्यापार या शैक्षिक गतिविधियों की शुरुआत के लिए अच्छा माना जाता है। अमृत काल किसी भी प्रकार के कार्य के लिए उपयुक्त होता है और चर काल यात्रा, नृत्य या सांस्कृतिक गतिविधियों के लिए उपयुक्त होता है।",
       "राहु काल को अशुभ चौघड़िया माना जाता है और इस समय में कोई भी कार्य करने से बचना चाहिए। आज का राहु काल देखें।"
     ],
-    
+
     Kundalititle: "आपको अपनी जन्म कुंडली क्यों बनवानी चाहिए?",
     Kundalidescription:
       "जन्म कुंडली या बर्थ चार्ट आपके भविष्य के बारे में स्पष्टता प्राप्त करने का एक तरीका है, जिससे आप जीवन में बेहतर निर्णय और विकल्प ले सकें। यह ग्रहों और सितारों की उन स्थितियों का खाका है जो आपके जन्म के समय ब्रह्मांड में मौजूद थीं, और इन्हीं के आधार पर आपके भविष्य की भविष्यवाणी की जाती है। जन्म तिथि और समय के आधार पर आपकी कुंडली आपके जीवन में कई तरीकों से सहायक हो सकती है।",
@@ -848,16 +1087,16 @@ consultAstrologer:"Consult With Top Vedic Astrologers",
     kootaTitle: "कूट",
     maxScoreTitle: "अधिकतम अंक",
     interpretationTitle: "व्याख्या",
-chatnow:"चैट करें",
+    chatnow: "चैट करें",
     // freeServices 
     freeServicesTitle: "हमारी निःशुल्क सेवाएं",
     freeServicesIntro: "हमारी निःशुल्क सेवाएं आपके लक्ष्यों को प्राप्त करने में सहायता करने के लिए बनाई गई हैं।",
     show: "कुंडली दिखाएं",
 
-      name_en: "नाम",
- 
+    name_en: "नाम",
+
     gender: "लिंग",
-     
+
 
     // HOUSEDATA
     houseTitle: "भाव",
@@ -871,8 +1110,8 @@ chatnow:"चैट करें",
       "ओम् एस्ट्रो  की फ्री ऑनलाइन जन्म कुंडली अनुभवी ज्योतिषाचार्यों की सलाह से तैयार की जाती है और यह पूरी तरह से सटीक व प्रामाणिक होती है। जीवन में उलझनें हैं? भविष्य को लेकर असमंजस में हैं? तो बस अपनी जानकारी भरें और फ्री ऑनलाइन कुंडली पाएं, जो आपके व्यक्तित्व, भविष्य और जीवन की अन्य महत्वपूर्ण घटनाओं के बारे में विस्तार से बताएगी।",
 
 
-      consultAstrologer:"शीर्ष वैदिक ज्योतिषियों से परामर्श करें",
-      consltdesc:"क्या आज आपके लिए शुभ दिन है? अपनी जन्म कुंडली के अनुसार शुभ मुहूर्त जानने के लिए सबसे अच्छे वैदिक ज्योतिषियों से कॉल या चैट करें!",
+    consultAstrologer: "शीर्ष वैदिक ज्योतिषियों से परामर्श करें",
+    consltdesc: "क्या आज आपके लिए शुभ दिन है? अपनी जन्म कुंडली के अनुसार शुभ मुहूर्त जानने के लिए सबसे अच्छे वैदिक ज्योतिषियों से कॉल या चैट करें!",
     question1: "ऑनलाइन कुंडली मिलान कितना सटीक होता है?",
     answer1: "जनम कुंडली मिलान का परिणाम उस सॉफ़्टवेयर की गुणवत्ता, ज्योतिषी की विशेषज्ञता और व्यक्तियों द्वारा दी गई जानकारी पर निर्भर करता है। ऑनलाइन कुंडली मिलान पारंपरिक सिद्धांतों का पालन करता है और सटीक परिणाम देता है।",
 
@@ -1040,18 +1279,18 @@ chatnow:"चैट करें",
 
     title_hi1: "आज का पंचांग",
     description_hi1: "दैनिक ज्योतिषीय पंचांग",
-title_hi2: "जनम कुंडली",
+    title_hi2: "जनम कुंडली",
     description_hi2: "जन्म कुंडली विश्लेषण",
-title_hi3: "फ्री राशिफल",
+    title_hi3: "फ्री राशिफल",
     description_hi3: "दैनिक भविष्यवाणियाँ",
-title_hi4: "कुंडली मैच",
+    title_hi4: "कुंडली मैच",
     description_hi4: "मेल जोल का विश्लेषण",
-title_hi5: "शुभ मुहूर्त",
+    title_hi5: "शुभ मुहूर्त",
     description_hi5: "शुभ समय",
     title_hi6: "व्रत और उपवास",
     description_hi6: "व्रत कैलेंडर",
 
-   
+
     title_en: "हमारी मुफ्त सेवाएँ",
     description_en: "हमारी मुफ्त सेवाएं आपकी सफलता में मदद करने के लिए डिज़ाइन की गई हैं।",
 

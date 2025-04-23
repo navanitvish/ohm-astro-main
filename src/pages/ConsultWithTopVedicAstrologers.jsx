@@ -6,15 +6,15 @@ const VedicAstrologersSection = () => {
   const t = translations[language];
   const astrologers = [
     {
-      name: 'Dr. Raghunandan',
+      name: t.priyanka,
       image: '/src/assets/WhatsApp Image 2024-12-15 at 20.53.32_3d687b1c.jpg',
     },
     {
-      name: 'Dr. Aarti',
+      name: t.Vaibhavi,
       image: '/src/assets/WhatsApp Image 2024-12-15 at 20.57.52_aa38d7b7.jpg',
     },
     {
-      name: 'Dr. Hari Narayan',
+      name: t.dada,
      
       image: '/src/assets/WhatsApp Image 2024-12-15 at 20.59.04_069a45d0.jpg',
     }
