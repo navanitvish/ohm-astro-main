@@ -108,7 +108,7 @@ const PanchangPage = () => {
         };
         
         const response = await fetch(
-          'http://localhost:4500/api/free-services/panchang?latitude=28.6139&longitude=77.2090&ayanamsa=1&language=en',
+          'https://astrovani-6d54b00db2da.herokuapp.com/api/free-services/panchang?latitude=28.6139&longitude=77.2090&ayanamsa=1&language=en',
           requestOptions
         );
         

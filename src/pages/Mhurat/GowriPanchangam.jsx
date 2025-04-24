@@ -45,7 +45,7 @@ const GowriPanchangam = () => {
         setCurrentDate(formattedDate);
         
         // Make API request
-        const response = await fetch("http://localhost:4500/api/free-services/shubh-muhurat/gowri-nalla-neram", {
+        const response = await fetch("https://astrovani-6d54b00db2da.herokuapp.com/api/free-services/shubh-muhurat/gowri-nalla-neram", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

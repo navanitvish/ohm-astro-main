@@ -25,7 +25,7 @@ const ShubhHora = () => {
         // Format date as YYYY-MM-DD
         const formattedDate = selectedDate.toISOString().split('T')[0];
         
-        const response = await fetch("http://localhost:4500/api/free-services/shubh-muhurat/hora-timing", {
+        const response = await fetch("https://astrovani-6d54b00db2da.herokuapp.com/api/free-services/shubh-muhurat/hora-timing", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
