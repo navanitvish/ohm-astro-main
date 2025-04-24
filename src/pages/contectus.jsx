@@ -77,17 +77,12 @@ const ContactForm = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Company Info Section */}
           <div className="space-y-6">
-            <h2 className="text-xl font-bold">Innovana Astro Services Limited</h2>
-            <p className="flex items-start">
-              <MapPin className="mr-2 flex-shrink-0 mt-1" size={18} />
-              <span>1- KHA -18, Jawahar Nagar,<br />Jaipur, Rajasthan, 302004 India</span>
-            </p>
-            
+            <h2 className="text-xl font-bold">OHM Astro</h2>
             <p className="flex items-center">
               <Phone className="mr-2 flex-shrink-0" size={18} />
-              <span>Customer Support: +91-7229808887</span>
+              <span>Customer Support: +91-9991401666, 8930701666</span>
             </p>
-            
+        
             <p className="flex items-center">
               <Clock className="mr-2 flex-shrink-0" size={18} />
               <span>Working Hours: 10:00AM to 7:00PM (Monday to Friday)</span>
@@ -95,26 +90,12 @@ const ContactForm = () => {
             
             <p className="flex items-center">
               <Send className="mr-2 flex-shrink-0" size={18} />
-              <a href="mailto:support@anytimeastro.com" className="text-blue-600 hover:underline">
-                support@anytimeastro.com
+              <a href="mailto:support@ohmastro.com" className="text-blue-600 hover:underline">
+                support@OHMAstro.com
               </a>
             </p>
             
-            {/* Map */}
-            <div className="mt-4">
-              <div className="relative bg-gray-200 rounded overflow-hidden h-64">
-                <iframe
-                  title="Company Location"
-                  className="absolute top-0 left-0 w-full h-full"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5404450513037!2d75.80212361503869!3d26.855580983149834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5196574939f%3A0x76ef31e4b6139246!2sJawahar%20Nagar%2C%20Jaipur%2C%20Rajasthan%20302004!5e0!3m2!1sen!2sin!4v1650258410151!5m2!1sen!2sin"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                <span>View larger map</span>
-              </div>
-            </div>
+          
           </div>
           
           {/* Contact Form Section */}
