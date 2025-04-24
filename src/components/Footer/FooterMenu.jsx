@@ -133,11 +133,6 @@ const Footer = () => {
       icon: FaInstagram,
       color: "text-pink-700 hover:text-pink-600",
     },
-    {
-      name: "YouTube",
-      icon: FaYoutube,
-      color: "text-red-700 hover:text-red-600",
-    },
   ];
 
   return (
@@ -269,7 +264,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-red-700 text-center text-sm">
           <p>
-            Copyright © 2020-2024 Innovana Astro Services Ltd. All Rights
+            Copyright © 2025 OHM Astro. All Rights
             Reserved
           </p>
         </div>

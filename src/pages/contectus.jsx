@@ -133,6 +133,20 @@ const ContactForm = () => {
                 />
                 {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
               </div>
+
+              {/* mobile number input */}
+
+              <div>
+                <input
+                  type="text"
+                  name="mobile"
+                  value={formData.mobile}
+                  onChange={handleChange}
+                  placeholder="Mobile Number"
+                  className={`w-full p-3 border rounded ${errors.mobile ? 'border-red-500' : 'border-gray-300'}`}
+                />
+                {errors.mobile && <p className="text-red-500 text-sm mt-1">{errors.mobile}</p>}
+              </div>
               
               <div>
                 <select
