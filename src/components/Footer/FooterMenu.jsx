@@ -120,17 +120,20 @@ const Footer = () => {
     {
       name: "Facebook",
       icon: FaFacebookF,
+      link: "https://www.facebook.com/profile.php?id=61575827038297",
       color: "text-blue-700 hover:text-blue-600",
     },
     { name: "Twitter", icon: FaXTwitter, color: "hover:text-blue-400" },
     {
       name: "LinkedIn",
       icon: FaLinkedinIn,
+      link: "https://www.linkedin.com/in/ohm-astro-631151363?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       color: "text-blue-700 hover:text-blue-700",
     },
     {
       name: "Instagram",
       icon: FaInstagram,
+      link: "https://www.instagram.com/ohmas_tro/",
       color: "text-pink-700 hover:text-pink-600",
     },
   ];
@@ -250,7 +253,10 @@ const Footer = () => {
               {socialIcons.map((social) => (
                 <Link
                   key={social.name}
-                  to="#"
+                  to={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.name}
                   className={`bg-white text-black p-2 rounded-full hover:bg-gray-100 transition-all duration-200 ${social.color}`}
                 >
                   <span className="sr-only">{social.name}</span>

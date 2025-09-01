@@ -183,6 +183,8 @@ const BlogSection = () => {
     queryFn: () => fetchBlogs({ limit: 4, page: 1 }),
   });
 
+  console.log("blog data",data)
+
   if (isLoading) {
     return (
       <div className="min-h-[400px] flex items-center justify-center p-4">

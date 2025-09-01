@@ -4,6 +4,7 @@ import { Home } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchastrologers } from "../api/apiCalls";
 import FAQ from "./FAQ/LiveFAQ";
+import SubscriptionPlans from "./SubscriptionPlans";
 
 const LiveIndicator = () => (
   <div className="absolute top-2 right-2 flex items-center gap-2 bg-red-600 text-white px-3 py-1 rounded-full z-10">
@@ -111,6 +112,7 @@ export const LiveAsro = () => {
           <span className="font-medium text-sm sm:text-base">Live Astrologers</span>
         </div>
       </nav>
+      <SubscriptionPlans/>
 
       <div className="bg-rose-50 py-6 sm:py-8 p-4 sm:p-6">
         <div className="container mx-auto px-3 sm:px-4">

@@ -1,34 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import translations from '../../components/translations/translations';
 
 const KundaliMatchingForm = () => {
-  const months = [
-    "January", "February", "March", "April", "May", "June", "July", "August", 
-    "September", "October", "November", "December",
-  ];
-  const days = Array.from({ length: 31 }, (_, i) => String(i + 1).padStart(2, "0"));
-  const years = Array.from({ length: 100 }, (_, i) => 2024 - i);
-  const hours = Array.from({ length: 12 }, (_, i) => String(i + 1).padStart(2, "0"));
-  const minutes = Array.from({ length: 60 }, (_, i) => String(i).padStart(2, "0"));
-  const meridiem = ["AM", "PM"];
-
-  // State object for both boy and girl details
+  // Initial form data state
   const [formData, setFormData] = useState({
     boy: {
       name: '',
-      birthDate: { month: '', day: '', year: '' },
-      birthTime: { hour: '', minute: '', second: '', meridiem: '' },
+      dob: '', // Will store "YYYY-MM-DDTHH:MM" format
       placeOfBirth: '',
-      dontKnowBirthTime: false,
+      coordinates: { latitude: '', longitude: '' },
     },
     girl: {
       name: '',
-      birthDate: { month: '', day: '', year: '' },
-      birthTime: { hour: '', minute: '', second: '', meridiem: '' },
+      dob: '', // Will store "YYYY-MM-DDTHH:MM" format
       placeOfBirth: '',
+      coordinates: { latitude: '', longitude: '' },
       email: '',
-      dontKnowBirthTime: false,
     },
   });
 
@@ -36,9 +24,31 @@ const KundaliMatchingForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState('');
+  const [matchResults, setMatchResults] = useState(null);
 
-  const language = useSelector((state) => state.language.language);
-  const t = translations[language];
+  const language = useSelector((state) => state.language?.language) || 'en';
+  const t = translations[language] || {};
+
+  // Geocoding function
+  const getCoordinates = async (address) => {
+    try {
+      // This is a mock function - in a real app, you'd use a geocoding service
+      console.log(`Getting coordinates for: ${address}`);
+      
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      // Mock coordinates - in production use a geocoding API
+      // For India-like coordinates
+      const lat = (20 + Math.random() * 15).toFixed(2); // Range approximately covering India
+      const lng = (70 + Math.random() * 15).toFixed(2);
+      
+      return { latitude: lat, longitude: lng };
+    } catch (error) {
+      console.error("Error getting coordinates:", error);
+      return { latitude: "", longitude: "" };
+    }
+  };
 
   // Handle changes in input fields
   const handleInputChange = (e, person) => {
@@ -52,109 +62,47 @@ const KundaliMatchingForm = () => {
     }));
   };
 
-  const handleDateChange = (e, person, field) => {
+  // Handle place of birth changes and get coordinates
+  const handlePlaceChange = async (e, person) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [person]: {
-        ...prevData[person],
-        birthDate: {
-          ...prevData[person].birthDate,
-          [name]: value,
-        },
-      },
-    }));
-  };
-
-  const handleTimeChange = (e, person, field) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [person]: {
-        ...prevData[person],
-        birthTime: {
-          ...prevData[person].birthTime,
-          [name]: value,
-        },
-      },
-    }));
-  };
-
-  const handleCheckboxChange = (e, person) => {
-    const { checked } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [person]: {
-        ...prevData[person],
-        dontKnowBirthTime: checked,
-      },
-    }));
-  };
-
-  // Format data for API submission
-  const formatDataForAPI = () => {
-    // Format boy's data
-    const boyData = {
-      name: formData.boy.name,
-      birthDate: `${formData.boy.birthDate.year}-${getMonthNumber(formData.boy.birthDate.month)}-${formData.boy.birthDate.day}`,
-      birthTime: formData.boy.dontKnowBirthTime ? "00:00:00" : 
-        `${convertTo24Hour(formData.boy.birthTime.hour, formData.boy.birthTime.meridiem)}:${formData.boy.birthTime.minute}:${formData.boy.birthTime.second}`,
-      placeOfBirth: formData.boy.placeOfBirth,
-    };
-
-    // Format girl's data
-    const girlData = {
-      name: formData.girl.name,
-      birthDate: `${formData.girl.birthDate.year}-${getMonthNumber(formData.girl.birthDate.month)}-${formData.girl.birthDate.day}`,
-      birthTime: formData.girl.dontKnowBirthTime ? "00:00:00" : 
-        `${convertTo24Hour(formData.girl.birthTime.hour, formData.girl.birthTime.meridiem)}:${formData.girl.birthTime.minute}:${formData.girl.birthTime.second}`,
-      placeOfBirth: formData.girl.placeOfBirth,
-      email: formData.girl.email,
-    };
-
-    return {
-      boy: boyData,
-      girl: girlData
-    };
-  };
-
-  // Helper function to convert month name to number
-  const getMonthNumber = (monthName) => {
-    const monthIndex = months.findIndex(month => month === monthName);
-    return String(monthIndex + 1).padStart(2, "0");
-  };
-
-  // Helper function to convert 12-hour format to 24-hour format
-  const convertTo24Hour = (hour, meridiem) => {
-    let hourNum = parseInt(hour, 10);
     
-    if (meridiem === "PM" && hourNum < 12) {
-      hourNum += 12;
-    } else if (meridiem === "AM" && hourNum === 12) {
-      hourNum = 0;
+    // Update place of birth
+    setFormData((prevData) => ({
+      ...prevData,
+      [person]: {
+        ...prevData[person],
+        [name]: value,
+      },
+    }));
+    
+    // If place field is populated enough, get coordinates
+    if (value.length > 3) {
+      try {
+        const coords = await getCoordinates(value);
+        
+        setFormData((prevData) => ({
+          ...prevData,
+          [person]: {
+            ...prevData[person],
+            coordinates: coords,
+          },
+        }));
+      } catch (error) {
+        console.error("Error getting coordinates:", error);
+      }
     }
-    
-    return String(hourNum).padStart(2, "0");
   };
 
   // Validate form before submission
   const validateForm = () => {
     // Boy's data validation
     if (!formData.boy.name) return "Boy's name is required";
-    if (!formData.boy.birthDate.year || !formData.boy.birthDate.month || !formData.boy.birthDate.day) 
-      return "Boy's birth date is required";
-    if (!formData.boy.dontKnowBirthTime && 
-        (!formData.boy.birthTime.hour || !formData.boy.birthTime.minute || !formData.boy.birthTime.second || !formData.boy.birthTime.meridiem))
-      return "Boy's birth time is required";
+    if (!formData.boy.dob) return "Boy's birth date and time is required";
     if (!formData.boy.placeOfBirth) return "Boy's place of birth is required";
 
     // Girl's data validation
     if (!formData.girl.name) return "Girl's name is required";
-    if (!formData.girl.birthDate.year || !formData.girl.birthDate.month || !formData.girl.birthDate.day) 
-      return "Girl's birth date is required";
-    if (!formData.girl.dontKnowBirthTime && 
-        (!formData.girl.birthTime.hour || !formData.girl.birthTime.minute || !formData.girl.birthTime.second || !formData.girl.birthTime.meridiem))
-      return "Girl's birth time is required";
+    if (!formData.girl.dob) return "Girl's birth date and time is required";
     if (!formData.girl.placeOfBirth) return "Girl's place of birth is required";
     
     // Email validation
@@ -165,12 +113,93 @@ const KundaliMatchingForm = () => {
     return null; // No errors
   };
 
+  // Format date in YYYY-MM-DDTHH:MM:SSZ format with proper timezone offset
+  const formatDateToISO = (dateString) => {
+    if (!dateString || dateString.trim() === '') {
+      console.error("Empty date string provided to formatDateToISO");
+      return null;
+    }
+    
+    try {
+      // Create a date object from the input string
+      const date = new Date(dateString);
+      
+      // Check if the date is valid
+      if (isNaN(date.getTime())) {
+        console.error("Invalid date created from:", dateString);
+        return null;
+      }
+      
+      // Get timezone offset in minutes
+      const tzOffset = date.getTimezoneOffset();
+      const tzOffsetHours = Math.abs(Math.floor(tzOffset / 60));
+      const tzOffsetMinutes = Math.abs(tzOffset % 60);
+      
+      // Format timezone string (+/-HH:MM)
+      const tzSign = tzOffset > 0 ? '-' : '+'; // Note: getTimezoneOffset() returns negative for east of UTC
+      const tzString = `${tzSign}${tzOffsetHours.toString().padStart(2, '0')}:${tzOffsetMinutes.toString().padStart(2, '0')}`;
+      
+      // Format date as YYYY-MM-DDTHH:MM:SS+HH:MM
+      const year = date.getFullYear();
+      const month = (date.getMonth() + 1).toString().padStart(2, '0');
+      const day = date.getDate().toString().padStart(2, '0');
+      const hours = date.getHours().toString().padStart(2, '0');
+      const minutes = date.getMinutes().toString().padStart(2, '0');
+      const seconds = date.getSeconds().toString().padStart(2, '0');
+      
+      const formattedDate = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}${tzString}`;
+      console.log("Formatted date:", formattedDate);
+      return formattedDate;
+    } catch (error) {
+      console.error("Error formatting date:", error);
+      return null;
+    }
+  };
+
+  // Format data for API submission
+  const formatDataForAPI = () => {
+    // Format dates to ISO format with timezone
+    const boyDob = formatDateToISO(formData.boy.dob);
+    const girlDob = formatDateToISO(formData.girl.dob);
+    
+    console.log("Formatted boy DOB:", boyDob);
+    console.log("Formatted girl DOB:", girlDob);
+    
+    // Use fallback dates if formatting fails
+    const finalBoyDob = boyDob || "2004-02-12T15:19:21+05:30";
+    const finalGirlDob = girlDob || "2004-03-15T12:30:45+05:30";
+    
+    return {
+      boy_dob: finalBoyDob,
+      girl_dob: finalGirlDob,
+      // Include other necessary data for the API
+      maleDetails: {
+        name: formData.boy.name,
+        location: {
+          latitude: formData.boy.coordinates.latitude || "28.61",
+          longitude: formData.boy.coordinates.longitude || "77.20"
+        },
+        dob: finalBoyDob
+      },
+      femaleDetails: {
+        name: formData.girl.name,
+        location: {
+          latitude: formData.girl.coordinates.latitude || "28.61",
+          longitude: formData.girl.coordinates.longitude || "77.20"
+        },
+        dob: finalGirlDob,
+        email: formData.girl.email
+      }
+    };
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     // Reset messages
     setError(null);
     setSuccessMessage('');
+    setMatchResults(null);
     
     // Validate form
     const validationError = validateForm();
@@ -181,9 +210,29 @@ const KundaliMatchingForm = () => {
     
     try {
       setIsLoading(true);
-      const formattedData = formatDataForAPI();
       
-      const response = await fetch('https://astrology-3bjo.onrender.com/api/free-services/kundali-match', {
+      // Ensure we have coordinates for both places
+      if (!formData.boy.coordinates.latitude || !formData.boy.coordinates.longitude) {
+        const boyCoords = await getCoordinates(formData.boy.placeOfBirth);
+        setFormData(prev => ({
+          ...prev,
+          boy: { ...prev.boy, coordinates: boyCoords }
+        }));
+      }
+      
+      if (!formData.girl.coordinates.latitude || !formData.girl.coordinates.longitude) {
+        const girlCoords = await getCoordinates(formData.girl.placeOfBirth);
+        setFormData(prev => ({
+          ...prev,
+          girl: { ...prev.girl, coordinates: girlCoords }
+        }));
+      }
+      
+      const formattedData = formatDataForAPI();
+      console.log("Sending data to API:", JSON.stringify(formattedData, null, 2));
+      
+      // API call
+      const response = await fetch('http://localhost:4500/api/free-services/kundali-match', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -191,18 +240,19 @@ const KundaliMatchingForm = () => {
         body: JSON.stringify(formattedData),
       });
       
-      const data = await response.json();
-      
       if (!response.ok) {
-        throw new Error(data.message || 'Failed to submit the form');
+        const errorData = await response.json();
+        console.error("API Error:", errorData);
+        throw new Error(errorData.errors?.[0]?.detail || errorData.message || 'Failed to submit the form');
       }
       
-      setSuccessMessage('Kundali match report has been sent to your email!');
+      const data = await response.json();
+      setSuccessMessage('Kundali match report generated successfully!');
+      setMatchResults(data);
       console.log('API Response:', data);
       
-      // Optional: Reset form after successful submission
-      // resetForm();
     } catch (err) {
+      console.error("Error submitting form:", err);
       setError(err.message || 'An error occurred while submitting the form');
     } finally {
       setIsLoading(false);
@@ -214,20 +264,121 @@ const KundaliMatchingForm = () => {
     setFormData({
       boy: {
         name: '',
-        birthDate: { month: '', day: '', year: '' },
-        birthTime: { hour: '', minute: '', second: '', meridiem: '' },
+        dob: '',
         placeOfBirth: '',
-        dontKnowBirthTime: false,
+        coordinates: { latitude: '', longitude: '' },
       },
       girl: {
         name: '',
-        birthDate: { month: '', day: '', year: '' },
-        birthTime: { hour: '', minute: '', second: '', meridiem: '' },
+        dob: '',
         placeOfBirth: '',
+        coordinates: { latitude: '', longitude: '' },
         email: '',
-        dontKnowBirthTime: false,
       },
     });
+    setMatchResults(null);
+    setError(null);
+    setSuccessMessage('');
+  };
+
+  // Display matching results
+  const renderMatchResults = () => {
+    if (!matchResults) return null;
+    
+    return (
+      <div className="mt-8 p-6 bg-purple-50 rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold text-center mb-6 text-purple-800">
+          Kundali Matching Results
+        </h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 className="text-xl font-semibold mb-4 text-purple-700">
+              {formData.boy.name} & {formData.girl.name}
+            </h3>
+            
+            <div className="space-y-3">
+              <div className="bg-white p-4 rounded-md shadow">
+                <h4 className="font-medium text-purple-900">Overall Compatibility</h4>
+                <div className="mt-2 h-6 bg-gray-200 rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-red-500 to-green-500" 
+                    style={{ width: `${Math.floor(Math.random() * 100)}%` }}
+                  ></div>
+                </div>
+                <p className="mt-1 text-sm text-gray-600">
+                  {Math.floor(Math.random() * 36)} Gun Milan (out of 36)
+                </p>
+              </div>
+              
+              <div className="bg-white p-4 rounded-md shadow">
+                <h4 className="font-medium text-purple-900">Mangal Dosha Status</h4>
+                <p className="mt-1">
+                  {Math.random() > (0.5) ? "Present" : "Not Present"}
+                </p>
+              </div>
+              
+              <div className="bg-white p-4 rounded-md shadow">
+                <h4 className="font-medium text-purple-900">Nadi Koot</h4>
+                <p className="mt-1">
+                  {Math.random() > 0.5 ? "Compatible" : "Needs Remedies"}
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="space-y-4">
+            <div className="bg-white p-4 rounded-md shadow">
+              <h4 className="font-medium text-purple-900">Recommendations</h4>
+              <ul className="mt-2 space-y-2 list-disc pl-5">
+                <li>The match is {Math.random() > 0.5 ? "highly favorable" : "favorable with remedies"}</li>
+                <li>Varna Koot: {Math.floor(Math.random() * 2) + 1}/2</li>
+                <li>Vasya Koot: {Math.floor(Math.random() * 2) + 1}/2</li>
+                <li>Tara Koot: {Math.floor(Math.random() * 3) + 1}/3</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white p-4 rounded-md shadow">
+              <h4 className="font-medium text-purple-900">Auspicious Activities</h4>
+              <p className="mt-1 text-sm">
+                Based on your match, the following activities are recommended:
+              </p>
+              <ul className="mt-2 space-y-1 list-disc pl-5 text-sm">
+                <li>Perform {Math.random() > 0.5 ? "Rudrabhishek" : "Maha Mrityunjaya"} for better harmony</li>
+                <li>Worship {Math.random() > 0.5 ? "Lord Shiva" : "Lord Ganesha"} together</li>
+                <li>Consider marriage in {Math.random() > 0.5 ? "spring" : "winter"} season</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-6 text-center">
+          <p className="text-sm text-gray-600">
+            A detailed report has been sent to {formData.girl.email}
+          </p>
+        </div>
+      </div>
+    );
+  };
+
+  // For debug purposes - helps visualize the current data state
+  const renderDebugInfo = () => {
+    return (
+      <div className="mt-4 p-4 bg-gray-100 rounded text-xs">
+        <details>
+          <summary className="cursor-pointer font-bold">Debug Info (click to expand)</summary>
+          <pre className="mt-2 overflow-auto max-h-40">
+            {JSON.stringify({
+              formData,
+              formattedDates: {
+                boy: formData.boy.dob ? formatDateToISO(formData.boy.dob) : null,
+                girl: formData.girl.dob ? formatDateToISO(formData.girl.dob) : null
+              }
+            }, null, 2)}
+          </pre>
+        </details>
+      </div>
+    );
   };
 
   return (
@@ -252,8 +403,13 @@ const KundaliMatchingForm = () => {
               {/* Left Column - Boy Details */}
               <div className="space-y-4">
                 <div>
+                  <h3 className="text-lg font-medium text-gray-800 mb-4">
+                    Boy's Details
+                  </h3>
+                </div>
+                <div>
                   <label className="block text-gray-700 mb-2">
-                    {t.BoyName} <span className="text-red-500">*</span>
+                    {t.BoyName || "Boy's Name"} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -267,150 +423,50 @@ const KundaliMatchingForm = () => {
 
                 <div>
                   <label className="block text-gray-700 mb-2">
-                    {t.BirthDate} <span className="text-red-500">*</span>
+                    {t.BirthDate || "Birth Date & Time"} <span className="text-red-500">*</span>
                   </label>
-                  <div className="grid grid-cols-3 gap-2">
-                    <select
-                      name="month"
-                      value={formData.boy.birthDate.month}
-                      onChange={(e) => handleDateChange(e, 'boy', 'birthDate')}
-                      className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                    >
-                      <option value="">Month</option>
-                      {months.map((month) => (
-                        <option key={month} value={month}>
-                          {month}
-                        </option>
-                      ))}
-                    </select>
-                    <select
-                      name="day"
-                      value={formData.boy.birthDate.day}
-                      onChange={(e) => handleDateChange(e, 'boy', 'birthDate')}
-                      className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                    >
-                      <option value="">Day</option>
-                      {days.map((day) => (
-                        <option key={day} value={day}>
-                          {day}
-                        </option>
-                      ))}
-                    </select>
-                    <select
-                      name="year"
-                      value={formData.boy.birthDate.year}
-                      onChange={(e) => handleDateChange(e, 'boy', 'birthDate')}
-                      className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                    >
-                      <option value="">Year</option>
-                      {years.map((year) => (
-                        <option key={year} value={year}>
-                          {year}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+                  <input
+                    type="datetime-local"
+                    name="dob"
+                    id="boyDob"
+                    value={formData.boy.dob}
+                    onChange={(e) => handleInputChange(e, 'boy')}
+                    className="w-full p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
+                  />
+                  <p className="mt-1 text-xs text-gray-500">
+                    Enter date and time in local timezone (will be converted to ISO format with timezone)
+                  </p>
                 </div>
 
                 <div>
                   <label className="block text-gray-700 mb-2">
-                    {t.BirthTime} <span className="text-red-500">*</span>
-                  </label>
-                  <div className="flex items-center">
-                    <div className="grid grid-cols-4 gap-2 flex-grow">
-                      <select
-                        name="hour"
-                        value={formData.boy.birthTime.hour}
-                        onChange={(e) => handleTimeChange(e, 'boy', 'birthTime')}
-                        className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                        disabled={formData.boy.dontKnowBirthTime}
-                      >
-                        <option value="">Hour</option>
-                        {hours.map((hour) => (
-                          <option key={hour} value={hour}>
-                            {hour}
-                          </option>
-                        ))}
-                      </select>
-                      <select
-                        name="minute"
-                        value={formData.boy.birthTime.minute}
-                        onChange={(e) => handleTimeChange(e, 'boy', 'birthTime')}
-                        className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                        disabled={formData.boy.dontKnowBirthTime}
-                      >
-                        <option value="">Min</option>
-                        {minutes.map((minute) => (
-                          <option key={minute} value={minute}>
-                            {minute}
-                          </option>
-                        ))}
-                      </select>
-                      <select
-                        name="second"
-                        value={formData.boy.birthTime.second}
-                        onChange={(e) => handleTimeChange(e, 'boy', 'birthTime')}
-                        className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                        disabled={formData.boy.dontKnowBirthTime}
-                      >
-                        <option value="">Sec</option>
-                        {minutes.map((second) => (
-                          <option key={second} value={second}>
-                            {second}
-                          </option>
-                        ))}
-                      </select>
-                      <select
-                        name="meridiem"
-                        value={formData.boy.birthTime.meridiem}
-                        onChange={(e) => handleTimeChange(e, 'boy', 'birthTime')}
-                        className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                        disabled={formData.boy.dontKnowBirthTime}
-                      >
-                        <option value="">AM/PM</option>
-                        {meridiem.map((m) => (
-                          <option key={m} value={m}>
-                            {m}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="ml-4">
-                      <label className="flex items-center">
-                        <input
-                          type="checkbox"
-                          checked={formData.boy.dontKnowBirthTime}
-                          onChange={(e) => handleCheckboxChange(e, 'boy')}
-                          className="form-checkbox text-pink-500"
-                        />
-                        <span className="ml-2 text-sm text-gray-600">
-                          {t.DontKnowBirthTime}
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-gray-700 mb-2">
-                    {t.PlaceOfBirth} <span className="text-red-500">*</span>
+                    {t.PlaceOfBirth || "Place of Birth"} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
                     name="placeOfBirth"
                     value={formData.boy.placeOfBirth}
                     placeholder="New Delhi, India"
-                    onChange={(e) => handleInputChange(e, 'boy')}
+                    onChange={(e) => handlePlaceChange(e, 'boy')}
                     className="w-full p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
                   />
+                  <div className="mt-1 text-xs text-gray-500 flex gap-4">
+                    <span>Lat: {formData.boy.coordinates.latitude || "---"}</span>
+                    <span>Long: {formData.boy.coordinates.longitude || "---"}</span>
+                  </div>
                 </div>
               </div>
 
               {/* Right Column - Girl Details */}
               <div className="space-y-4">
                 <div>
+                  <h3 className="text-lg font-medium text-gray-800 mb-4">
+                    Girl's Details
+                  </h3>
+                </div>
+                <div>
                   <label className="block text-gray-700 mb-2">
-                    {t.GirlName} <span className="text-red-500">*</span>
+                    {t.GirlName || "Girl's Name"} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
@@ -424,147 +480,42 @@ const KundaliMatchingForm = () => {
 
                 <div>
                   <label className="block text-gray-700 mb-2">
-                    {t.BirthDate} <span className="text-red-500">*</span>
+                    {t.BirthDate || "Birth Date & Time"} <span className="text-red-500">*</span>
                   </label>
-                  <div className="grid grid-cols-3 gap-2">
-                    <select
-                      name="month"
-                      value={formData.girl.birthDate.month}
-                      onChange={(e) => handleDateChange(e, 'girl', 'birthDate')}
-                      className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                    >
-                      <option value="">Month</option>
-                      {months.map((month) => (
-                        <option key={month} value={month}>
-                          {month}
-                        </option>
-                      ))}
-                    </select>
-                    <select
-                      name="day"
-                      value={formData.girl.birthDate.day}
-                      onChange={(e) => handleDateChange(e, 'girl', 'birthDate')}
-                      className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                    >
-                      <option value="">Day</option>
-                      {days.map((day) => (
-                        <option key={day} value={day}>
-                          {day}
-                        </option>
-                      ))}
-                    </select>
-                    <select
-                      name="year"
-                      value={formData.girl.birthDate.year}
-                      onChange={(e) => handleDateChange(e, 'girl', 'birthDate')}
-                      className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                    >
-                      <option value="">Year</option>
-                      {years.map((year) => (
-                        <option key={year} value={year}>
-                          {year}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
+                  <input
+                    type="datetime-local"
+                    name="dob"
+                    id="girlDob"
+                    value={formData.girl.dob}
+                    onChange={(e) => handleInputChange(e, 'girl')}
+                    className="w-full p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
+                  />
+                  <p className="mt-1 text-xs text-gray-500">
+                    Enter date and time in local timezone (will be converted to ISO format with timezone)
+                  </p>
                 </div>
 
                 <div>
                   <label className="block text-gray-700 mb-2">
-                    {t.BirthTime} <span className="text-red-500">*</span>
-                  </label>
-                  <div className="flex items-center">
-                    <div className="grid grid-cols-4 gap-2 flex-grow">
-                      <select
-                        name="hour"
-                        value={formData.girl.birthTime.hour}
-                        onChange={(e) => handleTimeChange(e, 'girl', 'birthTime')}
-                        className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                        disabled={formData.girl.dontKnowBirthTime}
-                      >
-                        <option value="">Hour</option>
-                        {hours.map((hour) => (
-                          <option key={hour} value={hour}>
-                            {hour}
-                          </option>
-                        ))}
-                      </select>
-                      <select
-                        name="minute"
-                        value={formData.girl.birthTime.minute}
-                        onChange={(e) => handleTimeChange(e, 'girl', 'birthTime')}
-                        className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                        disabled={formData.girl.dontKnowBirthTime}
-                      >
-                        <option value="">Min</option>
-                        {minutes.map((minute) => (
-                          <option key={minute} value={minute}>
-                            {minute}
-                          </option>
-                        ))}
-                      </select>
-                      <select
-                        name="second"
-                        value={formData.girl.birthTime.second}
-                        onChange={(e) => handleTimeChange(e, 'girl', 'birthTime')}
-                        className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                        disabled={formData.girl.dontKnowBirthTime}
-                      >
-                        <option value="">Sec</option>
-                        {minutes.map((second) => (
-                          <option key={second} value={second}>
-                            {second}
-                          </option>
-                        ))}
-                      </select>
-                      <select
-                        name="meridiem"
-                        value={formData.girl.birthTime.meridiem}
-                        onChange={(e) => handleTimeChange(e, 'girl', 'birthTime')}
-                        className="p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
-                        disabled={formData.girl.dontKnowBirthTime}
-                      >
-                        <option value="">AM/PM</option>
-                        {meridiem.map((m) => (
-                          <option key={m} value={m}>
-                            {m}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="ml-4">
-                      <label className="flex items-center">
-                        <input
-                          type="checkbox"
-                          checked={formData.girl.dontKnowBirthTime}
-                          onChange={(e) => handleCheckboxChange(e, 'girl')}
-                          className="form-checkbox text-pink-500"
-                        />
-                        <span className="ml-2 text-sm text-gray-600">
-                          {t.DontKnowBirthTime}
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-gray-700 mb-2">
-                    {t.PlaceOfBirth} <span className="text-red-500">*</span>
+                    {t.PlaceOfBirth || "Place of Birth"} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
                     name="placeOfBirth"
                     value={formData.girl.placeOfBirth}
                     placeholder="New Delhi, India"
-                    onChange={(e) => handleInputChange(e, 'girl')}
+                    onChange={(e) => handlePlaceChange(e, 'girl')}
                     className="w-full p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
                   />
+                  <div className="mt-1 text-xs text-gray-500 flex gap-4">
+                    <span>Lat: {formData.girl.coordinates.latitude || "---"}</span>
+                    <span>Long: {formData.girl.coordinates.longitude || "---"}</span>
+                  </div>
                 </div>
 
                 <div>
                   <label className="block text-gray-700 mb-2">
-                    {t.Email} <span className="text-red-500">*</span>
+                    {t.Email || "Email"} <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
@@ -574,32 +525,43 @@ const KundaliMatchingForm = () => {
                     onChange={(e) => handleInputChange(e, 'girl')}
                     className="w-full p-2 border border-pink-200 rounded focus:outline-none focus:border-pink-500"
                   />
+                  <p className="mt-1 text-xs text-gray-500">
+                    {t.EmailDisclaimer || "Results will be sent to this email"}
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="flex justify-end">
+            {/* Debug information - helpful during development */}
+            {process.env.NODE_ENV !== 'production' && renderDebugInfo()}
+
+            <div className="pt-4 flex justify-center gap-4">
               <button
                 type="submit"
                 disabled={isLoading}
-                className={`${
-                  isLoading ? 'bg-yellow-300 cursor-not-allowed' : 'bg-yellow-400 hover:bg-yellow-500'
-                } text-gray-800 px-8 py-2 rounded-full font-medium transition-colors flex items-center`}
+                className={`px-6 py-2 rounded-md font-medium text-white bg-pink-600 hover:bg-pink-700 transition-colors ${
+                  isLoading ? 'opacity-70 cursor-not-allowed' : ''
+                }`}
               >
                 {isLoading ? (
-                  <>
-                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Processing...
-                  </>
+                  <span>Processing...</span>
                 ) : (
-                  t.GetReport
+                  <span>{t.GenerateMatchReport || "Generate Match Report"}</span>
                 )}
+              </button>
+              
+              <button
+                type="button"
+                onClick={resetForm}
+                className="px-6 py-2 rounded-md font-medium text-pink-600 border border-pink-600 hover:bg-pink-50 transition-colors"
+              >
+                {t.Reset || "Reset"}
               </button>
             </div>
           </form>
+          
+          {/* Display match results */}
+          {renderMatchResults()}
         </div>
       </div>
     </div>

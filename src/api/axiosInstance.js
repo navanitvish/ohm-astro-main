@@ -5,7 +5,7 @@ const admin = localStorage.getItem("admin");
 console.log( "this token",admin);
 
 const axiosInstance = axios.create({
-  baseURL: 'https://astrovani-6d54b00db2da.herokuapp.com/', // Replace with your base URL
+  baseURL: 'https://ohmastrobacken-1.onrender.com', // Replace with your base URL
   headers: {
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${admin}`,
@@ -23,7 +23,7 @@ export default axiosInstance;
 // console.log( "this token",admin);
 
 // const axiosInstance = axios.create({
-//   baseURL: 'https://atro-server.onrender.com', // Replace with your base URL
+//   baseURL: 'https://astrovani-6d54b00db2da.herokuapp.com/', // Replace with your base URL
 //   headers: {
 //     'Content-Type': 'application/json',
 //     'Authorization': `Bearer ${admin}`,

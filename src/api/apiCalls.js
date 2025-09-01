@@ -56,6 +56,17 @@ export const fetchTopAstrologers = async () => {
   return response.data; // Ensure this matches the API response structure
 };
 
+// Function to fetch subscription plans
+export const fetchSubscriptionPlans = async () => {
+  try {
+    const response = await axiosInstance.get(endpoints.getSubscriptionPlans);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching subscription plans:", error);
+    throw new Error(error.response?.data?.message || "Failed to fetch subscription plans");
+  }
+};
+
 
 
 // Send sign-in email OTP request
@@ -154,3 +165,33 @@ export const postGemstone = async (postGemstoneuery) => {
     throw new Error("There was an error submitting the postGemstoneuery. Please try again.");
   }
 };
+
+
+// mobile otp api
+export const sendMobileOTP = async (mobile) => {
+  try {
+    const response = await axiosInstance.post(endpoints.sendMobileOTP, {
+      mobile
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Error sending mobile OTP:", error);
+    throw error;
+  }
+};
+
+
+// otp verify
+export const mobileOtpVerify = async (sessionId, otp) => {
+  try {
+    const response = await axiosInstance.post(endpoints.mobileOtpVerify, {
+      sessionId,
+      otp
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Error verifying mobile OTP:", error);
+    throw error;
+  }
+};
+

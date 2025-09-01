@@ -43,12 +43,9 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center space-x-3">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center">
-              <span className="text-white text-3xl">☀</span>
-            </div>
-            <div>
-              <h1 className="text-2xl md:text-4xl font-semibold">OHM Astro</h1>
-              <p className="text-sm md:text-md text-gray-600">{t.consultOnline}</p>
+            <div className="flex  items-center">
+             <img src="/src/assets/cusmotmer_logo.jpg" className="text-2xl w-30 h-14  object-cover md:text-4xl font-semibold"/><span className="text-xl md:text-2xl lg:text-3xl font-bold  bg-gradient-to-r from-amber-500 to-pink-500 text-transparent bg-clip-text">OHM Astro</span>
+             
             </div>
           </Link>
         </div>
