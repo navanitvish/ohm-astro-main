@@ -3,10 +3,13 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { zodiacData, getHoroscope } from '../../components/content/zodiacData ';
 import SignsNavigation from './SignsNavigation';  // Import the new component
-
+import { useSelector } from "react-redux";
+import translations from "../../components/translations/translations";
 const HoroscopePage = () => {
   const { sign } = useParams();
   const navigate = useNavigate();
+    const language = useSelector((state) => state.language.language);
+  const t = translations[language];
   
   // Default to 'Aries' if no valid sign is provided
   const [activeSign, setActiveSign] = useState(() => {

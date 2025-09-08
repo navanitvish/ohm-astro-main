@@ -57,6 +57,7 @@ import BlogDetails from "./pages/Blog/BlogDetails";
 import ContactForm from "./pages/contectus";
 import FAQPage from './pages/FAQ/Faq';
 import UpcomingPujaSection from "./pages/Home/PujaSection";
+import ComingSoon from "./pages/ComSoon";
 function App() {
   
   return (
@@ -69,8 +70,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/AstrologerListing" element={<AstrologerListing />} />
             <Route path="/Astrologchat" element={<AstorolagerChat />} />
-            <Route path="/Panchang" element={<PanchangPage />} />
-            <Route path="/KundaliMatching" element={<KundaliMatching />} />
+            <Route path="/ComingSoon" element={<ComingSoon />} />
+            {/* <Route path="/KundaliMatching" element={<KundaliMatching />} /> */}
             <Route path="/GemstoneShowcase" element={<GemstoneShowcase />} />
             <Route path="/DailyHoroscope" element={<DailyHoroscope />} />
             <Route path="/horoscope/:sign" element={<HoroscopePage />} />

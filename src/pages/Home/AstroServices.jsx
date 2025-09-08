@@ -24,14 +24,14 @@ const AstroServices = () => {
       id: 1,
       name: t.todayPanchang, // Translation key
       icon: FaScroll,
-      link: "/Panchang",
+      link: "/ComingSoon",
       isNew: false,
     },
     {
       id: 2,
       name: t.kundaliMatching, // Translation key
       icon: FaRing,
-      link: "/KundaliMatching",
+      link: "/ComingSoon",
       isNew: false,
     },
     {
@@ -45,7 +45,7 @@ const AstroServices = () => {
       id: 4,
       name: t.dailyHoroscope, // Translation key
       icon: FaCompass,
-      link: "/DailyHoroscope",
+      link: "/ComingSoon",
       isNew: false,
     },
     {

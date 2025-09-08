@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import VedicAstrologersSection from "../ConsultWithTopVedicAstrologers";
+import { useSelector } from "react-redux";
+import translations from "../../components/translations/translations";
+
 
 const Breadcrumb = () => {
+   const language = useSelector((state) => state.language.language);
+  const t = translations[language];
   return (
     <div className="bg-red-500 text-white py-3 px-4">
       <div className="max-w-6xl mx-auto flex items-center gap-2 text-sm">
@@ -16,13 +21,15 @@ const Breadcrumb = () => {
   );
 };
 const Horoscope = () => {
+   const language = useSelector((state) => state.language.language);
+  const t = translations[language];
   return (
     <div>
       <Breadcrumb />
       <div className="max-w-6xl mx-auto px-4 py-8 font-sans">
         {/* Header */}
         <h1 className="text-4xl font-bold text-center mb-12">
-          Horoscope
+          {t.Horoscope}
           <div className="w-24 h-1 bg-red-500 mx-auto mt-2"></div>
         </h1>
 
@@ -33,15 +40,10 @@ const Horoscope = () => {
             {/* Significance Section */}
             <section className="mb-8">
               <h2 className="text-2xl font-bold mb-4">
-                Significance Of Horoscope
+              {t.SignificanceTitle}
               </h2>
               <p className="text-gray-700 mb-6">
-                A well-crafted Horoscope can assist a person in making
-                significant decisions in life and knowing in advance the
-                consequences of an action in their life. It helps while getting
-                married, buying a new property, starting a new business, buying
-                a new vehicle, deciding the name of a newborn, and more. This
-                makes it essential to consult only the best Astrologers.
+                {t.significanceContent}
               </p>
 
               {/* Service Cards */}
@@ -60,10 +62,9 @@ const Horoscope = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-bold">Daily Horoscope</h3>
+                    <h3 className="font-bold">{t.dailyTitle}</h3>
                     <p className="text-sm text-gray-600">
-                      Get an in-depth analysis of your Birth Chart by renowned
-                      Vedic Astrologers
+                      {t.dailyContent}
                     </p>
                   </div>
                 </Link>
@@ -82,10 +83,9 @@ const Horoscope = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-bold">Monthly Horoscope</h3>
+                    <h3 className="font-bold">{t.monthlyTitle}</h3>
                     <p className="text-sm text-gray-600">
-                      Get an in-depth analysis of your Birth Chart by renowned
-                      Vedic Astrologers
+                     {t.monthlyContent}
                     </p>
                   </div>
                 </Link>
@@ -103,10 +103,9 @@ const Horoscope = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-bold">Yearly Horoscope</h3>
+                    <h3 className="font-bold">{t.yearlyTitle}</h3>
                     <p className="text-sm text-gray-600">
-                      Get an in-depth analysis of your Birth Chart by renowned
-                      Vedic Astrologers
+                     {t.yearlyContent}
                     </p>
                   </div>
                 </Link>
@@ -115,10 +114,11 @@ const Horoscope = () => {
               {/* Why Is Astrology Important Section */}
               <section>
                 <h2 className="text-2xl font-bold mb-4">
-                  Why Is Astrology Important?
+                 {t.importanceTitle}
+
                 </h2>
                 <p className="text-gray-700 mb-4">
-                Astrology and Horoscopes can be considered ancient astronomical studies used to identify the impact of celestial bodies on our lives. It has its roots in India in the Vedic Era, where Sage Bhrigu, one of the seven Vedic Sages, brought it to practice. His legacy is being carried on today by our renowned Astrologers.
+{t.importanceContent}
                 </p>
                 
               </section>

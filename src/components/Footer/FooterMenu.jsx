@@ -37,10 +37,10 @@ const Footer = () => {
         {
           title: t.Muhurta,
           links: [
-            { text: t.Choghadiya, url: "/choghadiya" },
-            { text: t.RahuKaal, url: "/rahukaal" },
-            { text: t.ShubhaHora, url: "/shubhahora" },
-            { text: t.Gowri, url: "/gowri" },
+            { text: t.Choghadiya, url: "/ComingSoon" },
+            { text: t.RahuKaal, url: "/ComingSoon" },
+            { text: t.ShubhaHora, url: "/ComingSoon" },
+            { text: t.Gowri, url: "/ComingSoon" },
           ],
         },
         {
@@ -49,13 +49,13 @@ const Footer = () => {
         },
         {
           title: t.Panchang,
-          links: [{ text: t.todayPanchang, url: "/Panchang" }],
+          links: [{ text: t.todayPanchang, url: "/ComingSoon" }],
         },
         {
           title: t.ASTROLOGYs,
           links: [
-            { text: t.Kundali, url: "/astrology" },
-            { text: t.KundaliJanam, url: "/kundali-janam" },
+            { text: t.Kundali, url: "/ComingSoon" },
+            { text: t.KundaliJanam, url: "/ComingSoon" },
           ],
         },
       ],
@@ -65,22 +65,22 @@ const Footer = () => {
         {
           title: t.VRATANDUPVAAS,
           links: [
-            { text: t.Purnima, url: "/Purnima" },
-            { text: t.Amavasya, url: "/amavasya" },
-            { text: t.Ekadashi, url: "/ekadashi" },
-            { text: t.PradoshVrat, url: "/pradoshvrat" },
-            { text: t.Sankashti, url: "/sankashti" },
-            { text: t.Vinayaka, url: "/vinayaka" },
-            { text: t.Sankranti, url: "/sankranti" },
-            { text: t.Satyanarayan, url: "/satyanarayan" },
+            { text: t.Purnima, url: "/ComingSoon" },
+            { text: t.Amavasya, url: "/ComingSoon" },
+            { text: t.Ekadashi, url: "/ComingSoon" },
+            { text: t.PradoshVrat, url: "/ComingSoon" },
+            { text: t.Sankashti, url: "/ComingSoon" },
+            { text: t.Vinayaka, url: "/ComingSoon" },
+            { text: t.Sankranti, url: "/ComingSoon" },
+            { text: t.Satyanarayan, url: "/ComingSoon" },
           ],
         },
         {
           title: t.HOROSCOPE,
           links: [
-            { text: t.Dailyhoro, url: "/DailyHoroscope" },
-            { text: t.Monthlyhoro, url: "/monthly-horoscope" },
-            { text: t.Yearlyhoro, url: "/yearly-horoscope" },
+            { text: t.Dailyhoro, url: "/ComingSoon" },
+            { text: t.Monthlyhoro, url: "/ComingSoon" },
+            { text: t.Yearlyhoro, url: "/ComingSoon" },
           ],
         },
       ],

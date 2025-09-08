@@ -148,7 +148,7 @@ export default function SubscriptionPlans() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
             Your Astrological Journey
@@ -158,7 +158,7 @@ export default function SubscriptionPlans() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {plans.length > 0 ? (
             plans.map((plan) => {
               const style = getPlanStyle(plan);
@@ -179,23 +179,6 @@ export default function SubscriptionPlans() {
                   </div>
 
                   <div className="p-6">
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-800 mb-3 text-lg">Included features:</h4>
-                      <ul className="space-y-3">
-                        {getPlanFeatures(plan).map((feature, index) => (
-                          <li key={index} className="flex items-center">
-                            <div className="bg-white p-1 rounded-full shadow-sm mr-3">
-                              {feature.icon}
-                            </div>
-                            <span className="text-gray-700">{feature.text}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="mb-6">
-                      <p className="text-gray-600 text-sm italic">{getPlanDescription(plan)}</p>
-                    </div>
                     
                     <button
                       onClick={() => handleSelectPlan(plan)}
