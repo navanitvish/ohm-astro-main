@@ -5,7 +5,7 @@ const admin = localStorage.getItem("admin");
 console.log( "this token",admin);
 
 const axiosInstance = axios.create({
-  baseURL: 'https://ohmastrobacken.onrender.com/', // Replace with your base URL
+  baseURL: 'https://astrowanibackend.onrender.com/', // Replace with your base URL
   headers: {
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${admin}`,
