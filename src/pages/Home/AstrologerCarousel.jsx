@@ -116,13 +116,13 @@ const AstrologerList = () => {
                     {astrologer.name}
                   </h3>
                   <p className="text-sm md:text-base text-gray-700 mb-2">
-                    {astrologer.bio.length > 60
+                    {astrologer.bio && astrologer.bio.length > 60
                       ? `${astrologer.bio.slice(0, 60)}...`
-                      : astrologer.bio}
+                      : astrologer.bio || "No bio available"}
                   </p>
                   <div className="flex justify-center mt-2 text-yellow-400 text-sm md:text-base">
-                    {"★".repeat(Math.round(astrologer.rating))}
-                    {"☆".repeat(5 - Math.round(astrologer.rating))}
+                    {"★".repeat(Math.round(astrologer.rating || 0))}
+                    {"☆".repeat(5 - Math.round(astrologer.rating || 0))}
                   </div>
                 </div>
               </div>
